@@ -1259,3 +1259,23 @@ tbody tr:hover { background: var(--color-surface); }
 .choose-box p:last-child { margin-bottom: 0; }
 .choose-box a { color: #2563eb; text-decoration: underline; }
 .choose-box a:hover { color: #1d4ed8; }
+
+/* ── Site Logo Image ──────────────────────────────────────────────── */
+.logo-img {
+  display: block;
+  height: 40px;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+@media (max-width: 600px) {
+  .logo-img {
+    height: 32px;
+    max-width: 140px;
+  }
+}
+
+/* Hide the old text logo-mark now that the image is in use */
+.logo-mark { display: none; }
