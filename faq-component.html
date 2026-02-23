@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- ═══════════════════════════════════════════════════════════════
+       GOOGLE ANALYTICS 4 — PASTE YOUR TAG HERE
+       ───────────────────────────────────────────────────────────────
+       Replace this comment with the GA4 snippet from your account:
+         Analytics > Admin > Data Streams > [stream] > Tagging instructions
+         > "Install manually" > copy both script tags and paste here.
+       Your Measurement ID looks like: G-XXXXXXXXXX
+       ═══════════════════════════════════════════════════════════════ -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- ── Google Search Console site verification ──────────────────────
+       Replace the content value below with your real GSC verification
+       code from: Search Console → Settings → Ownership verification
+       → HTML tag → copy the content="..." value only.
+
+       When you have your code, the tag should look like this:
+         <meta name="google-site-verification" content="YOUR_CODE_HERE" />
+
+       Simply overwrite the placeholder value; the tag structure is
+       already correct and will not break when you paste the real code.
+  ──────────────────────────────────────────────────────────────────── -->
+  <meta name="google-site-verification" content="REPLACE-WITH-YOUR-GSC-VERIFICATION-CODE" />
+  <title>FAQ Component — ToolStackChoice.com</title>
+
+  <!--
+  ═══════════════════════════════════════════════════════════════
+  FAQ COMPONENT — USAGE INSTRUCTIONS
+  ═══════════════════════════════════════════════════════════════
+
+  HOW TO DROP THIS INTO ANY PAGE
+  ───────────────────────────────
+  1. Copy the <link> tag below into your page <head>:
+       <link rel="stylesheet" href="faq-component.css" />
+
+  2. Copy the <section class="faq-component"> block from the
+     EMBEDDABLE SNIPPET section at the bottom of this file.
+
+  3. Change the <h2> text to your desired section title,
+     e.g. "FAQ: Semrush" or "FAQ: Zapier vs Make".
+
+  4. Replace each [Placeholder question N] with a real question
+     and each placeholder answer sentence with a real answer.
+
+  5. Update the JSON-LD FAQPage block in your page <head>
+     to match your real questions and answers.
+
+  CUSTOMISATION
+  ─────────────
+  • Section title  → change the <h2> text
+  • Question count → add or remove <div class="faq-item"> blocks
+  • Colours        → override --faq-accent and --faq-border in :root
+  • Width          → override max-width on .faq-component
+
+  NO JAVASCRIPT REQUIRED
+  ──────────────────────
+  The expand/collapse behaviour uses the native HTML <details>
+  and <summary> elements — supported in all modern browsers
+  with zero JavaScript.
+  ═══════════════════════════════════════════════════════════════
+  -->
+
+  <link rel="stylesheet" href="faq-component.css" />
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       JSON-LD STRUCTURED DATA — SCHEMA.ORG
+       ───────────────────────────────────────────────────────────────
+       WHAT THIS IS
+       This block tells search engines and AI models what this page
+       is about in a machine-readable format (JSON-LD / Schema.org).
+
+       HOW TO USE
+       • Copy this entire <script> block into the <head> of any page
+         that uses the FAQ component.
+       • Replace every [Placeholder question N] with a real question.
+       • Replace every [Placeholder answer N] with a direct,
+         one-sentence answer in plain language.
+       • The question count here must match the FAQ items on the page.
+       • Validate at: https://validator.schema.org/
+
+       AISO NOTE
+       AI-powered search (SGE / Perplexity / Bing Copilot) reads
+       JSON-LD to extract facts, ratings, and entity relationships.
+       Keep values accurate, concise, and consistent with the visible
+       page content — AI models cross-check both.
+       ═══════════════════════════════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "[Placeholder question 1 — e.g. What is Semrush?]",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "[Placeholder answer 1 — replace with a direct one-sentence answer in plain language.]"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "[Placeholder question 2]",
+        "acceptedAnswer": { "@type": "Answer", "text": "[Placeholder answer 2.]" }
+      },
+      {
+        "@type": "Question",
+        "name": "[Placeholder question 3]",
+        "acceptedAnswer": { "@type": "Answer", "text": "[Placeholder answer 3.]" }
+      },
+      {
+        "@type": "Question",
+        "name": "[Placeholder question 4]",
+        "acceptedAnswer": { "@type": "Answer", "text": "[Placeholder answer 4.]" }
+      },
+      {
+        "@type": "Question",
+        "name": "[Placeholder question 5]",
+        "acceptedAnswer": { "@type": "Answer", "text": "[Placeholder answer 5.]" }
+      },
+      {
+        "@type": "Question",
+        "name": "[Placeholder question 6]",
+        "acceptedAnswer": { "@type": "Answer", "text": "[Placeholder answer 6.]" }
+      },
+      {
+        "@type": "Question",
+        "name": "[Placeholder question 7]",
+        "acceptedAnswer": { "@type": "Answer", "text": "[Placeholder answer 7.]" }
+      },
+      {
+        "@type": "Question",
+        "name": "[Placeholder question 8]",
+        "acceptedAnswer": { "@type": "Answer", "text": "[Placeholder answer 8.]" }
+      },
+      {
+        "@type": "Question",
+        "name": "[Placeholder question 9]",
+        "acceptedAnswer": { "@type": "Answer", "text": "[Placeholder answer 9.]" }
+      },
+      {
+        "@type": "Question",
+        "name": "[Placeholder question 10]",
+        "acceptedAnswer": { "@type": "Answer", "text": "[Placeholder answer 10.]" }
+      }
+    ]
+  }
+  </script>
+  <!-- END JSON-LD ═══════════════════════════════════════════════ -->
+</head>
+<body class="faq-demo-body">
+
+  <!-- ══════════════════════════════════════════════════════════
+       DEMO WRAPPER — remove this when embedding in a real page
+       ══════════════════════════════════════════════════════════ -->
+  <div class="faq-demo-wrapper">
+
+    <header class="faq-demo-header">
+      <p class="faq-demo-label">Component preview</p>
+      <h1 class="faq-demo-title">FAQ Component</h1>
+      <p class="faq-demo-desc">A self-contained, reusable FAQ section. No JavaScript. Drop the <code>&lt;section&gt;</code> block and <code>faq-component.css</code> into any page.</p>
+    </header>
+
+    <!-- ══════════════════════════════════════════════════════════
+         ▼▼▼  EMBEDDABLE SNIPPET — copy from here  ▼▼▼
+         ══════════════════════════════════════════════════════════ -->
+
+    <!--
+    ┌─────────────────────────────────────────────────────────────┐
+    │  COPY THIS <section> BLOCK INTO YOUR PAGE                   │
+    │  Change the <h2> text to set the section title.             │
+    │  Replace each [Placeholder question N] and answer.          │
+    └─────────────────────────────────────────────────────────────┘
+    -->
+    <section class="faq-component" aria-labelledby="faq-title">
+
+      <h2 id="faq-title" class="faq-component__title">
+        <!-- ↓ CHANGE THIS to your desired section title ↓ -->
+        FAQ: [Tool Name / Topic]
+      </h2>
+
+      <p class="faq-component__intro">
+        <!-- ↓ Optional intro sentence — delete if not needed ↓ -->
+        The most common questions about [Tool Name / Topic], answered directly in plain language.
+      </p>
+
+      <!-- ── Item 1 ── -->
+      <details class="faq-item" id="faq-1">
+        <summary class="faq-item__question">
+          <h3>[Placeholder question 1 — e.g. What is [Tool Name]?]</h3>
+          <span class="faq-item__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-item__answer">
+          <p>[Placeholder answer 1 — replace with a direct, plain-language sentence that fully answers the question above, ideally in 20–40 words.]</p>
+        </div>
+      </details>
+
+      <!-- ── Item 2 ── -->
+      <details class="faq-item" id="faq-2">
+        <summary class="faq-item__question">
+          <h3>[Placeholder question 2 — e.g. How much does [Tool Name] cost?]</h3>
+          <span class="faq-item__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-item__answer">
+          <p>[Placeholder answer 2 — replace with a direct, plain-language sentence that fully answers the question above.]</p>
+        </div>
+      </details>
+
+      <!-- ── Item 3 ── -->
+      <details class="faq-item" id="faq-3">
+        <summary class="faq-item__question">
+          <h3>[Placeholder question 3 — e.g. Is there a free plan for [Tool Name]?]</h3>
+          <span class="faq-item__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-item__answer">
+          <p>[Placeholder answer 3 — replace with a direct, plain-language sentence that fully answers the question above.]</p>
+        </div>
+      </details>
+
+      <!-- ── Item 4 ── -->
+      <details class="faq-item" id="faq-4">
+        <summary class="faq-item__question">
+          <h3>[Placeholder question 4 — e.g. What are the main features of [Tool Name]?]</h3>
+          <span class="faq-item__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-item__answer">
+          <p>[Placeholder answer 4 — replace with a direct, plain-language sentence that fully answers the question above.]</p>
+        </div>
+      </details>
+
+      <!-- ── Item 5 ── -->
+      <details class="faq-item" id="faq-5">
+        <summary class="faq-item__question">
+          <h3>[Placeholder question 5 — e.g. Who is [Tool Name] best for?]</h3>
+          <span class="faq-item__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-item__answer">
+          <p>[Placeholder answer 5 — replace with a direct, plain-language sentence that fully answers the question above.]</p>
+        </div>
+      </details>
+
+      <!-- ── Item 6 ── -->
+      <details class="faq-item" id="faq-6">
+        <summary class="faq-item__question">
+          <h3>[Placeholder question 6 — e.g. What are the pros of [Tool Name]?]</h3>
+          <span class="faq-item__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-item__answer">
+          <p>[Placeholder answer 6 — replace with a direct, plain-language sentence that fully answers the question above.]</p>
+        </div>
+      </details>
+
+      <!-- ── Item 7 ── -->
+      <details class="faq-item" id="faq-7">
+        <summary class="faq-item__question">
+          <h3>[Placeholder question 7 — e.g. What are the cons of [Tool Name]?]</h3>
+          <span class="faq-item__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-item__answer">
+          <p>[Placeholder answer 7 — replace with a direct, plain-language sentence that fully answers the question above.]</p>
+        </div>
+      </details>
+
+      <!-- ── Item 8 ── -->
+      <details class="faq-item" id="faq-8">
+        <summary class="faq-item__question">
+          <h3>[Placeholder question 8 — e.g. How does [Tool Name] compare to alternatives?]</h3>
+          <span class="faq-item__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-item__answer">
+          <p>[Placeholder answer 8 — replace with a direct, plain-language sentence that fully answers the question above.]</p>
+        </div>
+      </details>
+
+      <!-- ── Item 9 ── -->
+      <details class="faq-item" id="faq-9">
+        <summary class="faq-item__question">
+          <h3>[Placeholder question 9 — e.g. Is [Tool Name] worth it?]</h3>
+          <span class="faq-item__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-item__answer">
+          <p>[Placeholder answer 9 — replace with a direct, plain-language sentence that fully answers the question above.]</p>
+        </div>
+      </details>
+
+      <!-- ── Item 10 ── -->
+      <details class="faq-item" id="faq-10">
+        <summary class="faq-item__question">
+          <h3>[Placeholder question 10 — e.g. Does [Tool Name] offer a free trial?]</h3>
+          <span class="faq-item__icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-item__answer">
+          <p>[Placeholder answer 10 — replace with a direct, plain-language sentence that fully answers the question above.]</p>
+        </div>
+      </details>
+
+    </section>
+    <!-- ▲▲▲  END OF EMBEDDABLE SNIPPET  ▲▲▲ -->
+
+    <!-- Demo footer note -->
+    <footer class="faq-demo-footer">
+      <p>Files: <code>faq-component.html</code> &nbsp;+&nbsp; <code>faq-component.css</code> &nbsp;&mdash;&nbsp; No JavaScript required.</p>
+    </footer>
+
+  </div><!-- /faq-demo-wrapper -->
+
+</body>
+</html>

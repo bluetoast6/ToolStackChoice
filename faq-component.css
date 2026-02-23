@@ -1,0 +1,295 @@
+/*
+ * ═══════════════════════════════════════════════════════════════
+ * faq-component.css
+ * Self-contained styles for the reusable FAQ component.
+ *
+ * USAGE
+ * ─────
+ * 1. Link this file in your page <head>:
+ *      <link rel="stylesheet" href="faq-component.css" />
+ *
+ * 2. All component styles are scoped to .faq-component and
+ *    .faq-item — they will not conflict with your existing CSS.
+ *
+ * CUSTOMISATION VARIABLES
+ * ───────────────────────
+ * Override these in your own stylesheet (or in a :root block)
+ * after linking this file:
+ *
+ *   --faq-accent          Accent / open-state colour  (default: #2563eb)
+ *   --faq-border          Divider line colour          (default: #e5e7eb)
+ *   --faq-bg              Component background         (default: #ffffff)
+ *   --faq-bg-open         Open item background         (default: #f8faff)
+ *   --faq-text            Body text colour             (default: #111827)
+ *   --faq-text-muted      Muted / secondary text       (default: #6b7280)
+ *   --faq-radius          Border radius                (default: 6px)
+ *   --faq-max-width       Component max width          (default: 780px)
+ *   --faq-font            Font stack                   (default: system-ui)
+ *
+ * ═══════════════════════════════════════════════════════════════
+ */
+
+/* ── 1. Custom properties ── */
+:root {
+  --faq-accent:     #2563eb;
+  --faq-border:     #e5e7eb;
+  --faq-bg:         #ffffff;
+  --faq-bg-open:    #f0f5ff;
+  --faq-text:       #111827;
+  --faq-text-muted: #6b7280;
+  --faq-radius:     6px;
+  --faq-max-width:  780px;
+  --faq-font:       system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+/* ── 2. Component wrapper ── */
+.faq-component {
+  font-family:    var(--faq-font);
+  color:          var(--faq-text);
+  max-width:      var(--faq-max-width);
+  margin-inline:  auto;
+  /* Generous vertical rhythm when dropped into a page */
+  margin-block:   3rem;
+}
+
+/* ── 3. Section title (H2) ── */
+.faq-component__title {
+  font-size:      clamp(1.25rem, 2.5vw, 1.625rem);
+  font-weight:    800;
+  line-height:    1.25;
+  color:          var(--faq-text);
+  margin-bottom:  0.35em;
+  /* Ensure the heading is always visible when linked via anchor */
+  scroll-margin-top: 5rem;
+}
+
+/* ── 4. Optional intro paragraph ── */
+.faq-component__intro {
+  font-size:      0.9375rem;
+  color:          var(--faq-text-muted);
+  margin-bottom:  1.5rem;
+  line-height:    1.6;
+}
+
+/* ── 5. Individual FAQ item (<details>) ── */
+.faq-item {
+  background:     var(--faq-bg);
+  border-top:     1px solid var(--faq-border);
+  /* No border-radius on individual items — clean list look */
+}
+
+/* Last item gets a bottom border to close the list */
+.faq-item:last-of-type {
+  border-bottom:  1px solid var(--faq-border);
+}
+
+/* Remove the default browser disclosure triangle */
+.faq-item > summary {
+  list-style: none;
+}
+.faq-item > summary::-webkit-details-marker {
+  display: none;
+}
+
+/* ── 6. Open state: highlight the active item ── */
+.faq-item[open] {
+  background: var(--faq-bg-open);
+}
+
+.faq-item[open] .faq-item__question {
+  color: var(--faq-accent);
+}
+
+/* Rotate icon when open */
+.faq-item[open] .faq-item__icon::before {
+  transform: rotate(45deg);
+  color:     var(--faq-accent);
+}
+
+/* ── 7. Question row (<summary>) ── */
+.faq-item__question {
+  display:        flex;
+  align-items:    center;
+  justify-content: space-between;
+  gap:            1rem;
+  padding:        1rem 0;
+  cursor:         pointer;
+  color:          var(--faq-text);
+  /* Remove default focus outline; replaced with custom below */
+  outline:        none;
+  /* Prevent text selection on repeated clicks */
+  user-select:    none;
+  -webkit-user-select: none;
+}
+
+/* Keyboard focus ring — WCAG AA visible */
+.faq-item__question:focus-visible {
+  outline:        2px solid var(--faq-accent);
+  outline-offset: 2px;
+  border-radius:  var(--faq-radius);
+}
+
+/* Hover state */
+.faq-item__question:hover {
+  color: var(--faq-accent);
+}
+
+/* ── 8. H3 inside summary ── */
+.faq-item__question h3 {
+  font-size:      1rem;
+  font-weight:    600;
+  line-height:    1.4;
+  margin:         0;
+  /* Let the H3 grow; icon stays pinned right */
+  flex:           1;
+  /* Inherit colour from summary so hover/open states propagate */
+  color:          inherit;
+  scroll-margin-top: 5rem;
+}
+
+/* ── 9. Expand / collapse icon (pure CSS, no image) ── */
+.faq-item__icon {
+  flex-shrink:    0;
+  width:          1.25rem;
+  height:         1.25rem;
+  display:        flex;
+  align-items:    center;
+  justify-content: center;
+}
+
+/* Draw a "+" using a ::before pseudo-element */
+.faq-item__icon::before {
+  content:        "+";
+  font-size:      1.375rem;
+  font-weight:    300;
+  line-height:    1;
+  color:          var(--faq-text-muted);
+  display:        block;
+  transition:     transform 0.15s ease, color 0.15s ease;
+  /* Prevent the icon from inheriting bold from parent */
+  font-family:    var(--faq-font);
+}
+
+/* ── 10. Answer panel ── */
+.faq-item__answer {
+  padding:        0 0 1rem 0;
+}
+
+.faq-item__answer p {
+  font-size:      0.9375rem;
+  line-height:    1.65;
+  color:          var(--faq-text);
+  margin:         0;
+  /* Slightly indent the answer to visually separate from question */
+  padding-right:  2.25rem; /* matches icon width + gap */
+}
+
+/* ── 11. Responsive ── */
+@media (max-width: 600px) {
+  .faq-component {
+    margin-block: 2rem;
+  }
+
+  .faq-item__question {
+    padding: 0.875rem 0;
+  }
+
+  .faq-item__question h3 {
+    font-size: 0.9375rem;
+  }
+
+  .faq-item__answer p {
+    padding-right: 0;
+  }
+}
+
+/* ── 12. Print ── */
+@media print {
+  /* Show all answers when printing */
+  .faq-item {
+    display: block;
+  }
+
+  .faq-item__icon {
+    display: none;
+  }
+
+  .faq-item__answer {
+    display: block !important;
+  }
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   DEMO PAGE STYLES
+   These styles only affect the preview wrapper in faq-component.html.
+   They are NOT needed when embedding the component in a real page.
+   ═══════════════════════════════════════════════════════════════ */
+
+.faq-demo-body {
+  background:    #f3f4f6;
+  margin:        0;
+  padding:       2rem 1rem 4rem;
+  font-family:   system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color:         #111827;
+}
+
+.faq-demo-wrapper {
+  max-width:     860px;
+  margin-inline: auto;
+}
+
+.faq-demo-header {
+  padding:       2rem 0 1.5rem;
+  border-bottom: 2px solid #e5e7eb;
+  margin-bottom: 2.5rem;
+}
+
+.faq-demo-label {
+  font-size:     0.75rem;
+  font-weight:   700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color:         #6b7280;
+  margin-bottom: 0.4rem;
+}
+
+.faq-demo-title {
+  font-size:     clamp(1.5rem, 4vw, 2rem);
+  font-weight:   800;
+  margin-bottom: 0.5rem;
+  color:         #111827;
+}
+
+.faq-demo-desc {
+  font-size:     0.9375rem;
+  color:         #6b7280;
+  max-width:     60ch;
+  line-height:   1.6;
+  margin:        0;
+}
+
+.faq-demo-desc code {
+  background:    #e5e7eb;
+  padding:       0.1em 0.4em;
+  border-radius: 3px;
+  font-size:     0.875em;
+  color:         #111827;
+}
+
+.faq-demo-footer {
+  margin-top:    2.5rem;
+  padding-top:   1rem;
+  border-top:    1px solid #e5e7eb;
+  font-size:     0.8125rem;
+  color:         #9ca3af;
+  text-align:    center;
+}
+
+.faq-demo-footer code {
+  background:    #e5e7eb;
+  padding:       0.1em 0.4em;
+  border-radius: 3px;
+  font-size:     0.875em;
+  color:         #374151;
+}

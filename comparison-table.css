@@ -1,0 +1,448 @@
+/*
+ * ═══════════════════════════════════════════════════════════════
+ * comparison-table.css
+ * Self-contained styles for the reusable comparison table component.
+ *
+ * USAGE
+ * ─────
+ * Link this file in your page <head>:
+ *   <link rel="stylesheet" href="comparison-table.css" />
+ *
+ * All component styles are scoped to .ctbl-wrap, .ctbl, and
+ * .ctbl-* — they will not conflict with your existing CSS.
+ *
+ * CUSTOMISATION VARIABLES
+ * ───────────────────────
+ * Override any of these in your own stylesheet after this link:
+ *
+ *   --ctbl-accent-a     Tool A header colour    (default: #2563eb, blue)
+ *   --ctbl-accent-b     Tool B header colour    (default: #4f46e5, indigo)
+ *   --ctbl-accent-a-bg  Tool A header bg        (default: #eff6ff)
+ *   --ctbl-accent-b-bg  Tool B header bg        (default: #eef2ff)
+ *   --ctbl-border       Cell border colour      (default: #e5e7eb)
+ *   --ctbl-row-alt      Alternate row bg        (default: #f9fafb)
+ *   --ctbl-text         Body text               (default: #111827)
+ *   --ctbl-muted        Muted / note text       (default: #6b7280)
+ *   --ctbl-yes-color    "Yes" badge colour      (default: #16a34a, green)
+ *   --ctbl-no-color     "No" badge colour       (default: #dc2626, red)
+ *   --ctbl-partial-color "Partial" badge colour (default: #d97706, amber)
+ *   --ctbl-radius       Border radius           (default: 8px)
+ *   --ctbl-max-width    Component max width     (default: 860px)
+ *   --ctbl-font         Font stack              (default: system-ui)
+ * ═══════════════════════════════════════════════════════════════
+ */
+
+/* ── 1. Custom properties ── */
+:root {
+  --ctbl-accent-a:     #2563eb;
+  --ctbl-accent-b:     #4f46e5;
+  --ctbl-accent-a-bg:  #eff6ff;
+  --ctbl-accent-b-bg:  #eef2ff;
+  --ctbl-border:       #e5e7eb;
+  --ctbl-row-alt:      #f9fafb;
+  --ctbl-text:         #111827;
+  --ctbl-muted:        #6b7280;
+  --ctbl-yes-color:    #16a34a;
+  --ctbl-no-color:     #dc2626;
+  --ctbl-partial-color:#d97706;
+  --ctbl-radius:       8px;
+  --ctbl-max-width:    860px;
+  --ctbl-font:         system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+/* ── 2. Component wrapper ── */
+.ctbl-wrap {
+  font-family:   var(--ctbl-font);
+  color:         var(--ctbl-text);
+  max-width:     var(--ctbl-max-width);
+  margin-inline: auto;
+  margin-block:  2.5rem;
+}
+
+/* ── 3. Optional heading and subheading ── */
+.ctbl-heading {
+  font-size:     clamp(1.125rem, 2.5vw, 1.5rem);
+  font-weight:   800;
+  line-height:   1.25;
+  margin:        0 0 0.3em;
+  color:         var(--ctbl-text);
+  scroll-margin-top: 5rem;
+}
+
+.ctbl-subheading {
+  font-size:   0.875rem;
+  color:       var(--ctbl-muted);
+  margin:      0 0 1rem;
+  line-height: 1.5;
+}
+
+/* ── 4. Mobile scroll hint (hidden on desktop) ── */
+.ctbl-scroll-hint {
+  display:   none;
+  font-size: 0.75rem;
+  color:     var(--ctbl-muted);
+  margin:    0 0 0.4rem;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .ctbl-scroll-hint {
+    display: block;
+  }
+}
+
+/* ── 5. Overflow wrapper (horizontal scroll on small screens) ── */
+.ctbl-overflow {
+  overflow-x:                  auto;
+  -webkit-overflow-scrolling:  touch;
+  border:                      1px solid var(--ctbl-border);
+  border-radius:               var(--ctbl-radius);
+  /* Subtle shadow to indicate scrollability */
+  box-shadow:                  0 1px 3px rgba(0,0,0,0.06);
+}
+
+/* ── 6. Table base ── */
+.ctbl {
+  width:           100%;
+  border-collapse: collapse;
+  font-size:       0.9rem;
+  /* Minimum width prevents columns from becoming unreadably narrow */
+  min-width:       480px;
+  background:      #fff;
+}
+
+/* ── 7. Column header row ── */
+.ctbl thead tr {
+  border-bottom: 2px solid var(--ctbl-border);
+}
+
+.ctbl thead th {
+  padding:        0.75rem 1rem;
+  text-align:     left;
+  font-size:      0.8125rem;
+  font-weight:    700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  white-space:    nowrap;
+}
+
+/* Feature column header */
+.ctbl__feature-col {
+  background: var(--ctbl-row-alt);
+  color:      var(--ctbl-muted);
+  width:      34%;
+}
+
+/* Tool A column header */
+.ctbl__tool-col--a {
+  background: var(--ctbl-accent-a-bg);
+  color:      var(--ctbl-accent-a);
+  width:      33%;
+  border-left: 1px solid var(--ctbl-border);
+}
+
+/* Tool B column header */
+.ctbl__tool-col--b {
+  background: var(--ctbl-accent-b-bg);
+  color:      var(--ctbl-accent-b);
+  width:      33%;
+  border-left: 1px solid var(--ctbl-border);
+}
+
+/* ── 8. Body rows ── */
+.ctbl tbody tr {
+  border-bottom: 1px solid var(--ctbl-border);
+}
+
+.ctbl tbody tr:last-child {
+  border-bottom: none;
+}
+
+/* Alternating row background */
+.ctbl tbody tr:nth-child(even) {
+  background: var(--ctbl-row-alt);
+}
+
+/* Hover highlight */
+.ctbl tbody tr:hover {
+  background: #f0f5ff;
+}
+
+/* ── 9. Feature (row header) cell ── */
+.ctbl__feature {
+  padding:     0.75rem 1rem;
+  font-size:   0.875rem;
+  font-weight: 600;
+  color:       var(--ctbl-text);
+  text-align:  left;
+  vertical-align: top;
+  /* Prevent feature names from wrapping too aggressively */
+  white-space: normal;
+  min-width:   140px;
+}
+
+/* ── 10. Tool value cells ── */
+.ctbl__cell {
+  padding:        0.75rem 1rem;
+  font-size:      0.875rem;
+  color:          var(--ctbl-text);
+  vertical-align: top;
+  line-height:    1.5;
+  border-left:    1px solid var(--ctbl-border);
+}
+
+/* Subtle left-border accent per tool */
+.ctbl__cell--a {
+  border-left-color: var(--ctbl-border);
+}
+
+.ctbl__cell--b {
+  border-left-color: var(--ctbl-border);
+}
+
+/* ── 11. Yes / No / Partial badges ── */
+.ctbl-yes,
+.ctbl-no,
+.ctbl-partial {
+  display:        inline-block;
+  font-size:      0.75rem;
+  font-weight:    700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding:        0.15em 0.5em;
+  border-radius:  4px;
+  line-height:    1.4;
+  vertical-align: middle;
+}
+
+.ctbl-yes {
+  background: #dcfce7;
+  color:      var(--ctbl-yes-color);
+}
+
+.ctbl-no {
+  background: #fee2e2;
+  color:      var(--ctbl-no-color);
+}
+
+.ctbl-partial {
+  background: #fef3c7;
+  color:      var(--ctbl-partial-color);
+}
+
+/* ── 12. Inline note (secondary detail under a badge or value) ── */
+.ctbl-note {
+  display:   block;
+  font-size: 0.8rem;
+  color:     var(--ctbl-muted);
+  margin-top: 0.2rem;
+  font-weight: 400;
+}
+
+/* ── 13. Footer note ── */
+.ctbl-footnote {
+  font-size:  0.8rem;
+  color:      var(--ctbl-muted);
+  margin:     0.75rem 0 0;
+  line-height: 1.5;
+}
+
+.ctbl-footnote a {
+  color:           var(--ctbl-muted);
+  text-decoration: underline;
+}
+
+.ctbl-footnote a:hover {
+  color: var(--ctbl-text);
+}
+
+/* ── 14. Mobile: stacked card layout ── */
+/*
+ * On screens narrower than 600 px, each <tr> becomes a
+ * self-contained card. The feature name appears as a label
+ * above the two tool values, which sit side by side.
+ * This is achieved with CSS only — no JavaScript.
+ */
+@media (max-width: 600px) {
+
+  /* Remove the min-width constraint so the table can shrink */
+  .ctbl {
+    min-width: 0;
+    display:   block;
+  }
+
+  .ctbl thead {
+    display: none; /* Hidden: labels are injected via data-label */
+  }
+
+  .ctbl tbody {
+    display: block;
+  }
+
+  /* Each row becomes a card */
+  .ctbl tbody tr {
+    display:       block;
+    border:        1px solid var(--ctbl-border);
+    border-radius: var(--ctbl-radius);
+    margin-bottom: 0.75rem;
+    padding:       0.75rem;
+    background:    #fff;
+    box-shadow:    0 1px 3px rgba(0,0,0,0.05);
+  }
+
+  /* Remove the alternating bg on mobile — cards have their own border */
+  .ctbl tbody tr:nth-child(even) {
+    background: #fff;
+  }
+
+  .ctbl tbody tr:hover {
+    background: #f8faff;
+  }
+
+  /* Feature label spans full width at the top of the card */
+  .ctbl__feature {
+    display:       block;
+    width:         100%;
+    padding:       0 0 0.5rem;
+    border-bottom: 1px solid var(--ctbl-border);
+    margin-bottom: 0.5rem;
+    font-size:     0.8125rem;
+    color:         var(--ctbl-muted);
+    font-weight:   700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    white-space:   normal;
+  }
+
+  /* Tool cells sit side by side inside the card */
+  .ctbl__cell {
+    display:      inline-block;
+    width:        calc(50% - 0.5rem);
+    padding:      0.4rem 0;
+    border-left:  none;
+    vertical-align: top;
+    font-size:    0.875rem;
+  }
+
+  /* Add the tool name as a visible label via data-label attribute.
+     In the HTML, add data-label="[Tool A]" to each .ctbl__cell--a
+     and data-label="[Tool B]" to each .ctbl__cell--b for this to work.
+     The table still works without data-label — labels just won't show. */
+  .ctbl__cell::before {
+    content:        attr(data-label);
+    display:        block;
+    font-size:      0.6875rem;
+    font-weight:    700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom:  0.2rem;
+  }
+
+  .ctbl__cell--a::before { color: var(--ctbl-accent-a); }
+  .ctbl__cell--b::before { color: var(--ctbl-accent-b); }
+
+  /* Divider between the two tool cells */
+  .ctbl__cell--b {
+    border-left: 1px solid var(--ctbl-border);
+    padding-left: 0.75rem;
+    margin-left:  0.5rem;
+  }
+
+  /* Remove the outer overflow border on mobile — cards replace it */
+  .ctbl-overflow {
+    border:     none;
+    box-shadow: none;
+    overflow-x: visible;
+  }
+}
+
+/* ── 15. Print ── */
+@media print {
+  .ctbl-overflow {
+    overflow: visible;
+    box-shadow: none;
+  }
+
+  .ctbl tbody tr:hover {
+    background: inherit;
+  }
+
+  .ctbl-scroll-hint {
+    display: none;
+  }
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   DEMO PAGE STYLES
+   These styles only affect the preview wrapper in comparison-table.html.
+   They are NOT needed when embedding the component in a real page.
+   ═══════════════════════════════════════════════════════════════ */
+
+.ctbl-demo-body {
+  background:  #f3f4f6;
+  margin:      0;
+  padding:     2rem 1rem 4rem;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color:       #111827;
+}
+
+.ctbl-demo-wrapper {
+  max-width:     920px;
+  margin-inline: auto;
+}
+
+.ctbl-demo-header {
+  padding:       2rem 0 1.5rem;
+  border-bottom: 2px solid #e5e7eb;
+  margin-bottom: 2.5rem;
+}
+
+.ctbl-demo-label {
+  font-size:      0.75rem;
+  font-weight:    700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color:          #6b7280;
+  margin-bottom:  0.4rem;
+}
+
+.ctbl-demo-title {
+  font-size:     clamp(1.5rem, 4vw, 2rem);
+  font-weight:   800;
+  margin-bottom: 0.5rem;
+  color:         #111827;
+}
+
+.ctbl-demo-desc {
+  font-size:  0.9375rem;
+  color:      #6b7280;
+  max-width:  60ch;
+  line-height: 1.6;
+  margin:     0;
+}
+
+.ctbl-demo-desc code {
+  background:    #e5e7eb;
+  padding:       0.1em 0.4em;
+  border-radius: 3px;
+  font-size:     0.875em;
+  color:         #111827;
+}
+
+.ctbl-demo-footer {
+  margin-top:  2.5rem;
+  padding-top: 1rem;
+  border-top:  1px solid #e5e7eb;
+  font-size:   0.8125rem;
+  color:       #9ca3af;
+  text-align:  center;
+}
+
+.ctbl-demo-footer code {
+  background:    #e5e7eb;
+  padding:       0.1em 0.4em;
+  border-radius: 3px;
+  font-size:     0.875em;
+  color:         #374151;
+}

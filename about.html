@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — ToolStackChoice.com</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a href="#main-content" class="sr-only">Skip to main content</a>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="ToolStack Home">
+        <span class="logo-mark" aria-hidden="true">&#9632;</span> ToolStack
+      </a>
+      <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">&#9776;</button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
+        <ul role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="automation-tools.html">Automation Tools</a></li>
+          <li><a href="seo-tools.html">SEO Tools</a></li>
+          <li><a href="hosting.html">Hosting</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main-content">
+    <section class="hero">
+      <div class="container">
+        <h1>About ToolStackChoice.com</h1>
+        <p class="hero-sub">ToolStackChoice.com is an independent tool review and comparison site. Full about page coming soon.</p>
+        <a href="index.html" class="btn">&larr; Back to Home</a>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" aria-label="ToolStack Home">
+          <span class="logo-mark">&#9632;</span> ToolStack
+        </a>
+        <p>Independent tool reviews since 2024.</p>
+      </div>
+      <nav aria-label="Footer navigation">
+        <ul role="list" class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="automation-tools.html">Automation Tools</a></li>
+          <li><a href="make-com-review.html">Make.com Review</a></li>
+          <li><a href="n8n-cloud-review.html">n8n Cloud Review (2026)</a></li>
+          <li><a href="make-vs-n8n-cloud.html">Make vs n8n Comparison</a></li>
+          <li><a href="seo-tools.html">SEO Tools</a></li>
+          <li><a href="hosting.html">Hosting</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="footer-legal">
+        <p>&copy; 2026 ToolStack. All rights reserved.</p>
+        <p><a href="privacy.html">Privacy Policy</a> &middot; <a href="affiliate-disclosure.html">Affiliate Disclosure</a></p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var open = nav.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    })();
+  </script>
+</body>
+</html>

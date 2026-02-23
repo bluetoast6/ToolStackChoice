@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- ═══════════════════════════════════════════════════════════════
+       GOOGLE ANALYTICS 4 — PASTE YOUR TAG HERE
+       ───────────────────────────────────────────────────────────────
+       Replace this comment with the GA4 snippet from your account:
+         Analytics > Admin > Data Streams > [stream] > Tagging instructions
+         > "Install manually" > copy both script tags and paste here.
+       Your Measurement ID looks like: G-XXXXXXXXXX
+       ═══════════════════════════════════════════════════════════════ -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- ── Google Search Console site verification ──────────────────────
+       Replace the content value below with your real GSC verification
+       code from: Search Console → Settings → Ownership verification
+       → HTML tag → copy the content="..." value only.
+
+       When you have your code, the tag should look like this:
+         <meta name="google-site-verification" content="YOUR_CODE_HERE" />
+
+       Simply overwrite the placeholder value; the tag structure is
+       already correct and will not break when you paste the real code.
+  ──────────────────────────────────────────────────────────────────── -->
+  <meta name="google-site-verification" content="REPLACE-WITH-YOUR-GSC-VERIFICATION-CODE" />
+
+  <!--
+  ════════════════════════════════════════════════════════════════
+  COMPARE-TEMPLATE.HTML — Reusable "Tool A vs Tool B" page
+  ════════════════════════════════════════════════════════════════
+  HOW TO USE
+  ──────────
+  1. Duplicate this file and rename it, e.g. zapier-vs-make.html
+  2. Find-and-replace every [Tool A] and [Tool B] with real names
+  3. Fill in every [bracketed placeholder] with real content
+  4. Update <title>, <meta name="description">, and <link rel="canonical">
+  5. In the FAQ section near the bottom, paste your
+     <section class="faq-component"> block from faq-component.html
+  6. Add the FAQ stylesheet link below if not already present:
+       <link rel="stylesheet" href="faq-component.css" />
+  7. Update the FAQPage JSON-LD in <head> with real Q&A pairs
+  ════════════════════════════════════════════════════════════════
+  -->
+
+  <!-- ── Page meta (update for each comparison) ── -->
+  <title>[Tool A] vs [Tool B] ([Year]): Which is Better for You? — ToolStackChoice.com</title>
+  <meta name="description"
+        content="[Tool A] vs [Tool B]: a direct, hands-on comparison of features, pricing, and ideal use cases — so you can choose the right tool without the guesswork." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.toolstackchoice.com/compare/[tool-a]-vs-[tool-b]/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="[Tool A] vs [Tool B] ([Year]): Which is Better for You?" />
+  <meta property="og:description" content="A direct, hands-on comparison of [Tool A] and [Tool B] — features, pricing, and ideal use cases." />
+  <meta property="og:url"         content="https://www.toolstackchoice.com/compare/[tool-a]-vs-[tool-b]/" />
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       JSON-LD STRUCTURED DATA — SCHEMA.ORG
+       ───────────────────────────────────────────────────────────────
+       WHAT THIS IS
+       This block tells search engines and AI models what this page
+       is about in a machine-readable format (JSON-LD / Schema.org).
+
+       HOW TO USE
+       • Replace every value in [SQUARE BRACKETS] with real data.
+       • This template uses FAQPage schema (ideal for comparison pages).
+       • Optionally add a Product or Review node for each tool compared.
+       • Add an Organization node if not already declared site-wide.
+       • Keep the FAQ count here in sync with the FAQ section below.
+       • Validate at: https://validator.schema.org/
+
+       AISO NOTE
+       AI-powered search (SGE / Perplexity / Bing Copilot) reads
+       JSON-LD to extract facts, ratings, and entity relationships.
+       Keep values accurate, concise, and consistent with the visible
+       page content — AI models cross-check both.
+       ═══════════════════════════════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "[FAQ question 1 — e.g. What is the main difference between Tool A and Tool B?]",
+        "acceptedAnswer": { "@type": "Answer", "text": "[Direct one-sentence answer 1.]" }
+      },
+      {
+        "@type": "Question",
+        "name": "[FAQ question 2]",
+        "acceptedAnswer": { "@type": "Answer", "text": "[Direct one-sentence answer 2.]" }
+      },
+      {
+        "@type": "Question",
+        "name": "[FAQ question 3]",
+        "acceptedAnswer": { "@type": "Answer", "text": "[Direct one-sentence answer 3.]" }
+      },
+      {
+        "@type": "Question",
+        "name": "[FAQ question 4]",
+        "acceptedAnswer": { "@type": "Answer", "text": "[Direct one-sentence answer 4.]" }
+      },
+      {
+        "@type": "Question",
+        "name": "[FAQ question 5]",
+        "acceptedAnswer": { "@type": "Answer", "text": "[Direct one-sentence answer 5.]" }
+      },
+      {
+        "@type": "Question",
+        "name": "[FAQ question 6]",
+        "acceptedAnswer": { "@type": "Answer", "text": "[Direct one-sentence answer 6.]" }
+      },
+      {
+        "@type": "Question",
+        "name": "[FAQ question 7]",
+        "acceptedAnswer": { "@type": "Answer", "text": "[Direct one-sentence answer 7.]" }
+      },
+      {
+        "@type": "Question",
+        "name": "[FAQ question 8]",
+        "acceptedAnswer": { "@type": "Answer", "text": "[Direct one-sentence answer 8.]" }
+      },
+      {
+        "@type": "Question",
+        "name": "[FAQ question 9]",
+        "acceptedAnswer": { "@type": "Answer", "text": "[Direct one-sentence answer 9.]" }
+      },
+      {
+        "@type": "Question",
+        "name": "[FAQ question 10]",
+        "acceptedAnswer": { "@type": "Answer", "text": "[Direct one-sentence answer 10.]" }
+      }
+    ]
+  }
+  </script>
+  <!-- END JSON-LD ═══════════════════════════════════════════════ -->
+
+  <!-- ── Stylesheets ── -->
+  <!-- Main site styles (shared across all pages) -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Comparison-page-specific styles (scoped, does not override style.css) -->
+  <link rel="stylesheet" href="compare-template.css" />
+  <!--
+  When you paste the FAQ component into the FAQ section below,
+  also add this line:
+    <link rel="stylesheet" href="faq-component.css" />
+  -->
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════════════
+       SITE HEADER
+       ══════════════════════════════════════════════════════════ -->
+  <header class="ct-header" role="banner">
+    <div class="ct-header__inner">
+
+      <a href="index.html" class="ct-logo" aria-label="ToolStackChoice home">
+        <span class="ct-logo__mark" aria-hidden="true">&#9632;</span>
+        ToolStack
+      </a>
+
+      <nav class="ct-nav" aria-label="Primary navigation">
+        <ul role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="automation-tools.html">Automation Tools</a></li>
+          <li><a href="seo-tools.html">SEO Tools</a></li>
+          <li><a href="hosting.html">Hosting</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════════════════════════════════
+       MAIN CONTENT
+       ══════════════════════════════════════════════════════════ -->
+  <main id="main-content">
+    <div class="ct-layout">
+
+      <!-- ────────────────────────────────────────────────────
+           PRIMARY ARTICLE COLUMN
+           ──────────────────────────────────────────────────── -->
+      <article class="ct-article" aria-labelledby="ct-h1">
+
+        <!-- Breadcrumb -->
+        <nav class="ct-breadcrumb" aria-label="Breadcrumb">
+          <ol role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="[category].html">[Category, e.g. Automation Tools]</a></li>
+            <li aria-current="page">[Tool A] vs [Tool B]</li>
+          </ol>
+        </nav>
+
+        <!-- Page header -->
+        <header class="ct-page-header">
+          <div class="ct-page-header__meta">
+            <span class="ct-tag">[Category]</span>
+            <span class="ct-updated">Updated <time datetime="[YYYY-MM-DD]">[Month Year]</time></span>
+          </div>
+
+          <!-- ════ H1 ════ -->
+          <h1 id="ct-h1">[Tool A] vs [Tool B]: Which is better for you?</h1>
+
+          <p class="ct-standfirst">
+            A direct, hands-on comparison of [Tool A] and [Tool B] — covering features, pricing,
+            ease of use, and the specific situations where each tool wins.
+            Skip to the <a href="#ct-verdict">verdict</a> if you are short on time.
+          </p>
+
+          <!-- VS badge strip (decorative, no JS) -->
+          <div class="ct-vs-strip" aria-hidden="true">
+            <div class="ct-vs-badge ct-vs-badge--a">
+              <span class="ct-vs-badge__name">[Tool A]</span>
+              <span class="ct-vs-badge__label">Option A</span>
+            </div>
+            <span class="ct-vs-divider">vs</span>
+            <div class="ct-vs-badge ct-vs-badge--b">
+              <span class="ct-vs-badge__name">[Tool B]</span>
+              <span class="ct-vs-badge__label">Option B</span>
+            </div>
+          </div>
+        </header>
+
+
+        <!-- ════════════════════════════════════════════════════
+             SECTION 1 — Quick comparison
+             AEO: The summary paragraph + table together give a
+             complete answer to the "[Tool A] vs [Tool B]" head
+             query in a single section.
+             ════════════════════════════════════════════════════ -->
+        <section aria-labelledby="ct-quick">
+          <h2 id="ct-quick" class="ct-h2">Quick comparison: [Tool A] vs [Tool B]</h2>
+
+          <!--
+          ── AEO FIRST PARAGRAPH ──────────────────────────────
+          Write 40–80 words that directly answer the comparison
+          question. State the core trade-off in the first sentence.
+          ─────────────────────────────────────────────────────
+          -->
+          <p>
+            [Tool A] is best suited to [primary audience / use case, e.g. non-technical users who
+            need a fast, reliable automation tool with minimal setup], while [Tool B] is the stronger
+            choice for [contrasting audience / use case, e.g. teams that need advanced
+            data-transformation logic and are comfortable with a steeper learning curve]. The core
+            trade-off is [key differentiator, e.g. simplicity and breadth of integrations on one side
+            versus power and pricing flexibility on the other].
+          </p>
+
+          <!-- Comparison table -->
+          <div class="ct-table-wrap">
+            <table class="ct-table">
+              <thead>
+                <tr>
+                  <th scope="col">Criteria</th>
+                  <th scope="col">[Tool A]</th>
+                  <th scope="col">[Tool B]</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Starting price</th>
+                  <td>$[X] / mo</td>
+                  <td>$[Y] / mo</td>
+                </tr>
+                <tr>
+                  <th scope="row">Free plan</th>
+                  <td>[Yes — X tasks/mo / No]</td>
+                  <td>[Yes — X ops/mo / No]</td>
+                </tr>
+                <tr>
+                  <th scope="row">Pricing model</th>
+                  <td>[e.g. Per task / Per workflow / Per seat]</td>
+                  <td>[e.g. Per operation / Per scenario / Flat fee]</td>
+                </tr>
+                <tr>
+                  <th scope="row">Native integrations</th>
+                  <td>[e.g. 6,000+]</td>
+                  <td>[e.g. 1,500+]</td>
+                </tr>
+                <tr>
+                  <th scope="row">Ease of use</th>
+                  <td>[e.g. Beginner-friendly]</td>
+                  <td>[e.g. Moderate learning curve]</td>
+                </tr>
+                <tr>
+                  <th scope="row">Custom logic / code</th>
+                  <td>[e.g. Limited — via code steps]</td>
+                  <td>[e.g. Strong — built-in modules]</td>
+                </tr>
+                <tr>
+                  <th scope="row">Self-hosted option</th>
+                  <td>[Yes / No]</td>
+                  <td>[Yes / No]</td>
+                </tr>
+                <tr>
+                  <th scope="row">Support</th>
+                  <td>[e.g. Email + chat on paid plans]</td>
+                  <td>[e.g. Email on all plans, chat on Pro+]</td>
+                </tr>
+                <tr>
+                  <th scope="row">Ideal user type</th>
+                  <td>[e.g. Non-technical users, small teams]</td>
+                  <td>[e.g. Power users, developers, agencies]</td>
+                </tr>
+                <tr>
+                  <th scope="row">Our rating</th>
+                  <td><strong>[X.X] / 5</strong></td>
+                  <td><strong>[Y.Y] / 5</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- /table -->
+
+        </section>
+        <!-- /Section 1 -->
+
+
+        <!-- ════════════════════════════════════════════════════
+             SECTION 2 — What is [Tool A]?
+             AEO: Direct 60-word definition paragraph.
+             ════════════════════════════════════════════════════ -->
+        <section aria-labelledby="ct-what-a">
+          <h2 id="ct-what-a" class="ct-h2">What is [Tool A]?</h2>
+
+          <p>
+            [Tool A] is a [category, e.g. cloud-based automation platform] that allows [target users]
+            to [core value proposition, e.g. connect apps and automate workflows without writing code].
+            Founded in [year], it serves [scale, e.g. over X million users] and is widely regarded as
+            [market position, e.g. the most accessible entry point into workflow automation]. Its
+            [standout characteristic, e.g. library of 6,000+ pre-built integrations] makes it a
+            strong default choice for [primary audience].
+          </p>
+
+          <p>
+            Read our full <a href="[tool-a]-review.html">[Tool A] review</a> for a detailed
+            breakdown of features, pricing, and our hands-on verdict.
+          </p>
+        </section>
+        <!-- /Section 2 -->
+
+
+        <!-- ════════════════════════════════════════════════════
+             SECTION 3 — What is [Tool B]?
+             AEO: Direct 60-word definition paragraph.
+             ════════════════════════════════════════════════════ -->
+        <section aria-labelledby="ct-what-b">
+          <h2 id="ct-what-b" class="ct-h2">What is [Tool B]?</h2>
+
+          <p>
+            [Tool B] is a [category, e.g. visual automation platform] that enables [target users] to
+            [core value proposition, e.g. build complex, multi-step workflows using a scenario-based
+            drag-and-drop interface]. Founded in [year] and [context, e.g. rebranded from Integromat
+            in 2022], it is known for [standout characteristic, e.g. its flexible pricing model and
+            powerful data-transformation capabilities]. It is particularly popular among [primary
+            audience, e.g. agencies and technical users who need fine-grained control].
+          </p>
+
+          <p>
+            Read our full <a href="[tool-b]-review.html">[Tool B] review</a> for a detailed
+            breakdown of features, pricing, and our hands-on verdict.
+          </p>
+        </section>
+        <!-- /Section 3 -->
+
+
+        <!-- ════════════════════════════════════════════════════
+             SECTION 4 — Key differences
+             AEO: Bulleted list aids featured-snippet extraction
+             for "[Tool A] vs [Tool B] difference" queries.
+             ════════════════════════════════════════════════════ -->
+        <section aria-labelledby="ct-differences">
+          <h2 id="ct-differences" class="ct-h2">Key differences between [Tool A] and [Tool B]</h2>
+
+          <p>
+            These are the distinctions that matter most when choosing between the two tools.
+          </p>
+
+          <ul class="ct-list">
+            <li>
+              <strong>Pricing model.</strong>
+              [Tool A] charges [per task / per workflow / per seat], which [advantage/disadvantage,
+              e.g. keeps costs predictable for low-volume users but scales steeply with usage].
+              [Tool B] charges [per operation / per scenario / flat fee], which [advantage/disadvantage,
+              e.g. rewards complex workflows but can be harder to estimate upfront].
+            </li>
+            <li>
+              <strong>Ease of use.</strong>
+              [Tool A] is [description, e.g. designed for non-technical users with a simple
+              two-step trigger-action model], while [Tool B] [description, e.g. offers a more
+              powerful visual canvas that requires more time to learn but unlocks greater flexibility].
+            </li>
+            <li>
+              <strong>Integration breadth.</strong>
+              [Tool A] offers [X] native integrations; [Tool B] offers [Y].
+              [Context, e.g. For most common business apps both tools provide adequate coverage,
+              but Tool A's wider library gives it an edge for niche or legacy software.]
+            </li>
+            <li>
+              <strong>Data transformation.</strong>
+              [Tool A] [description, e.g. handles basic data mapping well but requires code steps
+              for complex transformations]. [Tool B] [description, e.g. includes built-in modules
+              for parsing, aggregating, and reformatting data without code].
+            </li>
+            <li>
+              <strong>Self-hosting.</strong>
+              [Tool A] [is / is not] available as a self-hosted option.
+              [Tool B] [is / is not], [context, e.g. making it the better choice for teams with
+              strict data-residency requirements].
+            </li>
+            <li>
+              <strong>Support and community.</strong>
+              [Tool A] [description, e.g. provides email and live chat on paid plans and has a
+              large community forum]. [Tool B] [description, e.g. offers email support on all plans
+              with an active user community and extensive documentation].
+            </li>
+          </ul>
+        </section>
+        <!-- /Section 4 -->
+
+
+        <!-- ════════════════════════════════════════════════════
+             SECTION 5 — Who should choose [Tool A]?
+             AEO: Answers "who is [Tool A] best for?" intent.
+             ════════════════════════════════════════════════════ -->
+        <section aria-labelledby="ct-choose-a">
+          <h2 id="ct-choose-a" class="ct-h2">Who should choose [Tool A]?</h2>
+
+          <p>
+            Choose [Tool A] if you prioritise [key benefit, e.g. ease of setup and the widest
+            possible integration library] over [trade-off, e.g. cost efficiency at high task
+            volumes]. It is the better fit when you need [use case, e.g. a reliable,
+            low-maintenance automation layer that non-technical team members can manage
+            independently].
+          </p>
+
+          <ul class="ct-list">
+            <li>
+              <strong>[User type 1, e.g. Solopreneurs and freelancers]</strong> who need
+              [reason, e.g. quick automations between common tools like Gmail, Slack, and Notion
+              without any technical setup].
+            </li>
+            <li>
+              <strong>[User type 2, e.g. Small marketing teams]</strong> who
+              [reason, e.g. want to automate lead capture, CRM updates, and social publishing
+              without involving a developer].
+            </li>
+            <li>
+              <strong>[User type 3, e.g. Businesses using popular SaaS tools]</strong> who
+              [reason, e.g. benefit most from Tool A's broad native integration library and
+              pre-built workflow templates].
+            </li>
+            <li>
+              <strong>[User type 4, e.g. Teams with a limited automation budget]</strong> who
+              [reason, e.g. run a low volume of tasks per month and stay within the free or
+              entry-level tier].
+            </li>
+          </ul>
+
+          <p>
+            <a href="#" class="ct-cta-link" rel="nofollow noopener" target="_blank">
+              Try [Tool A] &rarr;
+            </a>
+          </p>
+        </section>
+        <!-- /Section 5 -->
+
+
+        <!-- ════════════════════════════════════════════════════
+             SECTION 6 — Who should choose [Tool B]?
+             AEO: Answers "who is [Tool B] best for?" intent.
+             ════════════════════════════════════════════════════ -->
+        <section aria-labelledby="ct-choose-b">
+          <h2 id="ct-choose-b" class="ct-h2">Who should choose [Tool B]?</h2>
+
+          <p>
+            Choose [Tool B] if you need [key benefit, e.g. more control over data handling and
+            a pricing model that stays affordable as your workflow volume grows]. It is the
+            stronger choice when [use case, e.g. your automations involve multi-step logic,
+            data transformation, or scenarios that would become prohibitively expensive under
+            a per-task pricing model].
+          </p>
+
+          <ul class="ct-list">
+            <li>
+              <strong>[User type 1, e.g. Developers and technical users]</strong> who need
+              [reason, e.g. fine-grained control over data flow, custom API calls, and complex
+              conditional logic].
+            </li>
+            <li>
+              <strong>[User type 2, e.g. Agencies managing multiple client workflows]</strong> who
+              [reason, e.g. need a cost-effective model that does not penalise high operation counts].
+            </li>
+            <li>
+              <strong>[User type 3, e.g. Teams with data-residency requirements]</strong> who
+              [reason, e.g. require a self-hosted deployment option to keep data within their
+              own infrastructure].
+            </li>
+            <li>
+              <strong>[User type 4, e.g. Power users migrating from simpler tools]</strong> who
+              [reason, e.g. have outgrown basic trigger-action automation and need multi-branch,
+              iterative workflows].
+            </li>
+          </ul>
+
+          <p>
+            <a href="#" class="ct-cta-link" rel="nofollow noopener" target="_blank">
+              Try [Tool B] &rarr;
+            </a>
+          </p>
+        </section>
+        <!-- /Section 6 -->
+
+
+        <!-- ════════════════════════════════════════════════════
+             SECTION 7 — FAQ slot
+             ════════════════════════════════════════════════════
+             This section is intentionally left as a clean slot.
+
+             TO ADD THE FAQ COMPONENT:
+             ─────────────────────────
+             1. Add this line to <head>:
+                  <link rel="stylesheet" href="faq-component.css" />
+
+             2. Copy the <section class="faq-component"> block
+                from faq-component.html and paste it in place
+                of the HTML comment below.
+
+             3. Change the <h2> inside the component to:
+                  FAQ: [Tool A] vs [Tool B]
+
+             4. Replace the placeholder questions and answers
+                with real content.
+
+             5. Update the FAQPage JSON-LD in <head> to match.
+             ════════════════════════════════════════════════════ -->
+        <section class="ct-faq-slot" aria-labelledby="ct-faq-heading">
+          <h2 id="ct-faq-heading" class="ct-h2">FAQ: [Tool A] vs [Tool B]</h2>
+
+          <!--
+          ╔══════════════════════════════════════════════════════╗
+          ║  PASTE YOUR FAQ COMPONENT HERE                       ║
+          ║                                                      ║
+          ║  Replace this comment block with the                 ║
+          ║  <section class="faq-component"> ... </section>      ║
+          ║  snippet from faq-component.html.                    ║
+          ║                                                      ║
+          ║  Remove the <h2> inside the pasted component         ║
+          ║  (the one above already serves as the heading).      ║
+          ╚══════════════════════════════════════════════════════╝
+          -->
+
+          <p class="ct-faq-slot__placeholder">
+            <em>FAQ content goes here. Paste the FAQ component block above this paragraph, then delete this line.</em>
+          </p>
+
+        </section>
+        <!-- /Section 7 — FAQ slot -->
+
+
+        <!-- ════════════════════════════════════════════════════
+             VERDICT
+             ════════════════════════════════════════════════════ -->
+        <section class="ct-verdict" id="ct-verdict" aria-labelledby="ct-verdict-heading">
+          <h2 id="ct-verdict-heading" class="ct-h2">Our verdict: [Tool A] vs [Tool B]</h2>
+
+          <div class="ct-verdict__grid">
+
+            <div class="ct-verdict__col">
+              <p class="ct-verdict__label">Choose <strong>[Tool A]</strong> if&hellip;</p>
+              <ul>
+                <li>[Condition 1, e.g. you want the fastest setup with the widest app library]</li>
+                <li>[Condition 2, e.g. your team is non-technical and needs to manage workflows independently]</li>
+                <li>[Condition 3, e.g. your monthly task volume stays within the free or starter tier]</li>
+              </ul>
+              <p class="ct-verdict__rating">Our rating: <strong>[X.X] / 5</strong></p>
+              <a href="#" class="ct-btn" rel="nofollow noopener" target="_blank">Try [Tool A] &rarr;</a>
+            </div>
+
+            <div class="ct-verdict__col">
+              <p class="ct-verdict__label">Choose <strong>[Tool B]</strong> if&hellip;</p>
+              <ul>
+                <li>[Condition 1, e.g. you need advanced data transformation or multi-branch logic]</li>
+                <li>[Condition 2, e.g. you are running high task volumes and need a cost-effective pricing model]</li>
+                <li>[Condition 3, e.g. you require a self-hosted option for data-residency compliance]</li>
+              </ul>
+              <p class="ct-verdict__rating">Our rating: <strong>[Y.Y] / 5</strong></p>
+              <a href="#" class="ct-btn ct-btn--outline" rel="nofollow noopener" target="_blank">Try [Tool B] &rarr;</a>
+            </div>
+
+          </div>
+
+          <p class="ct-affiliate-note">
+            Affiliate disclosure: ToolStackChoice.com may earn a commission if you purchase
+            through the links above. This does not affect our editorial independence or scoring.
+          </p>
+        </section>
+        <!-- /Verdict -->
+
+      </article>
+      <!-- /ct-article -->
+
+
+      <!-- ────────────────────────────────────────────────────
+           SIDEBAR
+           ──────────────────────────────────────────────────── -->
+      <aside class="ct-sidebar" aria-label="Comparison quick reference">
+
+        <!-- At-a-glance winners -->
+        <div class="ct-sidebar__box">
+          <h2 class="ct-sidebar__title">At a glance</h2>
+
+          <dl class="ct-winners">
+            <div class="ct-winners__row">
+              <dt>Best overall</dt>
+              <dd>
+                <strong>[Tool A / Tool B]</strong>
+                <span>[One-line reason, e.g. Easier to use with the widest integration library]</span>
+              </dd>
+            </div>
+            <div class="ct-winners__row">
+              <dt>Best value</dt>
+              <dd>
+                <strong>[Tool A / Tool B]</strong>
+                <span>[One-line reason, e.g. More affordable at high task volumes]</span>
+              </dd>
+            </div>
+            <div class="ct-winners__row">
+              <dt>Best for beginners</dt>
+              <dd>
+                <strong>[Tool A / Tool B]</strong>
+                <span>[One-line reason, e.g. Simpler setup with guided templates]</span>
+              </dd>
+            </div>
+          </dl>
+        </div>
+        <!-- /At a glance -->
+
+        <!-- On this page (table of contents) -->
+        <nav class="ct-sidebar__box ct-toc" aria-label="On this page">
+          <h2 class="ct-sidebar__title">On this page</h2>
+          <ol class="ct-toc__list" role="list">
+            <li><a href="#ct-quick">Quick comparison</a></li>
+            <li><a href="#ct-what-a">What is [Tool A]?</a></li>
+            <li><a href="#ct-what-b">What is [Tool B]?</a></li>
+            <li><a href="#ct-differences">Key differences</a></li>
+            <li><a href="#ct-choose-a">Who should choose [Tool A]?</a></li>
+            <li><a href="#ct-choose-b">Who should choose [Tool B]?</a></li>
+            <li><a href="#ct-faq-heading">FAQ</a></li>
+            <li><a href="#ct-verdict">Our verdict</a></li>
+          </ol>
+        </nav>
+        <!-- /ToC -->
+
+        <!-- Related comparisons -->
+        <div class="ct-sidebar__box">
+          <h2 class="ct-sidebar__title">Related comparisons</h2>
+          <ul class="ct-sidebar__links" role="list">
+            <li><a href="#">[Tool A] vs [Alternative] Comparison</a></li>
+            <li><a href="#">[Tool B] vs [Alternative] Comparison</a></li>
+            <li><a href="#">Best [Category] Tools ([Year])</a></li>
+          </ul>
+        </div>
+
+        <!-- Full reviews -->
+        <div class="ct-sidebar__box">
+          <h2 class="ct-sidebar__title">Full reviews</h2>
+          <ul class="ct-sidebar__links" role="list">
+            <li><a href="[tool-a]-review.html">[Tool A] Review ([Year])</a></li>
+            <li><a href="[tool-b]-review.html">[Tool B] Review ([Year])</a></li>
+          </ul>
+        </div>
+
+      </aside>
+      <!-- /ct-sidebar -->
+
+    </div>
+    <!-- /ct-layout -->
+  </main>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       SITE FOOTER
+       ══════════════════════════════════════════════════════════ -->
+  <footer class="ct-footer" role="contentinfo">
+    <div class="ct-footer__inner">
+
+      <div class="ct-footer__brand">
+        <a href="index.html" class="ct-logo" aria-label="ToolStackChoice home">
+          <span class="ct-logo__mark" aria-hidden="true">&#9632;</span>
+          ToolStack
+        </a>
+        <p>Independent tool reviews since 2024.</p>
+      </div>
+
+      <nav aria-label="Footer navigation">
+        <ul role="list" class="ct-footer__nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="automation-tools.html">Automation Tools</a></li>
+          <li><a href="seo-tools.html">SEO Tools</a></li>
+          <li><a href="hosting.html">Hosting</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="ct-footer__legal">
+        <p>&copy; [Year] ToolStack. All rights reserved.</p>
+        <p>
+          <a href="privacy.html">Privacy Policy</a>
+          &middot;
+          <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- NO JAVASCRIPT — this page requires none -->
+
+</body>
+</html>

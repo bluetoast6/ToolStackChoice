@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- ═══════════════════════════════════════════════════════════════
+       GOOGLE ANALYTICS 4 — PASTE YOUR TAG HERE
+       ───────────────────────────────────────────────────────────────
+       Replace this comment with the GA4 snippet from your account:
+         Analytics > Admin > Data Streams > [stream] > Tagging instructions
+         > "Install manually" > copy both script tags and paste here.
+       Your Measurement ID looks like: G-XXXXXXXXXX
+       ═══════════════════════════════════════════════════════════════ -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- ── Google Search Console site verification ──────────────────────
+       Replace the content value below with your real GSC verification
+       code from: Search Console → Settings → Ownership verification
+       → HTML tag → copy the content="..." value only.
+
+       When you have your code, the tag should look like this:
+         <meta name="google-site-verification" content="YOUR_CODE_HERE" />
+
+       Simply overwrite the placeholder value; the tag structure is
+       already correct and will not break when you paste the real code.
+  ──────────────────────────────────────────────────────────────────── -->
+  <meta name="google-site-verification" content="REPLACE-WITH-YOUR-GSC-VERIFICATION-CODE" />
+  <title>Comparison Table Component — ToolStackChoice.com</title>
+
+  <!--
+  ════════════════════════════════════════════════════════════════
+  COMPARISON TABLE COMPONENT — USAGE INSTRUCTIONS
+  ════════════════════════════════════════════════════════════════
+
+  HOW TO DROP THIS INTO ANY PAGE
+  ────────────────────────────────
+  1. Add this <link> to your page <head>:
+       <link rel="stylesheet" href="comparison-table.css" />
+
+  2. Copy the <div class="ctbl-wrap"> block from the
+     EMBEDDABLE SNIPPET section below.
+
+  3. Replace [Tool A] and [Tool B] in the <thead> with real names.
+
+  4. Replace each [Feature N] and cell values with real content.
+
+  5. Add or remove <tr> blocks inside <tbody> as needed.
+     Each row follows the same three-cell pattern.
+
+  CUSTOMISATION
+  ─────────────
+  • Tool names     → change the <th> text in <thead>
+  • Row count      → add / remove <tr> blocks in <tbody>
+  • Accent colours → override --ctbl-accent-a / --ctbl-accent-b
+  • Max width      → override --ctbl-max-width
+  • Cell values    → use plain text, a ✓/✗ symbol, or a <span>
+
+  MOBILE BEHAVIOUR
+  ────────────────
+  On screens narrower than 600 px the table switches to a
+  stacked card layout — each row becomes its own block with
+  the feature name as a label above the two tool values.
+  No JavaScript is involved; the layout is driven entirely
+  by CSS custom properties and media queries.
+
+  NO JAVASCRIPT REQUIRED
+  ════════════════════════════════════════════════════════════════
+  -->
+
+  <link rel="stylesheet" href="comparison-table.css" />
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       JSON-LD STRUCTURED DATA — SCHEMA.ORG
+       ───────────────────────────────────────────────────────────────
+       WHAT THIS IS
+       This block tells search engines and AI models what this page
+       is about in a machine-readable format (JSON-LD / Schema.org).
+
+       HOW TO USE
+       • Replace every value in [SQUARE BRACKETS] with real data.
+       • This demo page uses Organization + Product schema.
+       • When embedding the table in a real review or comparison page,
+         replace the Product node with a Review or FAQPage node
+         matching that page’s content.
+       • Validate at: https://validator.schema.org/
+
+       AISO NOTE
+       AI-powered search (SGE / Perplexity / Bing Copilot) reads
+       JSON-LD to extract facts, ratings, and entity relationships.
+       Keep values accurate, concise, and consistent with the visible
+       page content — AI models cross-check both.
+       ═══════════════════════════════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+
+      {
+        "@type": "Organization",
+        "@id": "https://[YOUR-DOMAIN].com/#organization",
+        "name": "ToolStackChoice",
+        "url": "https://[YOUR-DOMAIN].com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://[YOUR-DOMAIN].com/assets/logo.png",
+          "width": 200,
+          "height": 60
+        },
+        "description": "Independent reviews and side-by-side comparisons of automation, SEO, and hosting tools."
+      },
+
+      {
+        "@type": "Product",
+        "name": "[Tool A] — [e.g. Automation Platform]",
+        "description": "[One-sentence description of Tool A.]",
+        "url": "https://[tool-a-website].com",
+        "brand": {
+          "@type": "Brand",
+          "name": "[Tool A Brand Name]"
+        },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "USD",
+          "price": "[e.g. 19.00]",
+          "priceValidUntil": "[YYYY-MM-DD]",
+          "availability": "https://schema.org/InStock",
+          "url": "https://[tool-a-pricing-page].com"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "[e.g. 4.4]",
+          "bestRating": "5",
+          "worstRating": "1",
+          "reviewCount": "[e.g. 1]"
+        }
+      },
+
+      {
+        "@type": "Product",
+        "name": "[Tool B] — [e.g. Visual Automation Platform]",
+        "description": "[One-sentence description of Tool B.]",
+        "url": "https://[tool-b-website].com",
+        "brand": {
+          "@type": "Brand",
+          "name": "[Tool B Brand Name]"
+        },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "USD",
+          "price": "[e.g. 9.00]",
+          "priceValidUntil": "[YYYY-MM-DD]",
+          "availability": "https://schema.org/InStock",
+          "url": "https://[tool-b-pricing-page].com"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "[e.g. 4.6]",
+          "bestRating": "5",
+          "worstRating": "1",
+          "reviewCount": "[e.g. 1]"
+        }
+      }
+
+    ]
+  }
+  </script>
+  <!-- END JSON-LD ═══════════════════════════════════════════════ -->
+
+</head>
+<body class="ctbl-demo-body">
+
+  <div class="ctbl-demo-wrapper">
+
+    <!-- Demo header -->
+    <header class="ctbl-demo-header">
+      <p class="ctbl-demo-label">Component preview</p>
+      <h1 class="ctbl-demo-title">Comparison Table Component</h1>
+      <p class="ctbl-demo-desc">
+        A self-contained, reusable feature comparison table.
+        No JavaScript. Drop the <code>&lt;div class="ctbl-wrap"&gt;</code> block
+        and <code>comparison-table.css</code> into any page.
+      </p>
+    </header>
+
+    <!-- ══════════════════════════════════════════════════════════
+         ▼▼▼  EMBEDDABLE SNIPPET — copy from here  ▼▼▼
+         ══════════════════════════════════════════════════════════ -->
+
+    <!--
+    ┌──────────────────────────────────────────────────────────────┐
+    │  COPY THIS <div class="ctbl-wrap"> BLOCK INTO YOUR PAGE      │
+    │  Replace [Tool A] and [Tool B] in <thead>.                   │
+    │  Replace each [Feature N] and cell values in <tbody>.        │
+    │  Add or remove <tr> rows as needed.                          │
+    └──────────────────────────────────────────────────────────────┘
+    -->
+
+    <div class="ctbl-wrap">
+
+      <!-- Optional section heading — remove if not needed -->
+      <h2 class="ctbl-heading">Feature comparison: [Tool A] vs [Tool B]</h2>
+      <p class="ctbl-subheading">
+        Key features compared side by side. Last verified
+        <time datetime="2026-02">February 2026</time>.
+      </p>
+
+      <!-- Scroll hint shown only on mobile (CSS-only, no JS) -->
+      <p class="ctbl-scroll-hint" aria-hidden="true">Scroll right to see all columns &rarr;</p>
+
+      <div class="ctbl-overflow">
+        <table class="ctbl">
+          <thead>
+            <tr>
+              <th scope="col" class="ctbl__feature-col">Feature</th>
+              <!-- ↓ Replace [Tool A] and [Tool B] with real names ↓ -->
+              <th scope="col" class="ctbl__tool-col ctbl__tool-col--a">[Tool A]</th>
+              <th scope="col" class="ctbl__tool-col ctbl__tool-col--b">[Tool B]</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <!-- ── Row 1 ── -->
+            <tr>
+              <th scope="row" class="ctbl__feature">
+                [Feature 1 — e.g. Starting price]
+              </th>
+              <td class="ctbl__cell ctbl__cell--a">
+                [e.g. $19 / mo]
+              </td>
+              <td class="ctbl__cell ctbl__cell--b">
+                [e.g. $9 / mo]
+              </td>
+            </tr>
+
+            <!-- ── Row 2 ── -->
+            <tr>
+              <th scope="row" class="ctbl__feature">
+                [Feature 2 — e.g. Free plan]
+              </th>
+              <td class="ctbl__cell ctbl__cell--a">
+                <span class="ctbl-yes">Yes</span>
+                <span class="ctbl-note">[e.g. 100 tasks / mo]</span>
+              </td>
+              <td class="ctbl__cell ctbl__cell--b">
+                <span class="ctbl-yes">Yes</span>
+                <span class="ctbl-note">[e.g. 1,000 ops / mo]</span>
+              </td>
+            </tr>
+
+            <!-- ── Row 3 ── -->
+            <tr>
+              <th scope="row" class="ctbl__feature">
+                [Feature 3 — e.g. Native integrations]
+              </th>
+              <td class="ctbl__cell ctbl__cell--a">
+                [e.g. 6,000+]
+              </td>
+              <td class="ctbl__cell ctbl__cell--b">
+                [e.g. 1,500+]
+              </td>
+            </tr>
+
+            <!-- ── Row 4 ── -->
+            <tr>
+              <th scope="row" class="ctbl__feature">
+                [Feature 4 — e.g. Ease of use]
+              </th>
+              <td class="ctbl__cell ctbl__cell--a">
+                [e.g. Beginner-friendly]
+              </td>
+              <td class="ctbl__cell ctbl__cell--b">
+                [e.g. Moderate learning curve]
+              </td>
+            </tr>
+
+            <!-- ── Row 5 ── -->
+            <tr>
+              <th scope="row" class="ctbl__feature">
+                [Feature 5 — e.g. Custom logic / code steps]
+              </th>
+              <td class="ctbl__cell ctbl__cell--a">
+                <span class="ctbl-partial">Limited</span>
+                <span class="ctbl-note">[e.g. via code steps only]</span>
+              </td>
+              <td class="ctbl__cell ctbl__cell--b">
+                <span class="ctbl-yes">Strong</span>
+                <span class="ctbl-note">[e.g. built-in data modules]</span>
+              </td>
+            </tr>
+
+            <!-- ── Row 6 ── -->
+            <tr>
+              <th scope="row" class="ctbl__feature">
+                [Feature 6 — e.g. Self-hosted option]
+              </th>
+              <td class="ctbl__cell ctbl__cell--a">
+                <span class="ctbl-no">No</span>
+              </td>
+              <td class="ctbl__cell ctbl__cell--b">
+                <span class="ctbl-yes">Yes</span>
+              </td>
+            </tr>
+
+            <!-- ── Row 7 ── -->
+            <tr>
+              <th scope="row" class="ctbl__feature">
+                [Feature 7 — e.g. Support channels]
+              </th>
+              <td class="ctbl__cell ctbl__cell--a">
+                [e.g. Email + live chat on paid plans]
+              </td>
+              <td class="ctbl__cell ctbl__cell--b">
+                [e.g. Email on all plans; chat on Pro+]
+              </td>
+            </tr>
+
+            <!-- ── Row 8 ── -->
+            <tr>
+              <th scope="row" class="ctbl__feature">
+                [Feature 8 — e.g. Our rating]
+              </th>
+              <td class="ctbl__cell ctbl__cell--a">
+                <strong>[e.g. 4.4 / 5]</strong>
+              </td>
+              <td class="ctbl__cell ctbl__cell--b">
+                <strong>[e.g. 4.6 / 5]</strong>
+              </td>
+            </tr>
+
+            <!--
+            ADD MORE ROWS HERE — copy any <tr> block above,
+            paste it below this comment, and fill in the content.
+            -->
+
+          </tbody>
+        </table>
+      </div>
+      <!-- /ctbl-overflow -->
+
+      <!-- Optional footer note -->
+      <p class="ctbl-footnote">
+        Prices and features are indicative. Always verify on the vendor&rsquo;s
+        official site before purchasing.
+        <a href="affiliate-disclosure.html">Affiliate disclosure</a>.
+      </p>
+
+    </div>
+    <!-- ▲▲▲  END OF EMBEDDABLE SNIPPET  ▲▲▲ -->
+
+    <!-- Demo footer -->
+    <footer class="ctbl-demo-footer">
+      <p>
+        Files: <code>comparison-table.html</code> &nbsp;+&nbsp;
+        <code>comparison-table.css</code> &nbsp;&mdash;&nbsp; No JavaScript required.
+      </p>
+    </footer>
+
+  </div><!-- /ctbl-demo-wrapper -->
+
+</body>
+</html>
