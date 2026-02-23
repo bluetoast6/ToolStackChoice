@@ -84,10 +84,20 @@
 }
 
 .ct-logo:hover { color: var(--ct-accent-a); }
-
-.ct-logo__mark {
-  color:     var(--ct-accent-a);
-  font-size: 0.7em;
+.ct-logo:hover .logo-img { opacity: 0.88; }
+.ct-logo__mark { display: none; }
+.ct-logo .logo-img {
+  height: 44px;
+  width:  auto;
+  max-width: 44px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+.ct-logo .logo-text {
+  font-size: 1.0625rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
 }
 
 /* ── 5. Primary navigation ── */
