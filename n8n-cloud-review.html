@@ -96,6 +96,7 @@
   <!-- END JSON-LD ═══════════════════════════════════════════════ -->
 
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="visuals.css" />
 </head>
 <body>
 
@@ -149,6 +150,47 @@
 
           <!-- Summary scorecard -->
           <div class="scorecard" role="region" aria-label="Review summary scorecard">
+          <!-- Visual: score bar chart -->
+          <figure class="score-chart" aria-label="Score breakdown bar chart" loading="lazy">
+            
+            <div class="score-chart__row">
+              <span class="score-chart__label">Ease of use</span>
+              <div class="score-chart__bar-track" role="presentation">
+                <div class="score-chart__bar-fill" style="width:70.0%" aria-hidden="true"></div>
+              </div>
+              <span class="score-chart__value">3.5</span>
+            </div>
+            <div class="score-chart__row">
+              <span class="score-chart__label">Feature depth</span>
+              <div class="score-chart__bar-track" role="presentation">
+                <div class="score-chart__bar-fill" style="width:98.0%" aria-hidden="true"></div>
+              </div>
+              <span class="score-chart__value">4.9</span>
+            </div>
+            <div class="score-chart__row">
+              <span class="score-chart__label">Pricing fairness</span>
+              <div class="score-chart__bar-track" role="presentation">
+                <div class="score-chart__bar-fill" style="width:86.0%" aria-hidden="true"></div>
+              </div>
+              <span class="score-chart__value">4.3</span>
+            </div>
+            <div class="score-chart__row">
+              <span class="score-chart__label">Reliability</span>
+              <div class="score-chart__bar-track" role="presentation">
+                <div class="score-chart__bar-fill" style="width:92.0%" aria-hidden="true"></div>
+              </div>
+              <span class="score-chart__value">4.6</span>
+            </div>
+            <div class="score-chart__row">
+              <span class="score-chart__label">Support quality</span>
+              <div class="score-chart__bar-track" role="presentation">
+                <div class="score-chart__bar-fill" style="width:82.0%" aria-hidden="true"></div>
+              </div>
+              <span class="score-chart__value">4.1</span>
+            </div>
+            <figcaption class="score-chart__caption">Scores out of 5 — see full scorecard above for methodology.</figcaption>
+          </figure>
+
             <div class="scorecard-rating">
               <span class="score-number" aria-label="Overall rating: 4.4 out of 5">4.4</span>
               <span class="score-label">/ 5</span>
@@ -189,6 +231,15 @@
              ───────────────────────────────────────────────────── -->
         <section aria-labelledby="what-is">
           <h2 id="what-is">What is n8n Cloud?</h2>
+          <!-- Visual: tool identity badge -->
+          <figure class="tool-badge" role="img" aria-label="n8n Cloud — Developer-friendly open-source automation">
+            <div class="tool-badge__icon tool-badge__icon--n8n" aria-hidden="true">N8</div>
+            <figcaption class="tool-badge__text">
+              <p class="tool-badge__name">n8n Cloud</p>
+              <p class="tool-badge__tagline">Developer-friendly open-source automation</p>
+            </figcaption>
+          </figure>
+
           <p>n8n Cloud is the hosted version of n8n, an open-source automation platform that lets you connect apps, APIs, and custom logic into reusable workflows. Instead of hiding complexity behind a no-code veneer, n8n gives technical teams more control over data flows, error handling, and branching logic. You get the flexibility of self-hosted n8n, but without running your own infrastructure.</p>
         </section>
 

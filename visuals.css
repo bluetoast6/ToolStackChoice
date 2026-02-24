@@ -1,0 +1,294 @@
+/* ============================================================
+   visuals.css — Lightweight purposeful visuals
+   Pure CSS/SVG components. Zero external images.
+   ============================================================ */
+
+/* ── 1. Tool identity badge (review pages, near "What is…") ── */
+.tool-badge {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--tsc-primary-soft, #eff6ff);
+  border: 1px solid var(--tsc-primary-border, #bfdbfe);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+  max-width: 480px;
+}
+
+.tool-badge__icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+/* Per-tool accent colours */
+.tool-badge__icon--make       { background: #6366f1; }
+.tool-badge__icon--n8n        { background: #e24329; }
+.tool-badge__icon--ahrefs     { background: #f97316; }
+.tool-badge__icon--semrush    { background: #1a73e8; }
+.tool-badge__icon--hostinger  { background: #673de6; }
+.tool-badge__icon--siteground { background: #00a651; }
+
+.tool-badge__text { flex: 1; }
+
+.tool-badge__name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--tsc-text, #1a1a1a);
+  margin-bottom: 0.15rem;
+}
+
+.tool-badge__tagline {
+  font-size: 0.875rem;
+  color: var(--tsc-muted, #6b6b6b);
+  max-width: none;
+  margin: 0;
+}
+
+/* ── 2. Score bar chart (review pages, near scorecard) ── */
+.score-chart {
+  margin: 1.25rem 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  max-width: 420px;
+}
+
+.score-chart__row {
+  display: grid;
+  grid-template-columns: 160px 1fr 2.5rem;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.8125rem;
+}
+
+.score-chart__label {
+  color: var(--tsc-muted, #6b6b6b);
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.score-chart__bar-track {
+  background: var(--tsc-border, #e2e2de);
+  border-radius: 99px;
+  height: 8px;
+  overflow: hidden;
+}
+
+.score-chart__bar-fill {
+  height: 100%;
+  border-radius: 99px;
+  background: var(--tsc-primary, #2563eb);
+  /* width set inline per score */
+}
+
+.score-chart__value {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--tsc-primary, #2563eb);
+  text-align: right;
+}
+
+.score-chart__caption {
+  font-size: 0.75rem;
+  color: var(--tsc-muted, #6b6b6b);
+  margin-top: 0.25rem;
+}
+
+/* ── 3. Comparison diagram (comparison pages, near quick table) ── */
+.vs-diagram {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  border: 1px solid var(--tsc-border, #e2e2de);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 1.75rem;
+  max-width: 580px;
+}
+
+.vs-diagram__side {
+  flex: 1;
+  padding: 1.25rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.vs-diagram__side--a {
+  background: #eff6ff;
+  border-right: 1px solid var(--tsc-border, #e2e2de);
+}
+
+.vs-diagram__side--b {
+  background: #f0fdf4;
+}
+
+.vs-diagram__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+/* Reuse tool accent colours */
+.vs-diagram__icon--make       { background: #6366f1; }
+.vs-diagram__icon--n8n        { background: #e24329; }
+.vs-diagram__icon--ahrefs     { background: #f97316; }
+.vs-diagram__icon--semrush    { background: #1a73e8; }
+.vs-diagram__icon--hostinger  { background: #673de6; }
+.vs-diagram__icon--siteground { background: #00a651; }
+
+.vs-diagram__name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--tsc-text, #1a1a1a);
+  margin: 0;
+}
+
+.vs-diagram__score {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--tsc-primary, #2563eb);
+  line-height: 1;
+}
+
+.vs-diagram__score-label {
+  font-size: 0.75rem;
+  color: var(--tsc-muted, #6b6b6b);
+  margin: 0;
+}
+
+.vs-diagram__best-for {
+  font-size: 0.8125rem;
+  color: var(--tsc-muted, #6b6b6b);
+  margin: 0;
+  max-width: none;
+}
+
+.vs-diagram__divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.5rem;
+  background: #fff;
+  border-left: 1px solid var(--tsc-border, #e2e2de);
+  border-right: 1px solid var(--tsc-border, #e2e2de);
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--tsc-muted, #6b6b6b);
+  letter-spacing: 0.05em;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  white-space: nowrap;
+}
+
+/* ── 4. Methodology steps visual (homepage / about) ── */
+.method-steps {
+  display: flex;
+  gap: 0;
+  margin: 1.25rem 0;
+  max-width: 520px;
+  counter-reset: method-step;
+}
+
+.method-step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding: 0 0.5rem;
+}
+
+.method-step + .method-step::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 18px;
+  width: 1px;
+  height: 36px;
+  background: var(--tsc-border, #e2e2de);
+}
+
+.method-step__num {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--tsc-primary, #2563eb);
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  flex-shrink: 0;
+}
+
+.method-step__label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--tsc-text, #1a1a1a);
+  line-height: 1.3;
+}
+
+/* ── 5. Responsive ── */
+@media (max-width: 600px) {
+  .score-chart__row {
+    grid-template-columns: 120px 1fr 2.2rem;
+  }
+
+  .vs-diagram {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .vs-diagram__side--a {
+    border-right: none;
+    border-bottom: 1px solid var(--tsc-border, #e2e2de);
+  }
+
+  .vs-diagram__divider {
+    writing-mode: horizontal-tb;
+    padding: 0.4rem 0;
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid var(--tsc-border, #e2e2de);
+    border-bottom: 1px solid var(--tsc-border, #e2e2de);
+  }
+
+  .tool-badge {
+    max-width: 100%;
+  }
+
+  .method-steps {
+    flex-direction: column;
+    max-width: 100%;
+    gap: 0.75rem;
+  }
+
+  .method-step + .method-step::before {
+    display: none;
+  }
+}

@@ -94,6 +94,7 @@
 
   <!-- ── Stylesheets ── -->
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="visuals.css" />
   <link rel="stylesheet" href="compare-template.css" />
   <link rel="stylesheet" href="faq-component.css" />
 </head>
@@ -176,7 +177,27 @@
              SECTION 1 — Quick comparison table
              ════════════════════════════════════════════════════ -->
         <section aria-labelledby="ct-quick">
-          <h2 id="ct-quick" class="ct-h2">Quick comparison: Hostinger vs SiteGround</h2>
+          
+          <!-- Visual: A vs B comparison diagram -->
+          <figure class="vs-diagram" role="img"
+            aria-label="Hostinger vs SiteGround — at-a-glance scores and best-fit summary">
+            <div class="vs-diagram__side vs-diagram__side--a">
+              <div class="vs-diagram__icon vs-diagram__icon--hostinger" aria-hidden="true">HO</div>
+              <p class="vs-diagram__name">Hostinger</p>
+              <p class="vs-diagram__score">4.3</p>
+              <p class="vs-diagram__score-label">out of 5</p>
+              <p class="vs-diagram__best-for">Best for budget-conscious sites</p>
+            </div>
+            <div class="vs-diagram__divider" aria-hidden="true">VS</div>
+            <div class="vs-diagram__side vs-diagram__side--b">
+              <div class="vs-diagram__icon vs-diagram__icon--siteground" aria-hidden="true">SI</div>
+              <p class="vs-diagram__name">SiteGround</p>
+              <p class="vs-diagram__score">4.4</p>
+              <p class="vs-diagram__score-label">out of 5</p>
+              <p class="vs-diagram__best-for">Best for managed WordPress</p>
+            </div>
+          </figure>
+<h2 id="ct-quick" class="ct-h2">Quick comparison: Hostinger vs SiteGround</h2>
 
           <p>If you want the best balance of price and performance for smaller sites, Hostinger is usually the better fit. If you&#8217;re willing to pay more for stronger performance, support, and &#8220;it just works&#8221; reliability, SiteGround tends to win.</p>
 

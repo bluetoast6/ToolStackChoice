@@ -121,6 +121,7 @@
 
   <!-- ── Stylesheets ── -->
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="visuals.css" />
   <link rel="stylesheet" href="compare-template.css" />
   <link rel="stylesheet" href="faq-component.css" />
 </head>
@@ -204,7 +205,27 @@
              SECTION 1 — Quick comparison
              ════════════════════════════════════════════════════ -->
         <section aria-labelledby="ct-quick">
-          <h2 id="ct-quick" class="ct-h2">Quick comparison: Make.com vs n8n Cloud</h2>
+          
+          <!-- Visual: A vs B comparison diagram -->
+          <figure class="vs-diagram" role="img"
+            aria-label="Make.com vs n8n Cloud — at-a-glance scores and best-fit summary">
+            <div class="vs-diagram__side vs-diagram__side--a">
+              <div class="vs-diagram__icon vs-diagram__icon--make" aria-hidden="true">MA</div>
+              <p class="vs-diagram__name">Make.com</p>
+              <p class="vs-diagram__score">4.6</p>
+              <p class="vs-diagram__score-label">out of 5</p>
+              <p class="vs-diagram__best-for">Best for visual workflow builders</p>
+            </div>
+            <div class="vs-diagram__divider" aria-hidden="true">VS</div>
+            <div class="vs-diagram__side vs-diagram__side--b">
+              <div class="vs-diagram__icon vs-diagram__icon--n8n" aria-hidden="true">N8</div>
+              <p class="vs-diagram__name">n8n Cloud</p>
+              <p class="vs-diagram__score">4.4</p>
+              <p class="vs-diagram__score-label">out of 5</p>
+              <p class="vs-diagram__best-for">Best for developers & power users</p>
+            </div>
+          </figure>
+<h2 id="ct-quick" class="ct-h2">Quick comparison: Make.com vs n8n Cloud</h2>
 
           <p>
             Make.com and n8n Cloud are both powerful workflow automation platforms, but they target

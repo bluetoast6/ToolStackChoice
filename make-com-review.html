@@ -99,6 +99,7 @@
   <!-- END JSON-LD ═══════════════════════════════════════════════ -->
 
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="visuals.css" />
 </head>
 <body>
 
@@ -152,6 +153,47 @@
 
           <!-- Summary scorecard -->
           <div class="scorecard" role="region" aria-label="Review summary scorecard">
+          <!-- Visual: score bar chart -->
+          <figure class="score-chart" aria-label="Score breakdown bar chart" loading="lazy">
+            
+            <div class="score-chart__row">
+              <span class="score-chart__label">Ease of use</span>
+              <div class="score-chart__bar-track" role="presentation">
+                <div class="score-chart__bar-fill" style="width:80.0%" aria-hidden="true"></div>
+              </div>
+              <span class="score-chart__value">4.0</span>
+            </div>
+            <div class="score-chart__row">
+              <span class="score-chart__label">Feature depth</span>
+              <div class="score-chart__bar-track" role="presentation">
+                <div class="score-chart__bar-fill" style="width:100.0%" aria-hidden="true"></div>
+              </div>
+              <span class="score-chart__value">5.0</span>
+            </div>
+            <div class="score-chart__row">
+              <span class="score-chart__label">Pricing fairness</span>
+              <div class="score-chart__bar-track" role="presentation">
+                <div class="score-chart__bar-fill" style="width:100.0%" aria-hidden="true"></div>
+              </div>
+              <span class="score-chart__value">5.0</span>
+            </div>
+            <div class="score-chart__row">
+              <span class="score-chart__label">Reliability</span>
+              <div class="score-chart__bar-track" role="presentation">
+                <div class="score-chart__bar-fill" style="width:80.0%" aria-hidden="true"></div>
+              </div>
+              <span class="score-chart__value">4.0</span>
+            </div>
+            <div class="score-chart__row">
+              <span class="score-chart__label">Support quality</span>
+              <div class="score-chart__bar-track" role="presentation">
+                <div class="score-chart__bar-fill" style="width:80.0%" aria-hidden="true"></div>
+              </div>
+              <span class="score-chart__value">4.0</span>
+            </div>
+            <figcaption class="score-chart__caption">Scores out of 5 — see full scorecard above for methodology.</figcaption>
+          </figure>
+
             <div class="scorecard-rating">
               <span class="score-number" aria-label="Overall rating: 4.6 out of 5">4.6</span>
               <span class="score-label">/ 5</span>
@@ -187,6 +229,15 @@
              ───────────────────────────────────────────────────── -->
         <section aria-labelledby="what-is">
           <h2 id="what-is">What is Make.com?</h2>
+          <!-- Visual: tool identity badge -->
+          <figure class="tool-badge" role="img" aria-label="Make.com — Visual no-code automation platform">
+            <div class="tool-badge__icon tool-badge__icon--make" aria-hidden="true">MA</div>
+            <figcaption class="tool-badge__text">
+              <p class="tool-badge__name">Make.com</p>
+              <p class="tool-badge__tagline">Visual no-code automation platform</p>
+            </figcaption>
+          </figure>
+
           <p>Make.com is a cloud-based visual automation platform that allows individuals, freelancers, and teams to connect apps and automate multi-step workflows without writing code. Originally launched as Integromat in 2012 and rebranded as Make in 2022, it is headquartered in Prague and serves over 500,000 users worldwide. Its defining feature is a drag-and-drop scenario canvas that makes complex, branching automations far more approachable than traditional code-based solutions.</p>
         </section>
 
