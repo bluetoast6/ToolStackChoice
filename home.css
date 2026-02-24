@@ -1,6 +1,6 @@
 /* ============================================================
-   home.css — Homepage-specific styles
-   Extends style.css without overriding global rules.
+   home.css — Homepage-specific styles (UX v1.1)
+   Extends style.css. Uses TSC Brand System v1.1 tokens.
    ============================================================ */
 
 /* ---------- 1. Hero: two-column split layout ---------- */
@@ -31,14 +31,43 @@
 .btn--lg {
   font-size: 1rem;
   padding: 0.8rem 1.8rem;
-  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
-}
-.btn--lg:hover {
-  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
-  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.22);
 }
 
-/* ---------- 2. Hero visual: stacked mini-cards ---------- */
+/* ---------- 2. Trust strip ---------- */
+.trust-strip {
+  background: var(--tsc-primary-soft);
+  border-bottom: 1px solid var(--tsc-primary-border);
+  padding-block: 0.75rem;
+}
+
+.trust-strip__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem 1.25rem;
+}
+
+.trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--tsc-primary-soft);
+  border: 1px solid var(--tsc-primary-border);
+  color: var(--tsc-primary);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.trust-badge svg {
+  flex-shrink: 0;
+}
+
+/* ---------- 3. Hero visual: stacked mini-cards ---------- */
 .hero__visual {
   display: flex;
   justify-content: center;
@@ -53,8 +82,8 @@
 
 .hc {
   position: absolute;
-  background: var(--color-bg);
-  border: 1px solid var(--color-border);
+  background: var(--tsc-bg);
+  border: 1px solid var(--tsc-border);
   border-radius: 10px;
   padding: 1rem 1.25rem;
   display: flex;
@@ -65,45 +94,29 @@
 }
 
 .hc__icon {
-  font-size: 1.4rem;
   flex-shrink: 0;
+  color: var(--tsc-primary);
 }
 
 .hc__label {
   font-weight: 600;
   font-size: 0.9375rem;
-  color: var(--color-text);
+  color: var(--tsc-text);
   flex: 1;
 }
 
 .hc__score {
   font-size: 0.875rem;
   font-weight: 700;
-  color: var(--color-accent);
+  color: var(--tsc-primary);
   white-space: nowrap;
 }
 
-.hc--1 {
-  top: 0;
-  left: 20px;
-  z-index: 3;
-}
+.hc--1 { top: 0;    left: 20px; z-index: 3; }
+.hc--2 { top: 72px; left: 0;    z-index: 2; opacity: 0.92; }
+.hc--3 { top: 144px;left: 20px; z-index: 1; opacity: 0.82; }
 
-.hc--2 {
-  top: 72px;
-  left: 0;
-  z-index: 2;
-  opacity: 0.92;
-}
-
-.hc--3 {
-  top: 144px;
-  left: 20px;
-  z-index: 1;
-  opacity: 0.82;
-}
-
-/* ---------- 3. Category cards — fully clickable ---------- */
+/* ---------- 4. Category cards — fully clickable ---------- */
 .card-grid--3 {
   grid-template-columns: repeat(3, 1fr);
 }
@@ -111,39 +124,50 @@
 .cat-card {
   display: flex;
   flex-direction: column;
-  background: var(--color-bg);
-  border: 1px solid var(--color-border);
+  background: var(--tsc-bg);
+  border: 1px solid var(--tsc-border);
   border-radius: var(--radius);
   padding: 1.5rem;
   text-decoration: none;
   color: inherit;
-  transition: box-shadow 0.18s ease, transform 0.18s ease, border-color 0.18s ease;
+  transition: box-shadow var(--tsc-transition),
+              transform var(--tsc-transition),
+              border-color var(--tsc-transition);
 }
 
 .cat-card:hover,
 .cat-card:focus-visible {
-  box-shadow: 0 6px 24px rgba(37, 99, 235, 0.12);
+  box-shadow: 0 6px 24px rgba(37, 99, 235, 0.13);
   transform: translateY(-3px);
-  border-color: var(--color-accent);
+  border-color: var(--tsc-primary);
   text-decoration: none;
   color: inherit;
 }
 
+.cat-card:active {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.1);
+}
+
 .cat-card__icon {
-  font-size: 2rem;
   margin-bottom: 0.75rem;
+  color: var(--tsc-primary);
+}
+
+.cat-card__icon svg {
+  display: block;
 }
 
 .cat-card__title {
   font-size: 1.1rem;
   font-weight: 700;
-  color: var(--color-text);
+  color: var(--tsc-text);
   margin-bottom: 0.5rem;
 }
 
 .cat-card__desc {
   font-size: 0.9375rem;
-  color: var(--color-text-muted);
+  color: var(--tsc-muted);
   flex: 1;
   margin-bottom: 1rem;
   max-width: none;
@@ -152,18 +176,18 @@
 .cat-card__cta {
   font-size: 0.9rem;
   font-weight: 600;
-  color: var(--color-accent);
+  color: var(--tsc-primary);
 }
 
 .cat-card:hover .cat-card__cta {
   text-decoration: underline;
 }
 
-/* ---------- 4. Review list — coloured category tags ---------- */
+/* ---------- 5. Review list — coloured category tags ---------- */
 .tag--automation {
   background: #eff6ff;
-  border-color: #bfdbfe;
-  color: #1d4ed8;
+  border-color: var(--tsc-primary-border);
+  color: var(--tsc-primary);
 }
 
 .tag--seo {
@@ -183,10 +207,10 @@
   font-weight: 700;
 }
 
-/* ---------- 5. Comparison table — card wrapper ---------- */
+/* ---------- 6. Comparison table — card wrapper + scroll hint ---------- */
 .table-card {
-  background: var(--color-bg);
-  border: 1px solid var(--color-border);
+  background: var(--tsc-bg);
+  border: 1px solid var(--tsc-border);
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: 0 1px 6px rgba(0,0,0,0.05);
@@ -196,52 +220,76 @@
   border: none;
   border-radius: 0;
   margin-bottom: 0;
+  /* scroll hint: right-edge gradient on mobile */
+  position: relative;
 }
 
 .table-card .table-note {
   padding: 0.75rem 1rem;
-  border-top: 1px solid var(--color-border);
-  background: var(--color-surface);
+  border-top: 1px solid var(--tsc-border);
+  background: var(--tsc-surface);
   margin-bottom: 0;
+  font-size: 0.85rem;
+  color: var(--tsc-muted);
 }
 
 /* Striped rows */
-tbody tr:nth-child(even) {
-  background: var(--color-surface);
+tbody tr:nth-child(even) td {
+  background: var(--tsc-surface);
 }
 
-/* Accent header row */
-thead th {
-  background: #eff6ff;
-  color: #1d4ed8;
-  border-bottom: 2px solid #bfdbfe;
+/* Recommended row */
+tr.row-recommended td {
+  background: #f0f7ff;
+}
+tr.row-recommended:hover td {
+  background: var(--tsc-primary-soft);
 }
 
-/* ---------- 6. Prose "Learn more" link ---------- */
+/* ---------- 7. Comparison table rows — hover tint ---------- */
+.table-card tbody tr {
+  transition: background var(--tsc-transition);
+  cursor: default;
+}
+
+.table-card tbody tr:hover td {
+  background: var(--tsc-primary-soft);
+}
+
+/* ---------- 8. Prose "Learn more" link ---------- */
 .prose-link {
   display: inline-block;
   margin-top: 1.25rem;
   font-size: 0.9375rem;
   font-weight: 600;
-  color: var(--color-accent);
+  color: var(--tsc-primary);
   text-decoration: none;
+  transition: color var(--tsc-transition);
 }
 .prose-link:hover {
   text-decoration: underline;
-  color: var(--color-accent-dark);
+  color: var(--tsc-primary-dark);
 }
 
-/* ---------- 7. Typography refinements ---------- */
+/* ---------- 9. Footer affiliate disclosure ---------- */
+.footer-disclosure {
+  margin-top: var(--space-sm);
+  font-size: 0.8125rem;
+  color: var(--tsc-muted);
+  max-width: 38ch;
+}
+
+/* ---------- 10. Typography refinements ---------- */
 body {
-  font-size: 1.0625rem; /* 17px */
-  line-height: 1.75;
+  font-size: var(--tsc-body-size);
+  line-height: var(--tsc-body-leading);
 }
 
 .section-intro {
   font-size: 1.0625rem;
 }
 
-/* ---------- 8. Mobile responsiveness ---------- */
+/* ---------- 11. Mobile responsiveness ---------- */
 
 /* Tablet: 2-col hero, 2-col cards */
 @media (max-width: 900px) {
@@ -278,8 +326,17 @@ body {
     grid-template-columns: 1fr;
   }
 
-  .cat-card:hover {
-    transform: none;
+  /* Disable hover lift on touch */
+  @media (hover: none) {
+    .cat-card:hover {
+      transform: none;
+      box-shadow: none;
+      border-color: var(--tsc-border);
+    }
+    .btn:hover {
+      transform: none;
+      box-shadow: none;
+    }
   }
 
   .footer-inner {
@@ -291,14 +348,17 @@ body {
     text-align: left;
   }
 
-  /* Ensure table scrolls cleanly on small screens */
+  /* Table horizontal scroll on mobile */
   .table-card {
-    overflow: hidden;
+    overflow: visible;
   }
 
   .table-card .table-wrap {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    /* Gradient scroll hint on right edge */
+    background-image: linear-gradient(to right, transparent 85%, rgba(37,99,235,0.06) 100%);
+    background-attachment: local;
   }
 
   /* Nav toggle */
@@ -325,7 +385,7 @@ body {
   .primary-nav ul li a {
     display: block;
     padding: 0.5rem 0;
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--tsc-border);
   }
 
   .header-inner {
@@ -333,9 +393,21 @@ body {
   }
 }
 
-/* ---------- 9. AOE / semantic helpers ---------- */
-/* Ensure all major sections have visible heading hierarchy */
+/* Disable hover effects on touch devices globally */
+@media (hover: none) {
+  .cat-card:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: var(--tsc-border);
+  }
+  .btn:hover {
+    transform: none;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.22);
+  }
+}
+
+/* ---------- 12. AOE / semantic helpers ---------- */
 .section > .container > h2,
 .section > .container > .container-prose > h2 {
-  scroll-margin-top: 5rem; /* account for sticky header */
+  scroll-margin-top: 5rem;
 }

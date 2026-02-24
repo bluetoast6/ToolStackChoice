@@ -13,6 +13,7 @@
 
 /* ---------- 2. Design Tokens ---------- */
 :root {
+  /* ── Legacy tokens (kept for backward-compat) ── */
   --color-bg:          #ffffff;
   --color-surface:     #f7f7f5;
   --color-border:      #e2e2de;
@@ -21,6 +22,32 @@
   --color-accent:      #2563eb;
   --color-accent-dark: #1d4ed8;
   --color-cta-bg:      #eff6ff;
+
+  /* ── TSC Brand System v1.1 ── */
+  --tsc-primary:       #2563eb;   /* main accent — matches --color-accent */
+  --tsc-primary-dark:  #1d4ed8;   /* darker shade for hover states */
+  --tsc-primary-soft:  #eff6ff;   /* light tint for backgrounds / highlights */
+  --tsc-primary-border:#bfdbfe;   /* soft blue border for accented elements */
+  --tsc-text:          #1a1a1a;   /* main body text */
+  --tsc-muted:         #6b6b6b;   /* secondary text / meta */
+  --tsc-border:        #e2e2de;   /* subtle border */
+  --tsc-bg:            #ffffff;   /* page background */
+  --tsc-surface:       #f7f7f5;   /* card / section surface */
+
+  /* ── Typography scale ── */
+  --tsc-h1-size:       clamp(1.75rem, 4vw, 2.75rem);
+  --tsc-h1-weight:     800;
+  --tsc-h1-tracking:   -0.025em;
+  --tsc-h2-size:       clamp(1.35rem, 3vw, 2rem);
+  --tsc-h2-weight:     700;
+  --tsc-h2-tracking:   -0.015em;
+  --tsc-h3-size:       clamp(1.05rem, 2vw, 1.3rem);
+  --tsc-h3-weight:     700;
+  --tsc-body-size:     1.0625rem; /* 17px */
+  --tsc-body-leading:  1.75;
+
+  /* ── Interaction ── */
+  --tsc-transition:    150ms ease-out;
 
   --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --font-size-base: 1rem;       /* 16px */
@@ -59,9 +86,17 @@ h1, h2, h3, h4 {
   color: var(--color-text);
 }
 
-h1 { font-size: clamp(1.75rem, 4vw, 2.75rem); }
-h2 { font-size: clamp(1.35rem, 3vw, 2rem); }
-h3 { font-size: clamp(1.05rem, 2vw, 1.3rem); }
+h1 {
+  font-size: var(--tsc-h1-size);
+  font-weight: var(--tsc-h1-weight);
+  letter-spacing: var(--tsc-h1-tracking);
+}
+h2 {
+  font-size: var(--tsc-h2-size);
+  font-weight: var(--tsc-h2-weight);
+  letter-spacing: var(--tsc-h2-tracking);
+}
+h3 { font-size: var(--tsc-h3-size); font-weight: var(--tsc-h3-weight); }
 
 p { max-width: 70ch; }
 
@@ -191,7 +226,7 @@ a:hover, a:focus-visible {
 /* ---------- 8. Button ---------- */
 .btn {
   display: inline-block;
-  background: var(--color-accent);
+  background: var(--tsc-primary);
   color: #fff;
   text-decoration: none;
   font-weight: 600;
@@ -200,11 +235,21 @@ a:hover, a:focus-visible {
   border-radius: var(--radius);
   border: none;
   cursor: pointer;
+  transition: background var(--tsc-transition),
+              box-shadow var(--tsc-transition),
+              transform var(--tsc-transition);
 }
 .btn:hover, .btn:focus-visible {
-  background: var(--color-accent-dark);
+  background: var(--tsc-primary-dark);
   color: #fff;
   text-decoration: none;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+  transform: translateY(-1px);
+}
+.btn:active {
+  background: var(--tsc-primary-dark);
+  box-shadow: 0 1px 4px rgba(37, 99, 235, 0.2);
+  transform: translateY(0);
 }
 
 /* ---------- 9. Sections ---------- */
@@ -339,7 +384,7 @@ table {
 }
 
 thead {
-  background: var(--color-surface);
+  background: var(--tsc-primary-soft);
 }
 
 th, td {
@@ -354,12 +399,38 @@ th {
   font-size: 0.875rem;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  color: var(--color-text-muted);
+  color: var(--tsc-primary);
+  border-bottom: 2px solid var(--tsc-primary-border);
 }
 
 tbody tr:last-child td { border-bottom: none; }
 
-tbody tr:hover { background: var(--color-surface); }
+tbody tr:nth-child(even) { background: var(--tsc-surface); }
+body tr:nth-child(odd)  { background: var(--tsc-bg); }
+body tr:hover           { background: var(--tsc-primary-soft); cursor: pointer; }
+tbody tr:hover          { background: var(--tsc-primary-soft); }
+
+/* Recommended row highlight */
+tr.row-recommended {
+  background: #f0f7ff !important;
+}
+tr.row-recommended td:first-child {
+  font-weight: 700;
+}
+.badge-recommended {
+  display: inline-block;
+  margin-left: 0.5rem;
+  background: var(--tsc-primary);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.1rem 0.45rem;
+  border-radius: 3px;
+  vertical-align: middle;
+  white-space: nowrap;
+}
 
 .table-note {
   font-size: 0.85rem;
