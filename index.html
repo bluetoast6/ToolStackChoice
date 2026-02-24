@@ -14,87 +14,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-  <!-- ── Google Search Console site verification ──────────────────────
-       Replace the content value below with your real GSC verification
-       code from: Search Console → Settings → Ownership verification
-       → HTML tag → copy the content="..." value only.
-
-       When you have your code, the tag should look like this:
-         <meta name="google-site-verification" content="aXkYM9-GrVhbR0koQXfvE2NBcEhN4qLDJ2r3lwZd6SE" />
-
-       Simply overwrite the placeholder value; the tag structure is
-       already correct and will not break when you paste the real code.
-  ──────────────────────────────────────────────────────────────────── -->
   <meta name="google-site-verification" content="aXkYM9-GrVhbR0koQXfvE2NBcEhN4qLDJ2r3lwZd6SE" />
   <meta name="description" content="Honest, in-depth reviews and comparisons of the best tools for automation, SEO, hosting, and more." />
   <title>ToolStack — Tool Reviews &amp; Comparisons</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="home.css" />
 
-  <!-- ═══════════════════════════════════════════════════════════════
-       JSON-LD STRUCTURED DATA — SCHEMA.ORG
-       ───────────────────────────────────────────────────────────────
-       WHAT THIS IS
-       This block tells search engines and AI models what this page
-       is about in a machine-readable format (JSON-LD / Schema.org).
-
-       HOW TO USE
-       • Replace every value in [SQUARE BRACKETS] with real data.
-       • For the homepage, keep Organization + WebSite as-is.
-       • For review pages, add a Review or Product schema node.
-       • For comparison pages, add a FAQPage schema node.
-       • Validate at: https://validator.schema.org/
-
-       AISO NOTE
-       AI-powered search (SGE / Perplexity / Bing Copilot) reads
-       JSON-LD to extract facts, ratings, and entity relationships.
-       Keep values accurate, concise, and consistent with the visible
-       page content — AI models cross-check both.
-       ═══════════════════════════════════════════════════════════════ -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
-
       {
         "@type": "Organization",
-        "@id": "https://[YOUR-DOMAIN].com/#organization",
+        "@id": "https://www.toolstackchoice.com/#organization",
         "name": "ToolStackChoice",
-        "url": "https://[YOUR-DOMAIN].com",
+        "url": "https://www.toolstackchoice.com",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://[YOUR-DOMAIN].com/assets/logo.png",
+          "url": "https://www.toolstackchoice.com/logo-icon.png",
           "width": 200,
           "height": 60
         },
         "description": "Independent reviews and side-by-side comparisons of automation, SEO, and hosting tools.",
-        "sameAs": [
-          "https://twitter.com/[YOUR-HANDLE]",
-          "https://linkedin.com/company/[YOUR-COMPANY]"
-        ]
+        "sameAs": []
       },
-
       {
         "@type": "WebSite",
-        "@id": "https://[YOUR-DOMAIN].com/#website",
-        "url": "https://[YOUR-DOMAIN].com",
+        "@id": "https://www.toolstackchoice.com/#website",
+        "url": "https://www.toolstackchoice.com",
         "name": "ToolStackChoice",
         "publisher": {
-          "@id": "https://[YOUR-DOMAIN].com/#organization"
-        },
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": {
-            "@type": "EntryPoint",
-            "urlTemplate": "https://[YOUR-DOMAIN].com/search?q={search_term_string}"
-          },
-          "query-input": "required name=search_term_string"
+          "@id": "https://www.toolstackchoice.com/#organization"
         }
       }
-
     ]
   }
   </script>
-  <!-- END JSON-LD ═══════════════════════════════════════════════ -->
 
 </head>
 <body>
@@ -102,10 +57,11 @@
   <!-- ===================== HEADER ===================== -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="logo" aria-label="ToolStackChoice Home"><img src="logo-icon.png" class="logo-img" alt="ToolStackChoice logo icon" width="44" height="44"><span class="logo-text">ToolStackChoice</span></a>
-      <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">
-        &#9776;
-      </button>
+      <a href="index.html" class="logo" aria-label="ToolStackChoice Home">
+        <img src="logo-icon.png" class="logo-img" alt="ToolStackChoice logo icon" width="44" height="44">
+        <span class="logo-text">ToolStackChoice</span>
+      </a>
+      <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">&#9776;</button>
       <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
         <ul role="list">
           <li><a href="index.html" aria-current="page">Home</a></li>
@@ -120,50 +76,76 @@
   </header>
 
   <!-- ===================== HERO ===================== -->
-  <section class="hero" aria-labelledby="hero-heading">
-    <div class="container">
-      <h1 id="hero-heading">Find the Right Tool for the Job</h1>
-      <p class="hero-sub">Honest, independent reviews and side-by-side comparisons of automation, SEO, hosting, and productivity tools — so you can decide with confidence.</p>
-      <a href="#featured" class="btn">Browse Reviews</a>
+  <section class="hero hero--split" aria-labelledby="hero-heading">
+    <div class="container hero__inner">
+
+      <!-- Left: copy -->
+      <div class="hero__copy">
+        <h1 id="hero-heading">Find the Right Tool for the Job</h1>
+        <p class="hero-sub">Honest, independent reviews and side-by-side comparisons of automation, SEO, hosting, and productivity tools — so you can decide with confidence.</p>
+        <a href="#featured" class="btn btn--lg">Browse Reviews</a>
+      </div>
+
+      <!-- Right: abstract visual -->
+      <div class="hero__visual" aria-hidden="true">
+        <div class="hero-card-stack">
+          <div class="hc hc--1">
+            <span class="hc__icon">&#9881;</span>
+            <span class="hc__label">Automation</span>
+            <span class="hc__score">4.6 / 5</span>
+          </div>
+          <div class="hc hc--2">
+            <span class="hc__icon">&#128269;</span>
+            <span class="hc__label">SEO Tools</span>
+            <span class="hc__score">4.5 / 5</span>
+          </div>
+          <div class="hc hc--3">
+            <span class="hc__icon">&#127760;</span>
+            <span class="hc__label">Hosting</span>
+            <span class="hc__score">4.4 / 5</span>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
   <!-- ===================== MAIN ===================== -->
   <main id="main-content">
 
-    <!-- Category Cards -->
+    <!-- ── Category Cards ── -->
     <section class="section" id="featured" aria-labelledby="categories-heading">
       <div class="container">
         <h2 id="categories-heading">Browse by Category</h2>
         <p class="section-intro">Jump straight to the category that matters most to your workflow.</p>
-        <div class="card-grid">
+        <div class="card-grid card-grid--3">
 
-          <article class="card">
-            <div class="card-icon" aria-hidden="true">&#9881;</div>
-            <h3><a href="automation-tools.html">Automation Tools</a></h3>
-            <p>Zapier, Make, n8n, and more — compare triggers, pricing, and integrations to automate your stack.</p>
-            <a href="automation-tools.html" class="card-link">See all reviews &rarr;</a>
-          </article>
+          <a href="automation-tools.html" class="cat-card" aria-label="Automation Tools — See all reviews">
+            <div class="cat-card__icon" aria-hidden="true">&#9881;</div>
+            <h3 class="cat-card__title">Automation Tools</h3>
+            <p class="cat-card__desc">Zapier, Make, n8n, and more — compare triggers, pricing, and integrations to automate your stack.</p>
+            <span class="cat-card__cta">See all reviews &rarr;</span>
+          </a>
 
-          <article class="card">
-            <div class="card-icon" aria-hidden="true">&#128269;</div>
-            <h3><a href="seo-tools.html">SEO Tools</a></h3>
-            <p>Ahrefs vs Semrush vs Moz — in-depth feature breakdowns, pricing tiers, and use-case guides.</p>
-            <a href="seo-tools.html" class="card-link">See all reviews &rarr;</a>
-          </article>
+          <a href="seo-tools.html" class="cat-card" aria-label="SEO Tools — See all reviews">
+            <div class="cat-card__icon" aria-hidden="true">&#128269;</div>
+            <h3 class="cat-card__title">SEO Tools</h3>
+            <p class="cat-card__desc">Ahrefs vs Semrush vs Moz — in-depth feature breakdowns, pricing tiers, and use-case guides.</p>
+            <span class="cat-card__cta">See all reviews &rarr;</span>
+          </a>
 
-          <article class="card">
-            <div class="card-icon" aria-hidden="true">&#127760;</div>
-            <h3><a href="hosting.html">Hosting</a></h3>
-            <p>Shared, VPS, managed WordPress, and cloud — find the host that fits your traffic and budget.</p>
-            <a href="hosting.html" class="card-link">See all reviews &rarr;</a>
-          </article>
+          <a href="hosting.html" class="cat-card" aria-label="Hosting — See all reviews">
+            <div class="cat-card__icon" aria-hidden="true">&#127760;</div>
+            <h3 class="cat-card__title">Hosting</h3>
+            <p class="cat-card__desc">Shared, VPS, managed WordPress, and cloud — find the host that fits your traffic and budget.</p>
+            <span class="cat-card__cta">See all reviews &rarr;</span>
+          </a>
 
         </div>
       </div>
     </section>
 
-    <!-- Featured Reviews -->
+    <!-- ── Latest Reviews ── -->
     <section class="section section-alt" aria-labelledby="latest-heading">
       <div class="container">
         <h2 id="latest-heading">Latest Reviews</h2>
@@ -173,7 +155,7 @@
 
           <article class="review-item">
             <div class="review-meta">
-              <span class="tag">Automation</span>
+              <span class="tag tag--automation">Automation</span>
               <time datetime="2026-02-15">Feb 15, 2026</time>
             </div>
             <h3><a href="#">Zapier vs Make (Integromat): Which Automation Tool Wins in 2026?</a></h3>
@@ -183,7 +165,7 @@
 
           <article class="review-item">
             <div class="review-meta">
-              <span class="tag">SEO</span>
+              <span class="tag tag--seo">SEO</span>
               <time datetime="2026-02-10">Feb 10, 2026</time>
             </div>
             <h3><a href="#">Ahrefs Review 2026: Still the Best Backlink Tool?</a></h3>
@@ -193,7 +175,7 @@
 
           <article class="review-item">
             <div class="review-meta">
-              <span class="tag">Hosting</span>
+              <span class="tag tag--hosting">Hosting</span>
               <time datetime="2026-02-05">Feb 5, 2026</time>
             </div>
             <h3><a href="#">Cloudflare Pages vs Vercel: Best Free Hosting for Static Sites</a></h3>
@@ -203,7 +185,7 @@
 
           <article class="review-item">
             <div class="review-meta">
-              <span class="tag">Automation</span>
+              <span class="tag tag--automation">Automation</span>
               <time datetime="2026-01-28">Jan 28, 2026</time>
             </div>
             <h3><a href="#">n8n Self-Hosted Review: The Open-Source Zapier Alternative</a></h3>
@@ -215,59 +197,61 @@
       </div>
     </section>
 
-    <!-- Comparison Table -->
+    <!-- ── Comparison Table ── -->
     <section class="section" aria-labelledby="compare-heading">
       <div class="container">
         <h2 id="compare-heading">Quick Comparison: Top Automation Tools</h2>
         <p class="section-intro">Key metrics at a glance — updated February 2026.</p>
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th scope="col">Tool</th>
-                <th scope="col">Free Plan</th>
-                <th scope="col">Starting Price</th>
-                <th scope="col">Native Integrations</th>
-                <th scope="col">Best For</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Zapier</strong></td>
-                <td>Yes (100 tasks/mo)</td>
-                <td>$19.99 / mo</td>
-                <td>6,000+</td>
-                <td>Non-technical users</td>
-              </tr>
-              <tr>
-                <td><strong>Make</strong></td>
-                <td>Yes (1,000 ops/mo)</td>
-                <td>$9 / mo</td>
-                <td>1,500+</td>
-                <td>Complex workflows</td>
-              </tr>
-              <tr>
-                <td><strong>n8n</strong></td>
-                <td>Self-hosted (free)</td>
-                <td>$20 / mo (cloud)</td>
-                <td>400+</td>
-                <td>Developers &amp; power users</td>
-              </tr>
-              <tr>
-                <td><strong>Pabbly Connect</strong></td>
-                <td>No</td>
-                <td>$19 / mo</td>
-                <td>1,000+</td>
-                <td>Budget-conscious teams</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="table-card">
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Tool</th>
+                  <th scope="col">Free Plan</th>
+                  <th scope="col">Starting Price</th>
+                  <th scope="col">Native Integrations</th>
+                  <th scope="col">Best For</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Zapier</strong></td>
+                  <td>Yes (100 tasks/mo)</td>
+                  <td>$19.99 / mo</td>
+                  <td>6,000+</td>
+                  <td>Non-technical users</td>
+                </tr>
+                <tr>
+                  <td><strong>Make</strong></td>
+                  <td>Yes (1,000 ops/mo)</td>
+                  <td>$9 / mo</td>
+                  <td>1,500+</td>
+                  <td>Complex workflows</td>
+                </tr>
+                <tr>
+                  <td><strong>n8n</strong></td>
+                  <td>Self-hosted (free)</td>
+                  <td>$20 / mo (cloud)</td>
+                  <td>400+</td>
+                  <td>Developers &amp; power users</td>
+                </tr>
+                <tr>
+                  <td><strong>Pabbly Connect</strong></td>
+                  <td>No</td>
+                  <td>$19 / mo</td>
+                  <td>1,000+</td>
+                  <td>Budget-conscious teams</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="table-note">Prices are indicative. Always verify on the vendor's official site before purchasing.</p>
         </div>
-        <p class="table-note">Prices are indicative. Always verify on the vendor's official site before purchasing.</p>
       </div>
     </section>
 
-    <!-- Newsletter / CTA -->
+    <!-- ── Newsletter / CTA ── -->
     <section class="section section-cta" aria-labelledby="cta-heading">
       <div class="container container-narrow">
         <h2 id="cta-heading">Stay Updated</h2>
@@ -280,7 +264,7 @@
       </div>
     </section>
 
-    <!-- ===================== ABOUT SECTIONS ===================== -->
+    <!-- ── About / Methodology ── -->
 
     <!-- Section 1: What is ToolStackChoice.com? -->
     <section class="section" aria-labelledby="about-heading">
@@ -288,6 +272,7 @@
         <h2 id="about-heading">What is ToolStackChoice.com?</h2>
         <p>ToolStackChoice.com is an independent review and comparison site that helps individuals, freelancers, and small businesses choose the right software tools. Every review is researched hands-on, free from vendor influence, and written to answer one question directly: is this tool worth your time and money?</p>
         <p>We focus on three categories — automation, SEO, and web hosting — because they have the greatest practical impact on how teams work and grow online. Rather than publishing quick takes, we test each tool against a consistent scoring rubric so our reviews stay comparable and trustworthy over time.</p>
+        <a href="about.html" class="prose-link">Learn more about our review process &rarr;</a>
       </div>
     </section>
 
@@ -356,6 +341,7 @@
             <strong>Regular re-evaluation.</strong> Software changes fast. We revisit published reviews when a tool releases a major update, adjusts pricing, or receives significant user feedback — and we date every revision so you always know how current the information is.
           </li>
         </ol>
+        <a href="about.html" class="prose-link">Learn more about our review process &rarr;</a>
       </div>
     </section>
 
@@ -365,10 +351,13 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <a href="index.html" class="logo" aria-label="ToolStackChoice Home"><img src="logo-icon.png" class="logo-img" alt="ToolStackChoice logo icon" width="44" height="44"><span class="logo-text">ToolStackChoice</span></a>
+        <a href="index.html" class="logo" aria-label="ToolStackChoice Home">
+          <img src="logo-icon.png" class="logo-img" alt="ToolStackChoice logo icon" width="44" height="44">
+          <span class="logo-text">ToolStackChoice</span>
+        </a>
         <p>Independent tool reviews since 2024.</p>
       </div>
-            <nav aria-label="Footer navigation">
+      <nav aria-label="Footer navigation">
         <ul role="list" class="footer-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="automation-tools.html">Automation Tools</a></li>
@@ -376,7 +365,13 @@
           <li><a href="n8n-cloud-review.html">n8n Cloud Review (2026)</a></li>
           <li><a href="make-vs-n8n-cloud.html">Make vs n8n Comparison</a></li>
           <li><a href="seo-tools.html">SEO Tools</a></li>
+          <li><a href="ahrefs-review.html">Ahrefs Review (2026)</a></li>
+          <li><a href="semrush-review.html">Semrush Review (2026)</a></li>
+          <li><a href="ahrefs-vs-semrush.html">Ahrefs vs Semrush</a></li>
           <li><a href="hosting.html">Hosting</a></li>
+          <li><a href="hostinger-review.html">Hostinger Review (2026)</a></li>
+          <li><a href="siteground-review.html">SiteGround Review (2026)</a></li>
+          <li><a href="hostinger-vs-siteground.html">Hostinger vs SiteGround</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
