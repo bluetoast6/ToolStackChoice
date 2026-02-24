@@ -53,8 +53,39 @@
   </script>
 
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── About page spacing polish (scoped to .about-page) ── */
+
+    /* Paragraph breathing room inside About sections */
+    .about-page .section p {
+      margin-bottom: 1.1rem;
+    }
+
+    /* Definition list: Q&A pairs */
+    .about-page .about-dl dt {
+      font-weight: 600;
+      margin-top: 1.25rem;
+      margin-bottom: 0.25rem;
+    }
+    .about-page .about-dl dt:first-child {
+      margin-top: 0;
+    }
+    .about-page .about-dl dd {
+      margin-left: 0;
+      margin-bottom: 0.75rem;
+    }
+
+    /* Ordered list: step spacing */
+    .about-page .about-steps li {
+      margin-bottom: 1rem;
+      padding-left: 0.25rem;
+    }
+    .about-page .about-steps li:last-child {
+      margin-bottom: 0;
+    }
+  </style>
 </head>
-<body>
+<body class="about-page">
   <a href="#main-content" class="sr-only">Skip to main content</a>
   <header class="site-header" role="banner">
     <div class="container header-inner">
