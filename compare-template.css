@@ -298,6 +298,12 @@
 
 .ct-article a:hover { text-decoration: underline; }
 
+/* Buttons inside .ct-article must override the generic link colour rule */
+.ct-article .ct-btn           { color: #fff; }
+.ct-article .ct-btn:hover     { color: #fff; text-decoration: none; }
+.ct-article .ct-btn--outline  { color: var(--ct-accent-b); }
+.ct-article .ct-btn--outline:hover { color: #fff; text-decoration: none; }
+
 /* ── 13. Comparison table ── */
 .ct-table-wrap {
   overflow-x: auto;
