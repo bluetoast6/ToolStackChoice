@@ -171,7 +171,7 @@
       <!-- Contact form -->
       <div class="contact-form-section">
         <h2>Send us a message</h2>
-        <form class="contact-form" id="contactForm" novalidate>
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/xwvnadrg" method="POST" novalidate>
           <div class="form-group">
             <label for="contact-name">Name <span aria-hidden="true">*</span></label>
             <input type="text" id="contact-name" name="name" required autocomplete="name" placeholder="Your name" />
@@ -232,11 +232,11 @@
       });
     })();
 
-    // Contact form — client-side confirmation (static site, no backend)
+    // Contact form — Formspree submission with AJAX
     (function () {
       var form = document.getElementById('contactForm');
-      var confirm = document.getElementById('contactConfirm');
-      if (!form || !confirm) return;
+      var confirmBox = document.getElementById('contactConfirm');
+      if (!form || !confirmBox) return;
       form.addEventListener('submit', function (e) {
         e.preventDefault();
         // Basic validation
@@ -244,10 +244,32 @@
         var email = form.querySelector('#contact-email').value.trim();
         var message = form.querySelector('#contact-message').value.trim();
         if (!name || !email || !message) return;
-        // Hide form, show confirmation
-        form.style.display = 'none';
-        confirm.classList.add('is-visible');
-        confirm.focus();
+        // Disable submit button during request
+        var btn = form.querySelector('.btn-submit');
+        btn.disabled = true;
+        btn.textContent = 'Sending…';
+        // Submit to Formspree via fetch
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        })
+        .then(function (res) {
+          if (res.ok) {
+            form.style.display = 'none';
+            confirmBox.classList.add('is-visible');
+            confirmBox.focus();
+          } else {
+            btn.disabled = false;
+            btn.textContent = 'Send message';
+            alert('Sorry, there was a problem sending your message. Please email us directly at toolstackchoice.privacy@gmail.com');
+          }
+        })
+        .catch(function () {
+          btn.disabled = false;
+          btn.textContent = 'Send message';
+          alert('Sorry, there was a problem sending your message. Please email us directly at toolstackchoice.privacy@gmail.com');
+        });
       });
     })();
   </script>
