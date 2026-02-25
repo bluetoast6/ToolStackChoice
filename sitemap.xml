@@ -8,6 +8,13 @@
     <priority>1.0</priority>
   </url>
 
+  <!-- Editorial guides -->
+  <url>
+    <loc>https://www.toolstackchoice.com/automation-tools/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- Category hubs -->
   <url>
     <loc>https://www.toolstackchoice.com/automation-tools.html</loc>
