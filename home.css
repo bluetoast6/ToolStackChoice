@@ -27,6 +27,30 @@
   margin-bottom: 2rem;
 }
 
+/* Hero CTA button group */
+.hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+/* Outline button variant (BEM modifier) */
+.btn--outline {
+  background: transparent;
+  color: var(--tsc-primary);
+  border: 2px solid var(--tsc-primary);
+  box-shadow: none;
+}
+.btn--outline:hover,
+.btn--outline:focus-visible {
+  background: var(--tsc-primary);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
+  transform: translateY(-1px);
+}
+
 /* Larger CTA button on hero */
 .btn--lg {
   font-size: 1rem;
