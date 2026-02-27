@@ -437,6 +437,19 @@ tr.row-recommended td:first-child {
   color: var(--color-text-muted);
 }
 
+/* Scroll hint shown only on mobile below comparison tables */
+.table-scroll-hint {
+  font-size: 0.8rem;
+  color: #777;
+  margin-top: 0.25rem;
+  display: none;
+}
+@media (max-width: 600px) {
+  .table-scroll-hint {
+    display: block;
+  }
+}
+
 /* ---------- 13. Subscribe Form ---------- */
 .subscribe-form {
   display: flex;
@@ -585,34 +598,26 @@ tr.row-recommended td:first-child {
 
 /* ---------- 17. Responsive: Tablet (≤ 768px) ---------- */
 @media (max-width: 768px) {
-
+  /* Footer: collapse to single column on tablet and mobile (all page types) */
   .footer-inner {
     grid-template-columns: 1fr;
     gap: var(--space-md);
+    text-align: left;
   }
-
   .footer-legal { text-align: left; }
-
   .footer-links {
     flex-direction: row;
     flex-wrap: wrap;
     gap: var(--space-xs) var(--space-md);
   }
-
-}
-
-/* ---------- 17. Responsive: Mobile (≤ 600px) ---------- */
-@media (max-width: 600px) {
-
+  /* Nav: show hamburger on tablet and mobile (≤768px) */
   .nav-toggle { display: block; }
-
   .primary-nav {
     display: none;
     width: 100%;
     order: 3;
   }
   .primary-nav.is-open { display: block; }
-
   .primary-nav ul {
     flex-direction: column;
     gap: 0;
@@ -620,21 +625,22 @@ tr.row-recommended td:first-child {
     padding-top: var(--space-xs);
     padding-bottom: var(--space-sm);
   }
-
   .primary-nav a {
     display: block;
     padding-block: 0.6rem;
     border-bottom: none;
   }
-
   .header-inner { flex-wrap: wrap; }
+}
 
+/* ---------- 17. Responsive: Mobile (≤ 600px) ---------- */
+@media (max-width: 600px) {
   .hero { padding-block: var(--space-lg); }
-
   .section { padding-block: var(--space-lg); }
-
-  th, td { white-space: normal; }
-
+  /* card-grid--2: force single column on small phones */
+  .card-grid--2 {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ---------- 18. Print ---------- */
