@@ -1344,6 +1344,9 @@ tr.row-recommended td:first-child {
 .choose-box p:last-child { margin-bottom: 0; }
 .choose-box a { color: #2563eb; text-decoration: underline; }
 .choose-box a:hover { color: #1d4ed8; }
+.choose-box .btn,
+.choose-box .btn:hover,
+.choose-box .btn:focus-visible { color: #fff; text-decoration: none; }
 
 /* ── Site Logo Icon ──────────────────────────────────────────────── */
 .logo-img {
