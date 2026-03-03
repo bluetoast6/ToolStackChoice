@@ -207,6 +207,54 @@ a:hover, a:focus-visible {
   color: var(--color-text);
 }
 
+/* Nav dropdown (desktop) */
+.primary-nav li.has-dropdown {
+  position: relative;
+}
+.primary-nav li.has-dropdown > a::after {
+  content: " \25BE";
+  font-size: 0.7em;
+  opacity: 0.55;
+  margin-left: 0.1em;
+}
+.primary-nav .dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  min-width: 220px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  z-index: 200;
+  padding: 0.35rem 0;
+  flex-direction: column;
+  gap: 0;
+  list-style: none;
+}
+.primary-nav li.has-dropdown:hover > .dropdown,
+.primary-nav li.has-dropdown:focus-within > .dropdown {
+  display: flex;
+}
+.primary-nav .dropdown li {
+  width: 100%;
+}
+.primary-nav .dropdown a {
+  display: block;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border-bottom: none;
+  white-space: nowrap;
+  color: var(--color-text);
+}
+.primary-nav .dropdown a:hover,
+.primary-nav .dropdown a:focus-visible {
+  background: var(--color-surface);
+  color: var(--color-accent);
+  border-bottom: none;
+}
+
 /* ---------- 7. Hero ---------- */
 .hero {
   background: var(--color-surface);
@@ -629,6 +677,23 @@ tr.row-recommended td:first-child {
     display: block;
     padding-block: 0.6rem;
     border-bottom: none;
+  }
+  /* Dropdown: always visible as flat list on mobile */
+  .primary-nav li.has-dropdown > a::after { display: none; }
+  .primary-nav .dropdown {
+    display: flex;
+    position: static;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    padding: 0 0 0 1rem;
+    background: transparent;
+    min-width: 0;
+  }
+  .primary-nav .dropdown a {
+    padding-block: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
   }
   .header-inner { flex-wrap: wrap; }
 }
