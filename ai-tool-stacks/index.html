@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="../style.css" />
   <link rel="stylesheet" href="../visuals.css" />
 
+  <!-- JSON-LD: CollectionPage -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -37,6 +38,90 @@
     }
   }
   </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is an AI tool stack page, and how is it different from a tool review?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "An AI tool stack page is a blueprint for how tools fit together for a specific persona, not a review of a single product. It answers questions like 'Given my role and stage, which tools should I combine for automation, SEO, hosting, analytics, and support—and why?' Each stack page links out to detailed reviews if you want to evaluate an individual tool more deeply."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I choose the right persona stack for my situation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Start by matching your primary business model and team size: SaaS founders building a product should use the Bootstrapped SaaS Founders stack; small agencies handling client work should use the Small Agencies stack. If you don't fit either cleanly, use the Ultimate Digital Tool Stack for Small Teams as a more general starting point and adapt it."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I mix tools from different stacks, or should I follow one stack exactly?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can absolutely mix tools between stacks — the blueprints are opinionated starting points, not rigid rules. The safest approach is to keep one consistent tool per layer (automation, SEO, hosting, analytics, support) and only swap when you have a clear reason, so your stack stays maintainable."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will these AI tool stacks stay up to date as tools and pricing change?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We periodically review each stack to update pricing, swap out tools that are no longer competitive, and add new options when they're clearly better for a persona. When something changes meaningfully — like a major pricing or feature update — we update both the stack page and the linked review, so you always have a current recommendation."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* ── AI Tool Stacks hub: persona card bullets ─────────────────────── */
+    .persona-card-bullets {
+      list-style: disc;
+      padding-left: 1.35rem;
+      margin: 0.6rem 0 1rem;
+    }
+    .persona-card-bullets li {
+      font-size: 0.93rem;
+      margin-bottom: 0.35rem;
+      color: var(--color-text);
+    }
+
+    /* ── Hub card "used in stacks" line ──────────────────────────────── */
+    .hub-card-used {
+      font-size: 0.82rem;
+      color: var(--color-text-muted);
+      font-style: italic;
+      margin-top: 0.4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* ── FAQ list (matches persona pages) ───────────────────────────── */
+    .faq-list { margin-top: var(--space-md); }
+    .faq-list dt {
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--color-text);
+      margin-top: var(--space-md);
+      margin-bottom: 0.35rem;
+    }
+    .faq-list dt:first-child { margin-top: 0; }
+    .faq-list dd {
+      margin-left: 0;
+      color: var(--color-text);
+      line-height: var(--line-height);
+      padding-bottom: var(--space-sm);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .faq-list dd:last-child { border-bottom: none; padding-bottom: 0; }
+  </style>
 </head>
 <body>
 
@@ -71,11 +156,11 @@
     <section class="hero">
       <div class="container">
         <h1>AI Tool Stacks for 2026</h1>
-        <p class="hero-sub">Not sure which tools to combine? These persona-based stack blueprints give you a tested, opinionated starting point — one default tool per layer, plus clear alternatives for when your needs differ. Every recommendation links back to our full, scored reviews.</p>
+        <p class="hero-sub">Persona-based AI tool blueprints for SaaS founders and small agencies, with opinionated picks for every layer of your stack.</p>
       </div>
     </section>
 
-    <!-- Stack pages -->
+    <!-- Persona cards -->
     <section class="section" aria-labelledby="stacks-heading">
       <div class="container">
         <h2 id="stacks-heading">Choose Your Persona</h2>
@@ -85,13 +170,23 @@
 
           <div class="card">
             <h3><a href="saas-founder-2026/">Best AI Tool Stack for Bootstrapped SaaS Founders (2026)</a></h3>
-            <p>A lean, cost-effective stack for solo founders and small SaaS teams who need automation, SEO, reliable hosting, and analytics — without enterprise overhead or DevOps complexity.</p>
+            <p>A lean, opinionated stack to help solo and small-team SaaS founders ship faster, validate, and grow without hiring a big team.</p>
+            <ul class="persona-card-bullets">
+              <li>Prioritized around shipping v1 and early revenue</li>
+              <li>Covers automation, SEO, analytics, and support</li>
+              <li>Includes clear upgrade paths as MRR grows</li>
+            </ul>
             <a href="saas-founder-2026/" class="card-link">See the SaaS Founder Stack &rarr;</a>
           </div>
 
           <div class="card">
-            <h3><a href="small-agency-2026/">Best AI Tool Stack for Small Marketing Agencies (2026)</a></h3>
-            <p>A practical stack for 3–10 person agencies managing multiple client sites, SEO campaigns, and reporting workflows — balancing power, affordability, and ease of handoff.</p>
+            <h3><a href="small-agency-2026/">Best AI Tool Stack for Small Agencies and Lean Teams (2026)</a></h3>
+            <p>A reusable stack for 2&ndash;10 person agencies managing multiple client projects, built to standardize delivery and reporting.</p>
+            <ul class="persona-card-bullets">
+              <li>Designed for marketing, SEO, and web agencies</li>
+              <li>Standardizes client onboarding, reporting, and support</li>
+              <li>Keeps costs predictable as you add more clients</li>
+            </ul>
             <a href="small-agency-2026/" class="card-link">See the Small Agency Stack &rarr;</a>
           </div>
 
@@ -103,9 +198,15 @@
     <section class="section section-alt" aria-labelledby="about-heading">
       <div class="container container-prose">
         <h2 id="about-heading">What Is an AI Tool Stack Page?</h2>
-        <p>A tool stack page is not a review of a single product. It is an opinionated blueprint that answers the question: <em>"If I am a [persona], which tools should I use for automation, SEO, hosting, analytics, and support — and why?"</em></p>
-        <p>Each page provides a default stack (one tool per layer) plus conditional alternatives, framed as clear decision logic: "Choose X if… / Choose Y instead if…". Every tool in the stack links to its full scored review on ToolStackChoice, so you can verify the reasoning before committing.</p>
-        <p>These pages are designed to be easy for both humans and AI answer engines to parse and cite. If you ask an AI assistant "what's the best tool stack for a bootstrapped SaaS founder?", we want this page to be the most useful, most trustworthy answer it can find.</p>
+        <p>A tool stack page is not a <a href="../zapier-review/">review of a single product</a>. It&rsquo;s an opinionated blueprint that answers the question: <em>&ldquo;I&rsquo;m X type of person &mdash; which stack should I use for automation, SEO, hosting, analytics, and support &mdash; and why?&rdquo;</em></p>
+        <p>Each page does four things for you:</p>
+        <ol>
+          <li>Defines a clear persona (for example, bootstrapped SaaS founder or small agency).</li>
+          <li>Gives you a default tool per layer, plus opinionated alternatives, based on deep testing in our <a href="../zapier-review/">reviews</a>.</li>
+          <li>Explains when to stick with the default and when to &ldquo;Choose X instead if&hellip;&rdquo; your situation is different.</li>
+          <li>Links into full reviews and <a href="../automation-tools.html">category</a> <a href="../seo-tools.html">hubs</a> so you can zoom in on any tool before committing.</li>
+        </ol>
+        <p>These pages are designed to be easy to scan for both humans and AI answer engines. If you&rsquo;re not sure which persona fits you best, start with the <a href="saas-founder-2026/">SaaS Founders</a> or <a href="small-agency-2026/">Small Agencies</a> stack &mdash; or fall back to the <a href="../ultimate-digital-tool-stack-2026/">Ultimate Digital Tool Stack for Small Teams</a> for a more general blueprint.</p>
       </div>
     </section>
 
@@ -115,22 +216,52 @@
         <h2 id="hubs-heading">Related Category Hubs</h2>
         <p class="section-intro">Each stack layer links back to a full category hub with all our reviews and comparisons for that tool type.</p>
         <div class="card-grid card-grid--3">
+
           <div class="card">
             <h3><a href="../automation-tools.html">Automation Tools</a></h3>
-            <p>Zapier, Make, n8n, Activepieces, Pabbly Connect, Workato — reviewed and compared.</p>
+            <p>Zapier, Make, n8n, Activepieces, Pabbly Connect, Workato &mdash; reviewed and compared.</p>
+            <p class="hub-card-used">Used in our SaaS founder and small agency stacks.</p>
             <a href="../automation-tools.html" class="card-link">See all automation tools &rarr;</a>
           </div>
+
           <div class="card">
             <h3><a href="../seo-tools.html">SEO Tools</a></h3>
-            <p>Ahrefs, Semrush, Mangools, SE Ranking, Moz Pro, Screaming Frog, Surfer SEO.</p>
+            <p>Ahrefs, Semrush, Mangools, SE Ranking, Moz Pro, Surfer &mdash; tested for smarter SEO.</p>
+            <p class="hub-card-used">Powering the SEO layers in our stack pages.</p>
             <a href="../seo-tools.html" class="card-link">See all SEO tools &rarr;</a>
           </div>
+
           <div class="card">
             <h3><a href="../hosting.html">Hosting</a></h3>
             <p>Kinsta, WP Engine, Cloudways, Flywheel, Pressable, Hostinger, SiteGround.</p>
+            <p class="hub-card-used">Recommended hosting options across our persona stacks.</p>
             <a href="../hosting.html" class="card-link">See all hosting reviews &rarr;</a>
           </div>
+
         </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-alt" aria-labelledby="faq-heading" id="faq">
+      <div class="container container-prose">
+        <h2 id="faq-heading">FAQ</h2>
+
+        <dl class="faq-list">
+
+          <dt>What is an AI tool stack page, and how is it different from a tool review?</dt>
+          <dd>An AI tool stack page is a blueprint for how tools fit together for a specific persona, not a review of a single product. It answers questions like &ldquo;Given my role and stage, which tools should I combine for automation, SEO, hosting, analytics, and support &mdash; and why?&rdquo; Each stack page links out to <a href="../zapier-review/">detailed reviews</a> if you want to evaluate an individual tool more deeply.</dd>
+
+          <dt>How do I choose the right persona stack for my situation?</dt>
+          <dd>Start by matching your primary business model and team size: SaaS founders building a product should use the <a href="saas-founder-2026/">Bootstrapped SaaS Founders stack</a>; small agencies handling client work should use the <a href="small-agency-2026/">Small Agencies stack</a>. If you don&rsquo;t fit either cleanly, use the <a href="../ultimate-digital-tool-stack-2026/">Ultimate Digital Tool Stack for Small Teams</a> as a more general starting point and adapt it.</dd>
+
+          <dt>Can I mix tools from different stacks, or should I follow one stack exactly?</dt>
+          <dd>You can absolutely mix tools between stacks &mdash; the blueprints are opinionated starting points, not rigid rules. The safest approach is to keep one consistent tool per layer (<a href="../automation-tools.html">automation</a>, <a href="../seo-tools.html">SEO</a>, <a href="../hosting.html">hosting</a>, analytics, support) and only swap when you have a clear reason, so your stack stays maintainable.</dd>
+
+          <dt>Will these AI tool stacks stay up to date as tools and pricing change?</dt>
+          <dd>Yes. We periodically review each stack to update pricing, swap out tools that are no longer competitive, and add new options when they&rsquo;re clearly better for a persona. When something changes meaningfully &mdash; like a major pricing or feature update &mdash; we update both the stack page and the linked review, so you always have a current recommendation.</dd>
+
+        </dl>
       </div>
     </section>
 
