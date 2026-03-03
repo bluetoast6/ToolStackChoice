@@ -94,6 +94,14 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- Deep-dive guides -->
+  <url>
+    <loc>https://www.toolstackchoice.com/analytics-tools-saas-founders-2026/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- Automation tool reviews -->>
   <url>
     <loc>https://www.toolstackchoice.com/make-com-review.html</loc>
