@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VR6QGW9543"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VR6QGW9543');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="../favicon.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="../favicon-16.png" sizes="16x16" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+
+  <title>Support &amp; Helpdesk Stack for SaaS Founders in 2026 | ToolStackChoice</title>
+  <meta name="description" content="An opinionated support stack for SaaS founders in 2026 — in-app chat, shared inbox, knowledge base, and status pages. One default per layer, with clear upgrade signals and example stacks." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.toolstackchoice.com/support-stack-saas-founders-2026/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:site_name"   content="ToolStackChoice" />
+  <meta property="og:title"       content="Support &amp; Helpdesk Stack for SaaS Founders in 2026 | ToolStackChoice" />
+  <meta property="og:description" content="An opinionated support stack for SaaS founders in 2026 — in-app chat, shared inbox, knowledge base, and status pages. One default per layer, with clear upgrade signals." />
+  <meta property="og:url"         content="https://www.toolstackchoice.com/support-stack-saas-founders-2026/" />
+  <meta property="og:image"       content="https://www.toolstackchoice.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../visuals.css" />
+
+  <!-- JSON-LD: ItemList (Support Stack at a Glance) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Support & Helpdesk Stack for SaaS Founders in 2026",
+    "description": "An opinionated support stack for SaaS founders covering in-app chat, shared inbox, ticketing, knowledge base, and status pages.",
+    "url": "https://www.toolstackchoice.com/support-stack-saas-founders-2026/",
+    "numberOfItems": 4,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Crisp",
+        "description": "Default in-app chat and shared inbox tool. Simple combined chat and email, generous pricing for small teams, easy to get started and grow into.",
+        "url": "https://crisp.chat/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Built-in ticketing (Crisp / Help Scout)",
+        "description": "Default ticketing and workflow tool. Avoids extra tools; statuses and tags are enough at low volume.",
+        "url": "https://crisp.chat/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Notion + HelpKit",
+        "description": "Default knowledge base setup. Easy to publish searchable docs; Notion is familiar and HelpKit makes it look professional.",
+        "url": "https://www.helpkit.so/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Better Stack Status Pages",
+        "description": "Default status and incident communications tool. Clean hosted status pages, uptime monitoring, and reasonable pricing for small SaaS teams.",
+        "url": "https://betterstack.com/status"
+      }
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What's the absolute minimum support stack I need to launch?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can start with: a shared inbox (Crisp or Help Scout), a simple in-app contact widget, and a tiny 10-article KB covering onboarding, billing, and your key workflows."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "As a solo founder, how do I avoid being on call 24/7 with live chat?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Set business-hour expectations in your widget, route off-hours messages to email, and push simple questions into your KB so users can self-serve instead of waiting for you."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Crisp vs Help Scout vs Intercom: which is best for a bootstrapped SaaS?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If budget is tight, start with Crisp as the default. Move to Help Scout if you love an email-first experience, and only consider Intercom once your volume and revenue justify a heavier, sales-oriented platform."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I build a KB when the product is changing every week?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Focus on what doesn't change much (sign-up, login, billing basics) and on high-frequency questions. Treat 'we've answered this three times this week' as your signal to write an article."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When should I invest in a proper status page like Better Stack?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "As soon as you have paying customers and any history of downtime. It cuts down on 'is it down?' tickets and makes you look like a serious, reliable product."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* ── Support guide page: layout polish (same as analytics deep-dive) ── */
+
+    .persona-content h2 {
+      margin-top: var(--space-xl);
+      margin-bottom: var(--space-sm);
+      scroll-margin-top: 5rem;
+    }
+    .persona-content h2:first-child { margin-top: 0; }
+    .persona-content h3 {
+      margin-top: var(--space-lg);
+      margin-bottom: var(--space-xs);
+      scroll-margin-top: 5rem;
+    }
+    .persona-content p { margin-bottom: var(--space-sm); }
+    .persona-content ul,
+    .persona-content ol { padding-left: 1.35rem; margin-bottom: var(--space-sm); }
+    .persona-content li { margin-bottom: 0.4rem; }
+
+    /* Stack at a Glance table */
+    .stack-table-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      margin: var(--space-md) 0 var(--space-lg);
+    }
+    .stack-table-wrap table { margin: 0; }
+    .stack-table-wrap td { white-space: normal; }
+    .stack-table-wrap tfoot td {
+      font-size: 0.82rem;
+      color: var(--color-text-muted);
+      padding: 0.6rem 1rem;
+      border-top: 1px solid var(--color-border);
+      border-bottom: none;
+      background: var(--tsc-surface);
+    }
+
+    /* Layer decision / upgrade signal cards */
+    .layer-card {
+      border-left: 3px solid var(--tsc-primary);
+      padding: 1rem 1.25rem;
+      background: var(--tsc-primary-soft);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      margin-bottom: var(--space-sm);
+    }
+    .layer-card p { margin-bottom: 0.5rem; }
+    .layer-card p:last-child { margin-bottom: 0; }
+
+    /* Example stack recipe cards */
+    .stack-recipes {
+      display: grid;
+      gap: var(--space-md);
+      margin-top: var(--space-md);
+    }
+    @media (min-width: 700px) {
+      .stack-recipes { grid-template-columns: 1fr 1fr; }
+    }
+    .stack-recipe {
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      background: var(--tsc-surface);
+    }
+    .stack-recipe h3 {
+      margin-top: 0;
+      margin-bottom: var(--space-xs);
+      font-size: 1rem;
+    }
+    .stack-recipe p { font-size: 0.93rem; color: var(--color-text-muted); margin-bottom: var(--space-xs); }
+    .stack-recipe ul { margin: 0.5rem 0 0; padding-left: 1.2rem; }
+    .stack-recipe ul li { font-size: 0.93rem; margin-bottom: 0.35rem; }
+    .stack-recipe .recipe-note {
+      margin-top: var(--space-sm);
+      font-size: 0.875rem;
+      color: var(--color-text-muted);
+      font-style: italic;
+    }
+
+    /* FAQ as definition list */
+    .faq-list { margin-top: var(--space-md); }
+    .faq-list dt {
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--color-text);
+      margin-top: var(--space-md);
+      margin-bottom: 0.35rem;
+    }
+    .faq-list dt:first-child { margin-top: 0; }
+    .faq-list dd {
+      margin-left: 0;
+      color: var(--color-text);
+      line-height: var(--line-height);
+      margin-bottom: 0;
+      padding-bottom: var(--space-sm);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .faq-list dd:last-child { border-bottom: none; padding-bottom: 0; }
+
+    /* Enhanced verdict choose-box */
+    .choose-box ul {
+      padding-left: 1.35rem;
+      margin: 0.35rem 0 0.75rem;
+    }
+    .choose-box ul li { margin-bottom: 0.35rem; font-size: 0.95rem; }
+    .choose-box .verdict-label {
+      display: block;
+      font-weight: 700;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--tsc-primary);
+      margin-bottom: 0.25rem;
+      margin-top: var(--space-sm);
+    }
+    .choose-box .verdict-label:first-child { margin-top: 0; }
+    .choose-box .verdict-best-for {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: var(--space-sm);
+    }
+
+    /* Advanced layer callout */
+    .advanced-callout {
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      background: var(--tsc-surface);
+      margin-top: var(--space-md);
+    }
+    .advanced-callout h3 {
+      margin-top: 0;
+      font-size: 1rem;
+      color: var(--color-text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="sr-only">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="../index.html" class="logo" aria-label="ToolStackChoice Home"><img src="../logo-icon.png" class="logo-img" alt="ToolStackChoice logo icon" width="44" height="44"><span class="logo-text">ToolStackChoice</span></a>
+      <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">&#9776;</button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
+        <ul role="list">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../automation-tools.html">Automation Tools</a></li>
+          <li><a href="../seo-tools.html">SEO Tools</a></li>
+          <li><a href="../hosting.html">Hosting</a></li>
+          <li class="has-dropdown"><a href="../ai-tool-stacks/">AI Tool Stacks</a>
+            <ul class="dropdown">
+              <li><a href="../ai-tool-stacks/saas-founder-2026/">SaaS Founder Stack (2026)</a></li>
+              <li><a href="../ai-tool-stacks/small-agency-2026/">Small Agency Stack (2026)</a></li>
+              <li><a href="../ai-tool-stacks/solo-consultant-2026/">Solo Consultant Stack (2026)</a></li>
+              <li><a href="../ai-tool-stacks/mvs-saas-2026/">Minimum Viable SaaS Stack (2026)</a></li>
+            </ul>
+          </li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../contact/">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- Breadcrumb -->
+    <nav class="container" aria-label="Breadcrumb" style="padding-top:1rem;padding-bottom:0;font-size:0.875rem;color:var(--color-text-muted);">
+      <a href="../index.html">Home</a> &rsaquo;
+      <a href="../ai-tool-stacks/">AI Tool Stacks</a> &rsaquo;
+      <span>Support &amp; Helpdesk Stack for SaaS Founders (2026)</span>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <p class="category-tag" style="font-size:0.8rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-accent);margin-bottom:0.5rem;">AI Tool Stacks &middot; Updated February 2026</p>
+        <h1>Support &amp; Helpdesk Stack for SaaS Founders in 2026</h1>
+        <p class="hero-sub">As a SaaS founder you don&rsquo;t need enterprise support tooling &mdash; you need a lightweight stack that lets you answer questions fast, build a living knowledge base, and avoid drowning in tickets.</p>
+        <p class="hero-sub"><strong>TL;DR:</strong> Start simple, centralised, and searchable. This guide gives you a default support stack for early-stage SaaS, plus clear signals for when to upgrade. It is the canonical support layer reference for our <a href="../ai-tool-stacks/saas-founder-2026/">Bootstrapped SaaS Founder stack</a> and our <a href="../ai-tool-stacks/mvs-saas-2026/">Minimum Viable $100 Stack</a>.</p>
+      </div>
+    </section>
+
+    <!-- Who it's for -->
+    <section class="section section-alt" id="who-its-for">
+      <div class="container persona-content">
+        <h2>Who This Guide Is For</h2>
+
+        <p>This deep dive is for:</p>
+        <ul>
+          <li>Solo or 1&ndash;3-person SaaS teams.</li>
+          <li>Pre-PMF or early-PMF founders who are still close to every customer.</li>
+          <li>Teams that mostly support customers via email and in-app chat, not phone.</li>
+        </ul>
+
+        <p>It is <strong>not</strong> aimed at:</p>
+        <ul>
+          <li>Large, multi-team call centres.</li>
+          <li>Enterprise setups with complex SLAs and on-prem requirements.</li>
+          <li>Companies needing deep Salesforce / ServiceNow integration.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Stack at a Glance -->
+    <section class="section" id="stack-at-a-glance">
+      <div class="container persona-content">
+        <h2>Support Stack at a Glance (2026)</h2>
+        <p>Think of your support stack in four layers. For each layer, there is a default pick and one good alternative.</p>
+
+        <div class="stack-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Layer</th>
+                <th>Default tool (2026)</th>
+                <th>Why we recommend it for SaaS founders</th>
+                <th>Starting price</th>
+                <th>Good alternative</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>In-app chat &amp; shared inbox</strong></td>
+                <!-- Link "Crisp" to /crisp-review/ when that review page is live -->
+                <td><a href="https://crisp.chat/" rel="noopener noreferrer" target="_blank">Crisp</a></td>
+                <td>Simple combined chat + email, generous pricing for small teams, easy to get started and grow into.</td>
+                <td>Free tier; Mini from $45/month</td>
+                <td>Help Scout (email-first shared inbox)</td>
+              </tr>
+              <tr>
+                <td><strong>Ticketing &amp; workflows</strong></td>
+                <td>Built-in in Crisp / Help Scout</td>
+                <td>Avoids extra tools; statuses + tags are enough at low volume.</td>
+                <td>Included</td>
+                <td>Zendesk (when volume/process is high)</td>
+              </tr>
+              <tr>
+                <td><strong>Knowledge base (KB)</strong></td>
+                <td>Integrated docs or <a href="https://www.helpkit.so/" rel="noopener noreferrer" target="_blank">Notion + HelpKit</a></td>
+                <td>Easy to publish searchable docs; Notion is familiar and HelpKit makes it look professional.</td>
+                <td>$0&ndash;29/month</td>
+                <td>Help Scout Docs / GitBook</td>
+              </tr>
+              <tr>
+                <td><strong>Status &amp; incident comms</strong></td>
+                <td><a href="https://betterstack.com/status" rel="noopener noreferrer" target="_blank">Better Stack Status Pages</a></td>
+                <td>Clean hosted status pages, uptime monitoring, and reasonable pricing for small SaaS teams.</td>
+                <td>Free (1 status page); paid from $29/month</td>
+                <td>Statuspal / Hyperping</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="5">* Prices are current public entry tiers as of February 2026; always check current pricing on the vendor site.</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Layer 1 -->
+    <section class="section section-alt" id="layer-chat-inbox">
+      <div class="container persona-content">
+        <h2>Layer 1: In-App Chat &amp; Shared Inbox</h2>
+
+        <!-- Link "Crisp" to /crisp-review/ when that review page is live -->
+        <p><strong>Default: <a href="https://crisp.chat/" rel="noopener noreferrer" target="_blank">Crisp</a> as your combined chat + inbox.</strong></p>
+
+        <h3>What Crisp gives you (and why it fits bootstrapped SaaS)</h3>
+        <ul>
+          <li>In-app chat widget you can drop into your app or marketing site.</li>
+          <li>Shared inbox for support@yourdomain so all messages live in one place.</li>
+          <li>Basic automation and routing without needing a &ldquo;support admin.&rdquo;</li>
+          <li>Pricing that stays friendly as you add teammates.</li>
+        </ul>
+
+        <p>If you prefer a more email-first experience, <strong>Help Scout</strong> is a great alternative: it feels like Gmail but built for teams, with light chat and a strong shared inbox.</p>
+
+        <div class="layer-card">
+          <p><strong>Upgrade signals for this layer</strong></p>
+          <p>Consider moving to something heavier (or a higher tier) like Intercom or Zendesk when:</p>
+          <ul>
+            <li>You consistently handle more than 200 conversations per month.</li>
+            <li>You need separate queues for Support, Success, and Sales with more complex routing.</li>
+            <li>You want bots and multi-step flows to deflect routine questions.</li>
+            <li>You manage multiple brands or products and need fine-grained permissions.</li>
+          </ul>
+          <p>Until those are true, Crisp (or Help Scout) will be more than enough.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Layer 2 -->
+    <section class="section" id="layer-ticketing">
+      <div class="container persona-content">
+        <h2>Layer 2: Ticketing &amp; Workflows</h2>
+
+        <p>At early stage, your ticketing system can just be views and statuses in Crisp or Help Scout.</p>
+
+        <h3>Default setup</h3>
+        <ul>
+          <li>Use built-in ticketing/status in your support tool.</li>
+          <li>Keep the status flow simple: <strong>Open &rarr; In progress &rarr; Waiting &rarr; Closed.</strong></li>
+          <li>Tag conversations with a handful of labels like <em>bug</em>, <em>feature request</em>, <em>billing</em>, <em>onboarding</em>.</li>
+        </ul>
+
+        <h3>What this gives you</h3>
+        <ul>
+          <li>Enough structure that nothing falls through the cracks.</li>
+          <li>Basic visibility into &ldquo;what&rsquo;s generating the most tickets.&rdquo;</li>
+          <li>A way to spot topics that deserve a KB article.</li>
+        </ul>
+
+        <div class="layer-card">
+          <p><strong>Upgrade signals for this layer</strong></p>
+          <p>Consider adding a more dedicated ticketing setup (or moving to Zendesk/Intercom) if:</p>
+          <ul>
+            <li>You have multiple teams or timezones and need explicit ownership.</li>
+            <li>You are operating under strict SLAs and need granular reporting.</li>
+            <li>Tickets look like projects (multi-step implementations) rather than Q&amp;A.</li>
+          </ul>
+          <p>If your support still feels conversational and mostly one-touch, stick with the built-in tools.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Layer 3 -->
+    <section class="section section-alt" id="layer-knowledge-base">
+      <div class="container persona-content">
+        <h2>Layer 3: Knowledge Base (KB)</h2>
+
+        <p>Your KB turns repeat questions into one-click answers.</p>
+
+        <h3>For early-stage SaaS, you want</h3>
+        <ul>
+          <li>A public, searchable KB your users can reach from your app, chat widget, and footer.</li>
+          <li>Simple categories like <em>Getting started</em>, <em>Billing</em>, <em>Integrations</em>, <em>Troubleshooting</em>.</li>
+          <li>A lightweight process for turning &ldquo;we answered this 3 times&rdquo; into an article.</li>
+        </ul>
+
+        <h3>Default options that fit this guide</h3>
+        <p>If you are using Help Scout, use <strong>Help Scout Docs</strong> for a tightly integrated KB.</p>
+        <p>If you are on Crisp or just love Notion, use <strong>Notion + <a href="https://www.helpkit.so/" rel="noopener noreferrer" target="_blank">HelpKit</a></strong>:</p>
+        <ul>
+          <li>Write and organise articles in Notion.</li>
+          <li>Let HelpKit publish a clean, branded KB from that content.</li>
+        </ul>
+
+        <h3>Baseline structure</h3>
+        <ul>
+          <li>Start with 10&ndash;30 articles.</li>
+          <li>Each article solves one specific problem with short steps and screenshots.</li>
+          <li>Revisit once a quarter to update anything obviously outdated.</li>
+        </ul>
+
+        <div class="layer-card">
+          <p><strong>Upgrade signals for this layer</strong></p>
+          <p>Consider a more powerful KB setup when:</p>
+          <ul>
+            <li>You are seeing hundreds to thousands of KB visits per month.</li>
+            <li>You want advanced search, analytics, and feedback (&ldquo;Was this helpful?&rdquo;).</li>
+            <li>You need multiple spaces (e.g., separate docs for admins vs end-users).</li>
+            <li>You require draft/review workflows across a larger team.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Layer 4 -->
+    <section class="section" id="layer-status">
+      <div class="container persona-content">
+        <h2>Layer 4: Status &amp; Incident Communication</h2>
+
+        <p>Even small SaaS products should have a clear way to say &ldquo;we know something is wrong.&rdquo;</p>
+
+        <p><strong>Default: <a href="https://betterstack.com/status" rel="noopener noreferrer" target="_blank">Better Stack Status Pages</a>.</strong></p>
+
+        <h3>What you get</h3>
+        <ul>
+          <li>A hosted, branded status page for your app(s) &mdash; one page included on the free plan.</li>
+          <li>Uptime and incident history your users can see anytime.</li>
+          <li>Optional alerts and monitoring integrations so you know about problems early.</li>
+        </ul>
+
+        <h3>Pair this with</h3>
+        <ul>
+          <li>A saved reply in Crisp/Help Scout linking to your status page.</li>
+          <li>A link in your app&rsquo;s footer or help menu.</li>
+        </ul>
+
+        <div class="layer-card">
+          <p><strong>Upgrade signals for this layer</strong></p>
+          <p>Consider a more complex setup or additional tooling when:</p>
+          <ul>
+            <li>You have mission-critical B2B customers with strict uptime expectations.</li>
+            <li>You run multiple services or regions and need component-level status.</li>
+            <li>You want deeper on-call and incident management, post-mortems, etc.</li>
+          </ul>
+          <p>For most small SaaS teams, Better Stack (or similar) is a big trust upgrade for relatively little effort.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Advanced Layer -->
+    <section class="section section-alt" id="layer-feedback">
+      <div class="container persona-content">
+        <h2>Advanced Layer: Feedback &amp; Product Loop</h2>
+
+        <p>When support volume grows, you need a clean loop from support &rarr; product.</p>
+
+        <div class="advanced-callout">
+          <h3>Simple but effective pattern</h3>
+          <ul>
+            <li>In Crisp/Help Scout, tag tickets as <em>feature request</em>, <em>bug</em>, or <em>churn risk</em> when appropriate.</li>
+            <li>Keep a Notion or spreadsheet log of recurring requests and issues.</li>
+            <li>Review that log monthly with whoever owns product/engineering.</li>
+          </ul>
+        </div>
+
+        <p style="margin-top:var(--space-md);">Only add a dedicated feedback tool once:</p>
+        <ul>
+          <li>You&rsquo;ve clearly outgrown tags + Notion.</li>
+          <li>You&rsquo;re missing opportunities because there is too much unstructured feedback.</li>
+        </ul>
+
+        <p>The goal here is clarity, not tooling for its own sake.</p>
+      </div>
+    </section>
+
+    <!-- Example Stacks -->
+    <section class="section" id="example-stacks">
+      <div class="container persona-content">
+        <h2>Example Support Stacks</h2>
+        <p>Two named recipes depending on where you are in your product journey:</p>
+
+        <div class="stack-recipes">
+          <div class="stack-recipe">
+            <h3>1. Lean Support (Pre-PMF)</h3>
+            <p>Designed for: solo founder or tiny team, low volume, fast iteration.</p>
+            <ul>
+              <li><strong>In-app chat &amp; inbox:</strong> Crisp.</li>
+              <li><strong>Ticketing:</strong> Crisp&rsquo;s built-in statuses and tags.</li>
+              <li><strong>KB:</strong> Notion + HelpKit with 10&ndash;20 core articles.</li>
+              <li><strong>Status:</strong> Better Stack status page, linked in your app and emails.</li>
+              <li><strong>Feedback loop:</strong> Tags in Crisp + a simple Notion page tracking top issues/requests.</li>
+            </ul>
+            <p class="recipe-note">Optimises for: setup in a few hours, very low monthly cost, easy to switch tools later if you outgrow this stack.</p>
+          </div>
+
+          <div class="stack-recipe">
+            <h3>2. Scaling Support (Post-PMF)</h3>
+            <p>Designed for: growing team, more agents, rising expectations.</p>
+            <ul>
+              <li><strong>In-app chat &amp; inbox:</strong> Help Scout (email-first) or Crisp on a higher tier, with more automation and routing.</li>
+              <li><strong>Ticketing:</strong> More structured queues/views per team (Support vs Success).</li>
+              <li><strong>KB:</strong> 50+ articles in Help Scout Docs or a more advanced KB built on Notion + HelpKit.</li>
+              <li><strong>Status:</strong> Better Stack with more components and clearer incident workflows.</li>
+              <li><strong>Feedback loop:</strong> Formal monthly report of &ldquo;Top 5 issues/requests&rdquo; fed into the product roadmap.</li>
+            </ul>
+            <p class="recipe-note">Optimises for: consistent responses across a small team, trackable metrics (first response time, resolution time, CSAT), fewer repeat tickets because docs and product keep improving.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How this fits into other stacks -->
+    <section class="section section-alt" id="fits-into-stacks">
+      <div class="container persona-content">
+        <h2>How This Fits Into Your Other ToolStackChoice Stacks</h2>
+
+        <p>This page is the canonical reference for the support layer across our SaaS-focused stacks:</p>
+
+        <ul>
+          <li>In the <a href="../ai-tool-stacks/saas-founder-2026/">Bootstrapped SaaS Founder stack</a>, the Support layer uses the Lean Support setup (Crisp + Notion/HelpKit + Better Stack). This guide is the full breakdown and tool options for that layer.</li>
+          <li>In the <a href="../ai-tool-stacks/mvs-saas-2026/">Minimum Viable $100 Stack</a>, this guide defines the support layer &mdash; start with the free tiers and upgrade using the recommendations here once you have paying customers.</li>
+          <li>In the <a href="../ai-tool-stacks/solo-consultant-2026/">Solo Consultant stack</a>, the support principles here apply directly: one inbox, a small KB, and a status page if you run any client-facing tooling.</li>
+        </ul>
+
+        <p>For the full picture of your SaaS tool stack, see the <a href="../ai-tool-stacks/">AI Tool Stacks hub</a> or the <a href="../ultimate-digital-tool-stack-2026/">Ultimate Digital Tool Stack for Small Teams in 2026</a>.</p>
+      </div>
+    </section>
+
+    <!-- Verdict -->
+    <section class="section verdict-section" id="verdict">
+      <div class="container persona-content">
+        <h2>ToolStackChoice Verdict for 2026</h2>
+        <p>For most early-stage SaaS teams, a Lean Support stack built around Crisp, a small but focused KB (Notion + HelpKit or Help Scout Docs), and a Better Stack status page delivers 90% of what users expect with a fraction of enterprise-tool complexity.</p>
+
+        <aside class="choose-box" aria-label="ToolStackChoice verdict">
+          <h3>ToolStackChoice Verdict</h3>
+
+          <span class="verdict-label">Best for</span>
+          <p class="verdict-best-for">Solo founders and tiny SaaS teams who want to look professional and responsive without building a full support department.</p>
+
+          <span class="verdict-label">Choose this stack if</span>
+          <ul>
+            <li>You have under ~200 support conversations per month.</li>
+            <li>You are pre-Series A and still close to every customer.</li>
+            <li>You believe great support is a retention and growth lever, not just a cost.</li>
+          </ul>
+
+          <span class="verdict-label">Skip this stack if</span>
+          <ul>
+            <li>You already run a large, multi-tier support org with complex SLAs.</li>
+            <li>You are still pre-launch with no users (your job is shipping, not tooling).</li>
+          </ul>
+
+          <p style="margin-top:var(--space-sm);font-style:italic;font-size:0.95rem;">For most early-stage SaaS teams, a Lean Support stack built around Crisp, a small but focused KB, and a Better Stack status page delivers 90% of what users expect with a fraction of enterprise-tool complexity.</p>
+        </aside>
+
+        <p style="margin-top:var(--space-md);">Explore related stacks: <a href="../ai-tool-stacks/saas-founder-2026/">Bootstrapped SaaS Founder Stack</a> &middot; <a href="../ai-tool-stacks/mvs-saas-2026/">Minimum Viable $100 Stack</a> &middot; <a href="../ai-tool-stacks/">All AI Tool Stacks</a></p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-alt" id="faq">
+      <div class="container persona-content">
+        <h2>FAQ: Common Founder Questions</h2>
+        <dl class="faq-list">
+          <dt>What&rsquo;s the absolute minimum support stack I need to launch?</dt>
+          <dd>You can start with: a shared inbox (Crisp or Help Scout), a simple in-app contact widget, and a tiny 10-article KB covering onboarding, billing, and your key workflows.</dd>
+
+          <dt>As a solo founder, how do I avoid being on call 24/7 with live chat?</dt>
+          <dd>Set business-hour expectations in your widget, route off-hours messages to email, and push simple questions into your KB so users can self-serve instead of waiting for you.</dd>
+
+          <dt>Crisp vs Help Scout vs Intercom: which is best for a bootstrapped SaaS?</dt>
+          <dd>If budget is tight, start with Crisp as the default. Move to Help Scout if you love an email-first experience, and only consider Intercom once your volume and revenue justify a heavier, sales-oriented platform.</dd>
+
+          <dt>How do I build a KB when the product is changing every week?</dt>
+          <dd>Focus on what doesn&rsquo;t change much (sign-up, login, billing basics) and on high-frequency questions. Treat &ldquo;we&rsquo;ve answered this three times this week&rdquo; as your signal to write an article.</dd>
+
+          <dt>When should I invest in a proper status page like Better Stack?</dt>
+          <dd>As soon as you have paying customers and any history of downtime. It cuts down on &ldquo;is it down?&rdquo; tickets and makes you look like a serious, reliable product.</dd>
+        </dl>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="../index.html" class="logo" aria-label="ToolStackChoice Home"><img src="../logo-icon.png" class="logo-img" alt="ToolStackChoice logo icon" width="44" height="44"><span class="logo-text">ToolStackChoice</span></a>
+        <p>Independent tool reviews since 2024.</p>
+      </div>
+      <nav aria-label="Footer navigation">
+        <ul role="list" class="footer-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../automation-tools.html">Automation Tools</a></li>
+          <li><a href="../seo-tools.html">SEO Tools</a></li>
+          <li><a href="../hosting.html">Hosting</a></li>
+          <li><a href="../ai-tool-stacks/">AI Tool Stacks</a></li>
+          <li><a href="../ai-tool-stacks/saas-founder-2026/">SaaS Founder Stack (2026)</a></li>
+          <li><a href="../ai-tool-stacks/mvs-saas-2026/">Minimum Viable SaaS Stack (2026)</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../contact/">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="footer-legal">
+        <p>&copy; 2026 ToolStack. All rights reserved.</p>
+        <p><a href="../privacy-policy/">Privacy Policy</a> &middot; <a href="../affiliate-disclosure.html">Affiliate Disclosure</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var open = nav.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    })();
+  </script>
+
+</body>
+</html>
