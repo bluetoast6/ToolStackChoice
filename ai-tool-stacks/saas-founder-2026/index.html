@@ -355,9 +355,16 @@
               <tr>
                 <td><strong>Support &amp; communication</strong></td>
                 <td><a href="https://crisp.chat/" rel="noopener noreferrer" target="_blank">Crisp</a></td>
-                <td>Live chat, shared inbox, and basic help centre — good fit for early SaaS support at low cost</td>
+                <td>Live chat, shared inbox, and basic help centre &mdash; good fit for early SaaS support at low cost</td>
                 <td>Free tier available; Mini from $45/month</td>
                 <td>Intercom if you need advanced automation and product tours</td>
+              </tr>
+              <tr>
+                <td><strong>Billing &amp; subscriptions</strong></td>
+                <td><a href="https://stripe.com/" rel="noopener noreferrer" target="_blank">Stripe</a> + Stripe Billing</td>
+                <td>Developer standard for payments; Stripe Billing handles plans, trials, proration, and invoices in one place</td>
+                <td>~2.9% + $0.30 per transaction; Billing from ~0.7% of recurring volume</td>
+                <td>Paddle as Merchant of Record if you want tax/VAT handled automatically</td>
               </tr>
             </tbody>
             <tfoot>
@@ -478,6 +485,21 @@
           <p>You expect high support volume, want advanced automation and product tours, and can justify significantly higher pricing in exchange for deeper customer engagement features.</p>
         <p style="font-size:0.93rem;">For the full support layer breakdown &mdash; KB setup, status pages, ticketing, and upgrade signals &mdash; see our <a href="../../support-stack-saas-founders-2026/">Support &amp; Helpdesk Stack for SaaS Founders in 2026</a> deep dive.</p>
         </div>
+
+        <h3 id="billing">Billing &amp; Subscriptions</h3>
+        <p>Your billing stack is how money flows into your SaaS. At early stage you want fast integration, reliable subscription management, and clear metrics &mdash; without building your own billing engine.</p>
+
+        <div class="layer-card">
+          <p><strong>Default pick: <a href="https://stripe.com/" rel="noopener noreferrer" target="_blank">Stripe</a> + Stripe Billing</strong></p>
+          <p>Stripe Payments handles checkout and card processing; Stripe Billing manages plans, trials, proration, and invoices. Add ProfitWell Metrics (free) on top for MRR, churn, and LTV dashboards. Use Stripe Billing&rsquo;s built-in dunning to recover failed payments automatically.</p>
+        </div>
+
+        <div class="layer-card">
+          <p><strong>Choose Paddle instead if&hellip;</strong></p>
+          <p>You want a Merchant of Record that handles VAT and sales tax across multiple countries for you, and are comfortable with a higher all-in fee (~5% + $0.50 per transaction) in exchange for reduced tax compliance overhead.</p>
+        </div>
+
+        <p style="font-size:0.93rem;">For the full billing layer breakdown &mdash; subscription management, metrics, dunning, and early-stage pitfalls &mdash; see our <a href="../../billing-stack-saas-founders-2026/">Billing &amp; Subscription Stack for SaaS Founders in 2026</a> deep dive.</p>
 
       </div>
     </section>
