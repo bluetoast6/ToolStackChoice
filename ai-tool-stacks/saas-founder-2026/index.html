@@ -126,6 +126,131 @@
     ]
   }
   </script>
+
+  <style>
+    /* ── Persona stack page: layout polish ───────────────────────────── */
+
+    /* Section heading rhythm */
+    .persona-content h2 {
+      margin-top: var(--space-xl);
+      margin-bottom: var(--space-sm);
+      scroll-margin-top: 5rem;
+    }
+    .persona-content h2:first-child { margin-top: 0; }
+    .persona-content h3 {
+      margin-top: var(--space-lg);
+      margin-bottom: var(--space-xs);
+      scroll-margin-top: 5rem;
+    }
+    .persona-content p { margin-bottom: var(--space-sm); }
+    .persona-content ul,
+    .persona-content ol { padding-left: 1.35rem; margin-bottom: var(--space-sm); }
+    .persona-content li { margin-bottom: 0.4rem; }
+
+    /* Stack at a Glance table */
+    .stack-table-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      margin: var(--space-md) 0 var(--space-lg);
+    }
+    .stack-table-wrap table { margin: 0; }
+    .stack-table-wrap td { white-space: normal; }
+    .stack-table-wrap tfoot td {
+      font-size: 0.82rem;
+      color: var(--color-text-muted);
+      padding: 0.6rem 1rem;
+      border-top: 1px solid var(--color-border);
+      border-bottom: none;
+      background: var(--tsc-surface);
+    }
+
+    /* Layer decision cards (reuse when-col pattern from Ultimate Stack) */
+    .layer-card {
+      border-left: 3px solid var(--tsc-primary);
+      padding: 1rem 1.25rem;
+      background: var(--tsc-primary-soft);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      margin-bottom: var(--space-sm);
+    }
+    .layer-card p { margin-bottom: 0.5rem; }
+    .layer-card p:last-child { margin-bottom: 0; }
+
+    /* Example stack recipe cards (reuse stack-card from Ultimate Stack) */
+    .stack-recipes {
+      display: grid;
+      gap: var(--space-md);
+      margin-top: var(--space-md);
+    }
+    @media (min-width: 700px) {
+      .stack-recipes { grid-template-columns: 1fr 1fr; }
+    }
+    .stack-recipe {
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      background: var(--tsc-surface);
+    }
+    .stack-recipe h3 {
+      margin-top: 0;
+      margin-bottom: var(--space-xs);
+      font-size: 1rem;
+    }
+    .stack-recipe p { font-size: 0.93rem; color: var(--color-text-muted); margin-bottom: var(--space-xs); }
+    .stack-recipe ul { margin: 0.5rem 0 0; padding-left: 1.2rem; }
+    .stack-recipe ul li { font-size: 0.93rem; margin-bottom: 0.35rem; }
+    .stack-recipe .recipe-note {
+      margin-top: var(--space-sm);
+      font-size: 0.875rem;
+      color: var(--color-text-muted);
+      font-style: italic;
+    }
+
+    /* FAQ as definition list */
+    .faq-list { margin-top: var(--space-md); }
+    .faq-list dt {
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--color-text);
+      margin-top: var(--space-md);
+      margin-bottom: 0.35rem;
+    }
+    .faq-list dt:first-child { margin-top: 0; }
+    .faq-list dd {
+      margin-left: 0;
+      color: var(--color-text);
+      line-height: var(--line-height);
+      margin-bottom: 0;
+      padding-bottom: var(--space-sm);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .faq-list dd:last-child { border-bottom: none; padding-bottom: 0; }
+
+    /* Enhanced verdict choose-box */
+    .choose-box ul {
+      padding-left: 1.35rem;
+      margin: 0.35rem 0 0.75rem;
+    }
+    .choose-box ul li { margin-bottom: 0.35rem; font-size: 0.95rem; }
+    .choose-box .verdict-label {
+      display: block;
+      font-weight: 700;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--tsc-primary);
+      margin-bottom: 0.25rem;
+      margin-top: var(--space-sm);
+    }
+    .choose-box .verdict-label:first-child { margin-top: 0; }
+    .choose-box .verdict-best-for {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: var(--space-sm);
+    }
+  </style>
 </head>
 <body>
 
@@ -177,10 +302,10 @@
 
     <!-- Stack at a Glance -->
     <section class="section section-alt" id="stack-table">
-      <div class="container">
+      <div class="container persona-content">
         <h2>Your 2026 SaaS Founder Stack at a Glance</h2>
         <p>This is the default stack we recommend for bootstrapped and indie SaaS founders who want to move fast without over-engineering. Pick the default tool in each row and you'll have a working, integrated stack from day one.</p>
-        <div class="table-card" style="overflow-x:auto;">
+        <div class="stack-table-wrap">
           <table>
             <thead>
               <tr>
@@ -204,10 +329,10 @@
                 <td><a href="../../surfer-seo-review/">Surfer SEO</a> + <a href="../../semrush-review.html">Semrush</a></td>
                 <td>Surfer for on-page briefs and structure; Semrush for keyword research, competitors, and tracking</td>
                 <td>From $99/month (Surfer), from $117/month (Semrush)</td>
-                <td><a href="../../surfer-seo-review/">Surfer</a> + <a href="../../mangools-review.html">Mangools</a> for cheaper SEO suite tooling</td>
+                <td><a href="../../surfer-seo-review/">Surfer</a> + <a href="../../mangools-review.html">Mangools</a> for a cheaper SEO suite</td>
               </tr>
               <tr>
-                <td><strong>Hosting / infra (marketing site)</strong></td>
+                <td><strong>Hosting (marketing site)</strong></td>
                 <td><a href="../../flywheel-review/">Flywheel</a></td>
                 <td>Managed WordPress hosting — speed, backups, SSL, and an easy dashboard without DevOps</td>
                 <td>From $25/month</td>
@@ -217,7 +342,7 @@
                 <td><strong>Analytics &amp; reporting</strong></td>
                 <td><a href="https://plausible.io/" rel="noopener noreferrer" target="_blank">Plausible</a> + GA4</td>
                 <td>Plausible for simple, privacy-friendly dashboards; GA4 for deeper free-tier data when needed</td>
-                <td>From £9/month (Plausible); GA4 free</td>
+                <td>From &pound;9/month (Plausible); GA4 free</td>
                 <td>Any privacy-friendly analytics tool you already use</td>
               </tr>
               <tr>
@@ -228,21 +353,25 @@
                 <td>Intercom if you need advanced automation and product tours</td>
               </tr>
             </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="5">Prices are starting rates as of February 2026. Check each tool's official pricing page for current rates before purchasing.</td>
+              </tr>
+            </tfoot>
           </table>
         </div>
-        <p style="margin-top:1rem;font-size:0.875rem;color:var(--color-text-muted);">Prices are starting rates as of February 2026. Check each tool's pricing page for current rates.</p>
       </div>
     </section>
 
     <!-- Who This Stack Is For -->
     <section class="section" id="who-its-for">
-      <div class="container">
+      <div class="container persona-content">
         <h2>Who This Stack Is For</h2>
         <p>This stack is designed for bootstrapped and indie SaaS founders who want to move fast without managing a giant tool zoo.</p>
 
         <h3>It's for you if:</h3>
         <ul>
-          <li>You're a solo founder or part of a 2–3 person team.</li>
+          <li>You're a solo founder or part of a 2&ndash;3 person team.</li>
           <li>You're self-funded or on a tight budget and care about predictable costs.</li>
           <li>You're comfortable with tools but not a full-time engineer or DevOps person.</li>
           <li>Your primary goals are to ship, get users, and learn quickly.</li>
@@ -259,86 +388,101 @@
 
     <!-- Layer by Layer -->
     <section class="section section-alt" id="layers">
-      <div class="container">
+      <div class="container persona-content">
         <h2>The Stack, Layer by Layer</h2>
 
         <!-- Automation -->
         <h3 id="automation">Automation &amp; Workflows</h3>
         <p>Automation is the backbone of a lean SaaS founder's life: onboarding users, syncing data between your app and CRM, sending lifecycle emails, and handling internal admin tasks.</p>
 
-        <div class="table-card" style="margin-bottom:1.5rem;">
+        <div class="layer-card">
           <p><strong>Default pick: <a href="../../make-com-review.html">Make.com</a></strong></p>
           <p>Make.com gives you a visual canvas that handles multi-step, branching workflows at a great price point. It's strong for founders who want to start with simple "when this happens, do that" recipes and gradually build more complex flows as the product matures. See our full <a href="../../make-com-review.html">Make.com review</a>, the <a href="../../automation-tools.html">Automation Tools hub</a>, and the <a href="../../zapier-vs-make-vs-n8n/">Zapier vs Make vs n8n comparison</a>.</p>
+        </div>
 
-          <p><strong>Choose <a href="../../zapier-review/">Zapier</a> instead if…</strong><br>
-          You are non-technical, time-constrained, and mostly need straightforward automations between well-known SaaS tools. Zapier's template library and UI make it the fastest way to get your first automations live, even if you may pay more per task later. See our <a href="../../zapier-review/">Zapier review</a> and <a href="../../zapier-vs-make/">Zapier vs Make comparison</a>.</p>
+        <div class="layer-card">
+          <p><strong>Choose <a href="../../zapier-review/">Zapier</a> instead if&hellip;</strong></p>
+          <p>You are non-technical, time-constrained, and mostly need straightforward automations between well-known SaaS tools. Zapier's template library and UI make it the fastest way to get your first automations live, even if you may pay more per task later. See our <a href="../../zapier-review/">Zapier review</a> and <a href="../../zapier-vs-make/">Zapier vs Make comparison</a>.</p>
+        </div>
 
-          <p><strong>Choose <a href="../../n8n-review.html">n8n</a> or <a href="../../activepieces-review/">Activepieces</a> if…</strong><br>
-          You or a collaborator are comfortable with some technical setup and want open-source, self-hosted, or highly customisable automation with lower long-term cost. See our <a href="../../n8n-review.html">n8n review</a>, <a href="../../activepieces-review/">Activepieces review</a>, and the <a href="../../automation-tools.html">Automation Tools hub</a>.</p>
+        <div class="layer-card">
+          <p><strong>Choose <a href="../../n8n-review.html">n8n</a> or <a href="../../activepieces-review/">Activepieces</a> if&hellip;</strong></p>
+          <p>You or a collaborator are comfortable with some technical setup and want open-source, self-hosted, or highly customisable automation with lower long-term cost. See our <a href="../../n8n-review.html">n8n review</a>, <a href="../../activepieces-review/">Activepieces review</a>, and the <a href="../../automation-tools.html">Automation Tools hub</a>.</p>
         </div>
 
         <!-- SEO -->
         <h3 id="seo">SEO, Content &amp; Keyword Strategy</h3>
         <p>SEO for SaaS has two parts: making individual pages strong enough to rank, and deciding what topics and keywords are worth your time.</p>
 
-        <div class="table-card" style="margin-bottom:1.5rem;">
+        <div class="layer-card">
           <p><strong>On-page &amp; content briefs — Default pick: <a href="../../surfer-seo-review/">Surfer SEO</a></strong></p>
           <p>Surfer SEO gives you practical recommendations on headings, keyword usage, and content structure, plus briefs you can follow as a solo writer. This is ideal if you're writing or editing your own content and want something between "guessing" and hiring an SEO consultant. See our full <a href="../../surfer-seo-review/">Surfer SEO review</a>.</p>
+        </div>
 
+        <div class="layer-card">
           <p><strong>Keyword research &amp; competitive SEO — Default pick: <a href="../../semrush-review.html">Semrush</a></strong></p>
           <p>Semrush gives you keyword ideas, competitor data, SERP analysis, and basic tracking — everything you need to plan a content strategy and see what's working. For SaaS founders, the breadth of data and marketing features often justifies the price.</p>
+        </div>
 
-          <p><strong>Choose <a href="../../mangools-review.html">Mangools</a> instead if…</strong><br>
-          You want something simpler and cheaper while still getting solid keyword and SERP data. Mangools is a good starting point if full Semrush pricing feels heavy early on. See our <a href="../../mangools-vs-semrush/">Mangools vs Semrush comparison</a> and the <a href="../../seo-tools.html">SEO Tools hub</a>.</p>
+        <div class="layer-card">
+          <p><strong>Choose <a href="../../mangools-review.html">Mangools</a> instead if&hellip;</strong></p>
+          <p>You want something simpler and cheaper while still getting solid keyword and SERP data. Mangools is a good starting point if full Semrush pricing feels heavy early on. See our <a href="../../mangools-vs-semrush/">Mangools vs Semrush comparison</a> and the <a href="../../seo-tools.html">SEO Tools hub</a>.</p>
         </div>
 
         <!-- Hosting -->
         <h3 id="hosting">Hosting &amp; Infrastructure (Marketing Site)</h3>
         <p>Your SaaS app back end can be as custom as you like; your marketing site should be boring, fast, and reliable.</p>
 
-        <div class="table-card" style="margin-bottom:1.5rem;">
+        <div class="layer-card">
           <p><strong>Default pick: <a href="../../flywheel-review/">Flywheel</a></strong></p>
           <p>Flywheel gives you performance, backups, SSL, and an easy dashboard so you don't have to be your own sysadmin. It's a great fit if your marketing site is a mix of landing pages, blog posts, and docs. See our full <a href="../../flywheel-review/">Flywheel review</a> and the <a href="../../hosting.html">Best Web Hosting hub</a>.</p>
+        </div>
 
-          <p><strong>Choose a different managed host if…</strong><br>
-          You prefer a different control panel, need specific datacenter locations, or are already invested in another managed WordPress platform. See our <a href="../../hosting.html">Hosting hub</a> and individual reviews for <a href="../../kinsta-review.html">Kinsta</a>, <a href="../../cloudways-review/">Cloudways</a>, <a href="../../wp-engine-review/">WP Engine</a>, and <a href="../../pressable-review/">Pressable</a>.</p>
+        <div class="layer-card">
+          <p><strong>Choose a different managed host if&hellip;</strong></p>
+          <p>You prefer a different control panel, need specific datacenter locations, or are already invested in another managed WordPress platform. See our <a href="../../hosting.html">Hosting hub</a> and individual reviews for <a href="../../kinsta-review.html">Kinsta</a>, <a href="../../cloudways-review/">Cloudways</a>, <a href="../../wp-engine-review/">WP Engine</a>, and <a href="../../pressable-review/">Pressable</a>.</p>
         </div>
 
         <!-- Analytics -->
         <h3 id="analytics">Analytics &amp; Reporting</h3>
         <p>Without basic analytics, you're flying blind on acquisition, activation, and retention.</p>
 
-        <div class="table-card" style="margin-bottom:1.5rem;">
+        <div class="layer-card">
           <p><strong>Default pick: <a href="https://plausible.io/" rel="noopener noreferrer" target="_blank">Plausible</a> + GA4</strong></p>
-          <p>Plausible gives you a clean, privacy-friendly dashboard with the core metrics that matter (traffic, sources, key pages), while GA4 gives you free access to more granular data if you need it. Together, they're more than enough for an early-stage SaaS marketing site. Plausible starts from £9/month; GA4 is free.</p>
+          <p>Plausible gives you a clean, privacy-friendly dashboard with the core metrics that matter (traffic, sources, key pages), while GA4 gives you free access to more granular data if you need it. Together, they're more than enough for an early-stage SaaS marketing site. Plausible starts from &pound;9/month; GA4 is free.</p>
+        </div>
 
-          <p><strong>Choose a different analytics tool if…</strong><br>
-          You already standardise on another privacy-friendly analytics product across projects, or you know you need more advanced funnels and user-level tracking from day one.</p>
+        <div class="layer-card">
+          <p><strong>Choose a different analytics tool if&hellip;</strong></p>
+          <p>You already standardise on another privacy-friendly analytics product across projects, or you know you need more advanced funnels and user-level tracking from day one.</p>
         </div>
 
         <!-- Support -->
         <h3 id="support">Support &amp; Communication</h3>
         <p>Talking to early users quickly is one of your biggest advantages as a bootstrapped founder.</p>
 
-        <div class="table-card" style="margin-bottom:1.5rem;">
+        <div class="layer-card">
           <p><strong>Default pick: <a href="https://crisp.chat/" rel="noopener noreferrer" target="_blank">Crisp</a></strong></p>
           <p>Crisp gives you live chat, a shared inbox, and a basic help centre at a price point that makes sense for small SaaS teams. It helps you capture feedback, fix issues faster, and gradually build reusable documentation. Free tier available; Mini plan from $45/month.</p>
-
-          <p><strong>Choose Intercom (or similar) instead if…</strong><br>
-          You expect high support volume, want advanced automation and product tours, and can justify significantly higher pricing in exchange for deeper customer engagement features.</p>
         </div>
+
+        <div class="layer-card">
+          <p><strong>Choose Intercom (or similar) instead if&hellip;</strong></p>
+          <p>You expect high support volume, want advanced automation and product tours, and can justify significantly higher pricing in exchange for deeper customer engagement features.</p>
+        </div>
+
       </div>
     </section>
 
     <!-- Example Stacks -->
     <section class="section" id="example-stacks">
-      <div class="container">
+      <div class="container persona-content">
         <h2>Example Stacks You Can Copy</h2>
         <p>Not sure where to start? Pick one of these two ready-made configurations based on where you are right now.</p>
 
-        <div class="card-grid card-grid--2" style="margin-top:1.5rem;">
+        <div class="stack-recipes">
 
-          <div class="card">
+          <div class="stack-recipe">
             <h3>The Minimalist "Ship Fast" Stack</h3>
             <p>For founders who want the fewest moving parts and lowest cognitive load.</p>
             <ul>
@@ -349,10 +493,10 @@
               <li><strong>Analytics:</strong> GA4 (+ Plausible once you can budget it)</li>
               <li><strong>Support:</strong> Email only at first, then Crisp once you have active users</li>
             </ul>
-            <p style="margin-top:1rem;font-size:0.9rem;color:var(--color-text-muted);">This stack is for you if you're still validating your product and want to spend almost zero time on tooling decisions.</p>
+            <p class="recipe-note">This stack is for you if you're still validating your product and want to spend almost zero time on tooling decisions.</p>
           </div>
 
-          <div class="card">
+          <div class="stack-recipe">
             <h3>The Scale-Ready Stack</h3>
             <p>For founders who are committed to content and automation from the start.</p>
             <ul>
@@ -363,7 +507,7 @@
               <li><strong>Analytics:</strong> <a href="https://plausible.io/" rel="noopener noreferrer" target="_blank">Plausible</a> + GA4 from day one</li>
               <li><strong>Support:</strong> <a href="https://crisp.chat/" rel="noopener noreferrer" target="_blank">Crisp</a>, with the option to graduate to Intercom-style tooling later</li>
             </ul>
-            <p style="margin-top:1rem;font-size:0.9rem;color:var(--color-text-muted);">This stack is for you if you're confident in the problem you're solving and want tools that can grow with you over the next few years.</p>
+            <p class="recipe-note">This stack is for you if you're confident in the problem you're solving and want tools that can grow with you over the next few years.</p>
           </div>
 
         </div>
@@ -372,38 +516,45 @@
 
     <!-- FAQ -->
     <section class="section section-alt" id="faq">
-      <div class="container">
-        <h2>FAQ — Common Questions from Bootstrapped SaaS Founders</h2>
+      <div class="container persona-content">
+        <h2>FAQ &mdash; Common Questions from Bootstrapped SaaS Founders</h2>
+        <p>These are the questions we hear most often when bootstrapped founders are choosing their first tool stack.</p>
 
-        <h3>What is the minimum stack I can start with?</h3>
-        <p>You can launch with three essentials: an automation tool (<a href="../../zapier-review/">Zapier</a> or <a href="../../make-com-review.html">Make.com</a>), a solid host for your marketing site, and basic analytics (GA4). Everything else — SEO suite, support tools, advanced analytics — can be layered in once you see the first signs of traction.</p>
+        <dl class="faq-list">
 
-        <h3>What is the cheapest AI tool stack for a SaaS startup?</h3>
-        <p>The cheapest stack usually mixes a budget-friendly automation tool (like <a href="../../activepieces-review/">Activepieces</a> or <a href="../../pabbly-connect-review/">Pabbly Connect</a>), a value managed host from our <a href="../../hosting.html">Hosting hub</a>, a lightweight SEO tool like <a href="../../mangools-review.html">Mangools</a>, and free analytics (GA4). As revenue grows, you can upgrade individual tools without changing the overall structure.</p>
+          <dt>What is the minimum stack I can start with?</dt>
+          <dd>You can launch with three essentials: an automation tool (<a href="../../zapier-review/">Zapier</a> or <a href="../../make-com-review.html">Make.com</a>), a solid host for your marketing site, and basic analytics (GA4). Everything else &mdash; SEO suite, support tools, advanced analytics &mdash; can be layered in once you see the first signs of traction.</dd>
 
-        <h3>Can I use Make.com instead of Zapier for everything?</h3>
-        <p>In many cases yes. <a href="../../make-com-review.html">Make.com</a> can handle most of the automations <a href="../../zapier-review/">Zapier</a> can, and more complex multi-step flows as you grow. Zapier is still the fastest to get started with if you're completely new and mostly connecting common SaaS tools, so pick based on how much time you're willing to invest in learning. See our <a href="../../zapier-vs-make/">Zapier vs Make comparison</a> for a direct breakdown.</p>
+          <dt>What is the cheapest AI tool stack for a SaaS startup?</dt>
+          <dd>The cheapest stack usually mixes a budget-friendly automation tool (like <a href="../../activepieces-review/">Activepieces</a> or <a href="../../pabbly-connect-review/">Pabbly Connect</a>), a value managed host from our <a href="../../hosting.html">Hosting hub</a>, a lightweight SEO tool like <a href="../../mangools-review.html">Mangools</a>, and free analytics (GA4). As revenue grows, you can upgrade individual tools without changing the overall structure.</dd>
 
-        <h3>Which parts of this stack are hardest to change later?</h3>
-        <p>Hosting and automation are the heaviest migrations. Moving a large WordPress site or re-building dozens of flows is painful. SEO suites, analytics, and support tools tend to be easier to swap because they mostly observe or sit on top of your existing systems.</p>
+          <dt>Can I use Make.com instead of Zapier for everything?</dt>
+          <dd>In many cases yes. <a href="../../make-com-review.html">Make.com</a> can handle most of the automations <a href="../../zapier-review/">Zapier</a> can, and more complex multi-step flows as you grow. Zapier is still the fastest to get started with if you're completely new and mostly connecting common SaaS tools, so pick based on how much time you're willing to invest in learning. See our <a href="../../zapier-vs-make/">Zapier vs Make comparison</a> for a direct breakdown.</dd>
 
-        <h3>Can I run everything on free plans at first?</h3>
-        <p>You can get quite far on free and starter plans, but expect to allocate a small monthly budget once you have real users. Upgrading automation, SEO, and support tools early often saves you time and avoids brittle workarounds.</p>
+          <dt>Which parts of this stack are hardest to change later?</dt>
+          <dd>Hosting and automation are the heaviest migrations. Moving a large WordPress site or re-building dozens of flows is painful. SEO suites, analytics, and support tools tend to be easier to swap because they mostly observe or sit on top of your existing systems.</dd>
+
+          <dt>Can I run everything on free plans at first?</dt>
+          <dd>You can get quite far on free and starter plans, but expect to allocate a small monthly budget once you have real users. Upgrading automation, SEO, and support tools early often saves you time and avoids brittle workarounds.</dd>
+
+        </dl>
       </div>
     </section>
 
     <!-- Verdict -->
     <section class="section verdict-section" id="verdict">
-      <div class="container">
+      <div class="container persona-content">
         <h2>ToolStackChoice Verdict for 2026</h2>
-        <p>This stack makes the most sense for bootstrapped SaaS founders who value speed, simplicity, and predictable costs more than having a bespoke, fully custom setup from day one. Each tool is independently tested and reviewed on ToolStackChoice — you can read the full review for any tool before committing.</p>
+        <p>This stack makes the most sense for bootstrapped SaaS founders who value speed, simplicity, and predictable costs more than having a bespoke, fully custom setup from day one. Each tool is independently tested and reviewed on ToolStackChoice &mdash; you can read the full review for any tool before committing.</p>
         <p>The combination of Make.com's flexible automation, Surfer + Semrush's content and SEO coverage, Flywheel's low-maintenance hosting, Plausible's clean analytics, and Crisp's lightweight support gives you a stack that covers every core function without requiring a dedicated ops or DevOps hire.</p>
 
         <aside class="choose-box" aria-label="ToolStackChoice verdict">
           <h3>ToolStackChoice Verdict</h3>
-          <p><strong>Best for:</strong> Bootstrapped and indie SaaS founders who want a lean, integrated stack covering automation, SEO, hosting, analytics, and support — without hiring a full ops or DevOps team.</p>
 
-          <p><strong>Choose this stack if:</strong></p>
+          <span class="verdict-label">Best for</span>
+          <p class="verdict-best-for">Bootstrapped and indie SaaS founders who want a lean, integrated stack covering automation, SEO, hosting, analytics, and support &mdash; without hiring a full ops or DevOps team.</p>
+
+          <span class="verdict-label">Choose this stack if</span>
           <ul>
             <li>You're a solo founder or sub-5-person product team.</li>
             <li>You're self-funded and need predictable, reasonable monthly tool costs.</li>
@@ -411,17 +562,17 @@
             <li>You care more about shipping and iterating than perfecting infrastructure.</li>
           </ul>
 
-          <p><strong>Skip this stack if:</strong></p>
+          <span class="verdict-label">Skip this stack if</span>
           <ul>
             <li>You're building for strict enterprise compliance from day one.</li>
             <li>You already have a dedicated DevOps/engineering team designing custom infra.</li>
             <li>You operate in a niche that demands highly specialised, non-standard tooling.</li>
           </ul>
 
-          <p style="margin-top:1.5rem;">Overall, this stack makes the most sense for bootstrapped SaaS founders who value speed, simplicity, and predictable costs more than having a bespoke, fully custom setup from day one.</p>
+          <p style="margin-top:var(--space-sm);font-style:italic;font-size:0.95rem;">Overall, this stack makes the most sense for bootstrapped SaaS founders who value speed, simplicity, and predictable costs more than having a bespoke, fully custom setup from day one.</p>
         </aside>
 
-        <p style="margin-top:2rem;">Explore more stacks: <a href="../../ai-tool-stacks/small-agency-2026/">Small Agency Stack (2026)</a> &middot; <a href="../../ai-tool-stacks/">All AI Tool Stacks</a></p>
+        <p style="margin-top:var(--space-md);">Explore more stacks: <a href="../../ai-tool-stacks/small-agency-2026/">Small Agency Stack (2026)</a> &middot; <a href="../../ai-tool-stacks/">All AI Tool Stacks</a></p>
       </div>
     </section>
 
