@@ -4,20 +4,20 @@
     "mangools": {
       "name": "Mangools",
       "plain_url": "https://mangools.com",
-      "affiliate_url": null,
-      "status": "pending"
+      "affiliate_url": "https://mangools.com?ref=a699f00386aee08f56deea922",
+      "status": "active"
     },
     "make": {
       "name": "Make",
       "plain_url": "https://www.make.com",
-      "affiliate_url": null,
-      "status": "pending"
+      "affiliate_url": "https://www.make.com/en/register?pc=toolstackchoice",
+      "status": "active"
     },
     "n8n": {
       "name": "n8n",
       "plain_url": "https://n8n.io",
-      "affiliate_url": null,
-      "status": "pending"
+      "affiliate_url": "https://n8n.partnerlinks.io/lndei606iv7v",
+      "status": "active"
     },
     "pabbly-connect": {
       "name": "Pabbly Connect",
@@ -40,20 +40,20 @@
     "siteground": {
       "name": "SiteGround",
       "plain_url": "https://www.siteground.com",
-      "affiliate_url": null,
-      "status": "pending"
+      "affiliate_url": "https://www.siteground.com/index.htm?afcode=6b06c8dce61ea79c577601a6bb50b428",
+      "status": "active"
     },
     "kinsta": {
       "name": "Kinsta",
       "plain_url": "https://kinsta.com",
-      "affiliate_url": null,
-      "status": "pending"
+      "affiliate_url": "https://kinsta.com/?kaid=UMKVARHFPZSO",
+      "status": "active"
     },
     "cloudways": {
       "name": "Cloudways",
       "plain_url": "https://www.cloudways.com",
-      "affiliate_url": null,
-      "status": "pending"
+      "affiliate_url": "https://www.cloudways.com/en/?id=2091593",
+      "status": "active"
     }
   }
 }
