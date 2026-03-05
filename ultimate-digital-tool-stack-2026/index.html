@@ -82,6 +82,41 @@
     .when-col ul { margin: 0; padding-left: 1.15rem; }
     .when-col ul li { font-size: 0.9rem; margin-bottom: 0.3rem; }
 
+    /* ── Article body: heading spacing ── */
+    .ct-article h2 {
+      font-size:     clamp(1.25rem, 2.8vw, 1.625rem);
+      font-weight:   800;
+      line-height:   1.25;
+      margin:        2.75rem 0 0.5rem;
+      color:         var(--ct-text, #111827);
+      padding-top:   0.25rem;
+      border-top:    2px solid var(--ct-border, #e5e7eb);
+      scroll-margin-top: 5rem;
+    }
+    /* First h2 in each section needs no top border */
+    .ct-article section > h2:first-child {
+      border-top: none;
+      margin-top: 0;
+    }
+    .ct-article h3 {
+      font-size:   clamp(1.0625rem, 2vw, 1.25rem);
+      font-weight: 700;
+      line-height: 1.3;
+      margin:      1.75rem 0 0.5rem;
+      color:       var(--ct-text, #111827);
+    }
+    /* h3 that immediately follows an h2 gets a tighter top gap */
+    .ct-article h2 + h3 {
+      margin-top: 1rem;
+    }
+    .ct-article h4 {
+      font-size:   1rem;
+      font-weight: 700;
+      line-height: 1.35;
+      margin:      1.25rem 0 0.35rem;
+      color:       var(--ct-text, #111827);
+    }
+
     /* ── Article body: restore list indentation stripped by global reset ── */
     .ct-article ul,
     .ct-article ol {
