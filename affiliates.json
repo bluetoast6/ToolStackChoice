@@ -1,0 +1,59 @@
+{
+  "_comment": "Central affiliate link config for ToolStackChoice. To update a link: change the 'affiliate_url' for the relevant tool, then run: python3 scripts/apply_affiliates.py from the site root. If affiliate_url is null, the plain_url is used as the fallback.",
+  "tools": {
+    "mangools": {
+      "name": "Mangools",
+      "plain_url": "https://mangools.com",
+      "affiliate_url": null,
+      "status": "pending"
+    },
+    "make": {
+      "name": "Make",
+      "plain_url": "https://www.make.com",
+      "affiliate_url": null,
+      "status": "pending"
+    },
+    "n8n": {
+      "name": "n8n",
+      "plain_url": "https://n8n.io",
+      "affiliate_url": null,
+      "status": "pending"
+    },
+    "pabbly-connect": {
+      "name": "Pabbly Connect",
+      "plain_url": "https://www.pabbly.com/connect",
+      "affiliate_url": null,
+      "status": "pending"
+    },
+    "moz-pro": {
+      "name": "Moz Pro",
+      "plain_url": "https://moz.com/products/pro",
+      "affiliate_url": null,
+      "status": "pending"
+    },
+    "hostinger": {
+      "name": "Hostinger",
+      "plain_url": "https://www.hostinger.com",
+      "affiliate_url": null,
+      "status": "pending"
+    },
+    "siteground": {
+      "name": "SiteGround",
+      "plain_url": "https://www.siteground.com",
+      "affiliate_url": null,
+      "status": "pending"
+    },
+    "kinsta": {
+      "name": "Kinsta",
+      "plain_url": "https://kinsta.com",
+      "affiliate_url": null,
+      "status": "pending"
+    },
+    "cloudways": {
+      "name": "Cloudways",
+      "plain_url": "https://www.cloudways.com",
+      "affiliate_url": null,
+      "status": "pending"
+    }
+  }
+}
