@@ -625,61 +625,15 @@
 .ct-sidebar__links a:hover { color: var(--ct-accent-a); }
 
 /* ── 19. Site footer ── */
+/* ── 19. Site footer
+   The new footer uses shared .site-footer / .footer-body / .footer-legal
+   classes from style.css. ct-footer is kept as a semantic alias so the
+   print rule and box-sizing reset above still work.
+── */
 .ct-footer {
-  background:   var(--ct-bg-alt);
-  border-top:   1px solid var(--ct-border);
-  margin-top:   3rem;
-  padding:      2.5rem 1.5rem;
+  /* Inherits all layout from .site-footer in style.css */
+  margin-top: 3rem;
 }
-
-.ct-footer__inner {
-  display:               grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap:                   2rem;
-  max-width:             1200px;
-  margin-inline:         auto;
-  align-items:           start;
-}
-
-.ct-footer__brand p {
-  font-size: 0.8125rem;
-  color:     var(--ct-muted);
-  margin:    0.4rem 0 0;
-}
-
-.ct-footer__nav {
-  list-style: none;
-  margin:     0;
-  padding:    0;
-  display:    flex;
-  flex-direction: column;
-  gap:        0.4rem;
-}
-
-.ct-footer__nav a {
-  font-size:       0.8125rem;
-  color:           var(--ct-muted);
-  text-decoration: none;
-}
-
-.ct-footer__nav a:hover { color: var(--ct-text); }
-
-.ct-footer__legal {
-  text-align: right;
-}
-
-.ct-footer__legal p {
-  font-size: 0.8125rem;
-  color:     var(--ct-muted);
-  margin:    0 0 0.3rem;
-}
-
-.ct-footer__legal a {
-  color:           var(--ct-muted);
-  text-decoration: none;
-}
-
-.ct-footer__legal a:hover { color: var(--ct-text); }
 
 /* ── 20. Responsive ── */
 
@@ -704,14 +658,7 @@
     grid-template-columns: 1fr;
   }
 
-  .ct-footer__inner {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .ct-footer__legal {
-    text-align: left;
-    grid-column: 1 / -1;
-  }
+  /* Footer responsive handled by style.css .footer-body rules */
 }
 
 /* Mobile */
@@ -737,14 +684,7 @@
     padding:   0.6rem 1rem;
   }
 
-  .ct-footer__inner {
-    grid-template-columns: 1fr;
-    gap:                   1.5rem;
-  }
-
-  .ct-footer__legal {
-    grid-column: auto;
-  }
+  /* Footer mobile handled by style.css */
 }
 
 /* ── 21. Print ── */

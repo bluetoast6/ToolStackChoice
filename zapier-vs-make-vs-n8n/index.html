@@ -683,50 +683,76 @@
 
 
   <!-- SITE FOOTER -->
-  <footer class="ct-footer" role="contentinfo">
-    <div class="ct-footer__inner">
+  <!-- ══ SITE FOOTER ══ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-body">
 
-      <div class="ct-footer__brand">
-        <a href="../index.html" class="ct-logo" aria-label="ToolStackChoice home">
+      <!-- LEFT: Brand -->
+      <div class="footer-brand">
+        <a href="../index.html" class="logo" aria-label="ToolStackChoice Home">
           <img src="../logo-icon.png" class="logo-img" alt="ToolStackChoice logo icon" width="44" height="44">
           <span class="logo-text">ToolStackChoice</span>
         </a>
-        <p>Independent tool reviews since 2024.</p>
+        <p class="footer-tagline">Independent tool reviews since 2024.</p>
+        <p class="footer-disclosure">Some links are affiliate links; we never sell rankings.</p>
       </div>
 
-      <nav aria-label="Footer navigation">
-        <ul role="list" class="footer-links">
+      <!-- MIDDLE: High-level nav -->
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <p class="footer-col-heading" aria-hidden="true">Navigation</p>
+        <details class="footer-details">
+          <summary class="footer-summary">Navigation</summary>
+          <ul class="footer-nav-list">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../automation-tools.html">Automation Tools</a></li>
+            <li><a href="../ai-tool-stacks/">AI Tool Stacks</a></li>
+            <li><a href="../hosting.html">Hosting</a></li>
+            <li><a href="../seo-tools.html">SEO Tools</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../contact/">Contact</a></li>
+          </ul>
+        </details>
+        <ul class="footer-nav-list footer-nav-list--desktop">
           <li><a href="../index.html">Home</a></li>
           <li><a href="../automation-tools.html">Automation Tools</a></li>
-          <li><a href="../make-com-review.html">Make.com Review</a></li>
-          <li><a href="../n8n-cloud-review.html">n8n Cloud Review (2026)</a></li>
-          <li><a href="../zapier-review/">Zapier Review (2026)</a></li>
-          <li><a href="../make-vs-n8n-cloud.html">Make vs n8n Comparison</a></li>
-          <li><a href="../zapier-vs-make/">Zapier vs Make Comparison</a></li>
-          <li><a href="../seo-tools.html">SEO Tools</a></li>
+          <li><a href="../ai-tool-stacks/">AI Tool Stacks</a></li>
           <li><a href="../hosting.html">Hosting</a></li>
-          <li class="has-dropdown"><a href="../ai-tool-stacks/">AI Tool Stacks</a>
-            <ul class="dropdown">
-              <li><a href="../ai-tool-stacks/saas-founder-2026/">SaaS Founder Stack (2026)</a></li>
-              <li><a href="../ai-tool-stacks/small-agency-2026/">Small Agency Stack (2026)</a></li>
-            </ul>
-          </li>
+          <li><a href="../seo-tools.html">SEO Tools</a></li>
           <li><a href="../about.html">About</a></li>
           <li><a href="../contact/">Contact</a></li>
         </ul>
       </nav>
 
-      <div class="ct-footer__legal">
-        <p>&copy; 2026 ToolStack. All rights reserved.</p>
-        <p>
-          <a href="../privacy-policy/">Privacy Policy</a>
-          &middot;
-          <a href="../affiliate-disclosure.html">Affiliate Disclosure</a>
-        </p>
+      <!-- RIGHT: Popular reviews -->
+      <div class="footer-reviews">
+        <p class="footer-col-heading" aria-hidden="true">Popular Reviews</p>
+        <details class="footer-details">
+          <summary class="footer-summary">Popular Reviews &amp; Comparisons</summary>
+          <ul class="footer-nav-list">
+            <li><a href="../zapier-review/">Zapier Review</a></li>
+            <li><a href="../make-com-review.html">Make.com Review</a></li>
+            <li><a href="../n8n-cloud-review.html">n8n Review</a></li>
+            <li><a href="../openclaw-review/">OpenClaw Review</a></li>
+            <li><a href="../automation-tools.html">All Comparisons &rarr;</a></li>
+          </ul>
+        </details>
+        <ul class="footer-nav-list footer-nav-list--desktop">
+          <li><a href="../zapier-review/">Zapier Review</a></li>
+          <li><a href="../make-com-review.html">Make.com Review</a></li>
+          <li><a href="../n8n-cloud-review.html">n8n Review</a></li>
+          <li><a href="../openclaw-review/">OpenClaw Review</a></li>
+          <li><a href="../automation-tools.html">All Comparisons &rarr;</a></li>
+        </ul>
       </div>
 
+    </div><!-- /.footer-body -->
+
+    <div class="footer-legal">
+      <p>&copy; 2026 ToolStackChoice. All rights reserved.</p>
+      <p><a href="../privacy-policy/">Privacy Policy</a> &middot; <a href="../affiliate-disclosure.html">Affiliate Disclosure</a></p>
     </div>
   </footer>
+
 
   <!-- NO JAVASCRIPT — this page requires none -->
 
