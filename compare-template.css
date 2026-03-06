@@ -304,7 +304,29 @@
 .ct-article .ct-btn--outline  { color: var(--ct-accent-b); }
 .ct-article .ct-btn--outline:hover { color: #fff; text-decoration: none; }
 
-/* ── 13. Comparison table ── */
+/* ── 13. Article-level lists
+   The global CSS reset (padding:0 on *) strips browser-default list indentation.
+   These rules restore correct padding/spacing for any plain <ul>/<ol> inside
+   .ct-article, so future pages work correctly without per-page overrides.
+   Component-scoped lists (e.g. .ct-verdict__col ul) override as needed below.
+── */
+.ct-article ul,
+.ct-article ol {
+  padding-left: 1.4rem;
+  margin:       0.5rem 0 1.1rem;
+}
+
+.ct-article li {
+  font-size:     0.9375rem;
+  line-height:   1.65;
+  color:         var(--ct-text);
+  margin-bottom: 0.45rem;
+  max-width:     72ch;
+}
+
+.ct-article li:last-child { margin-bottom: 0; }
+
+/* ── 14. Comparison table ── */
 .ct-table-wrap {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
