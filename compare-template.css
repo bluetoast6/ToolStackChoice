@@ -224,53 +224,135 @@
   letter-spacing: 0.01em;
 }
 
-/* ── 10. VS badge strip ── */
-.ct-vs-strip {
-  display:     flex;
-  align-items: center;
-  gap:         1rem;
-  margin:      0 0 2rem;
-  flex-wrap:   wrap;
-}
+/* ── 10. VS hero card (replaces old badge strip) ── */
 
-.ct-vs-badge {
+/* Outer card — matches .scorecard shadow/radius treatment */
+.ct-vs-card {
   display:       flex;
-  flex-direction: column;
-  align-items:   center;
-  justify-content: center;
-  min-width:     120px;
-  padding:       0.75rem 1.25rem;
-  border:        2px solid var(--ct-border);
-  border-radius: var(--ct-radius);
-  text-align:    center;
+  align-items:   stretch;
+  gap:           0;
+  border:        1px solid var(--ct-border);
+  border-radius: 10px;
+  overflow:      hidden;
+  box-shadow:    0 2px 10px rgba(0,0,0,0.055);
+  margin:        0 0 2rem;
+  max-width:     560px;
 }
 
-.ct-vs-badge--a { border-color: var(--ct-accent-a); }
-.ct-vs-badge--b { border-color: var(--ct-accent-b); }
+/* Each tool side */
+.ct-vs-card__side {
+  flex:            1;
+  padding:         1.35rem 1.25rem;
+  display:         flex;
+  flex-direction:  column;
+  align-items:     center;
+  text-align:      center;
+  gap:             0.35rem;
+}
 
-.ct-vs-badge__name {
+.ct-vs-card__side--a {
+  background:   #eff6ff;
+  border-right: 1px solid var(--ct-border);
+}
+
+.ct-vs-card__side--b {
+  background: #f0fdf4;
+}
+
+/* Tool icon badge */
+.ct-vs-card__icon {
+  width:           44px;
+  height:          44px;
+  border-radius:   10px;
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  color:           #fff;
+  font-size:       1.1rem;
+  font-weight:     800;
+  flex-shrink:     0;
+  margin-bottom:   0.25rem;
+}
+
+/* Reuse tool accent colours */
+.ct-vs-card__icon--make       { background: #6366f1; }
+.ct-vs-card__icon--n8n        { background: #e24329; }
+.ct-vs-card__icon--zapier     { background: #ff4a00; }
+.ct-vs-card__icon--ahrefs     { background: #f97316; }
+.ct-vs-card__icon--semrush    { background: #1a73e8; }
+.ct-vs-card__icon--hostinger  { background: #673de6; }
+.ct-vs-card__icon--siteground { background: #00a651; }
+.ct-vs-card__icon--openclaw   { background: #7c3aed; }
+.ct-vs-card__icon--mangools   { background: #22c55e; }
+
+/* Tool name */
+.ct-vs-card__name {
   font-size:   1rem;
   font-weight: 700;
   color:       var(--ct-text);
+  margin:      0;
 }
 
-.ct-vs-badge--a .ct-vs-badge__name { color: var(--ct-accent-a); }
-.ct-vs-badge--b .ct-vs-badge__name { color: var(--ct-accent-b); }
-
-.ct-vs-badge__label {
-  font-size:      0.6875rem;
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-  color:          var(--ct-muted);
-  margin-top:     0.2rem;
+/* Rating row — score + label inline */
+.ct-vs-card__rating {
+  display:     flex;
+  align-items: baseline;
+  gap:         0.25rem;
+  justify-content: center;
 }
 
-.ct-vs-divider {
-  font-size:   1.25rem;
+.ct-vs-card__score {
+  font-size:   1.5rem;
   font-weight: 800;
-  color:       var(--ct-muted);
-  flex-shrink: 0;
+  color:       var(--ct-accent-a);
+  line-height: 1;
+  margin:      0;
 }
+
+.ct-vs-card__score-label {
+  font-size: 0.8125rem;
+  color:     var(--ct-muted);
+  margin:    0;
+}
+
+/* Price — secondary, same muted treatment as reading-time */
+.ct-vs-card__price {
+  font-size:      0.8125rem;
+  color:          var(--ct-muted);
+  letter-spacing: 0.01em;
+  margin:         0;
+}
+
+/* Best-for positioning line */
+.ct-vs-card__best-for {
+  font-size:  0.8125rem;
+  color:      var(--ct-muted);
+  margin:     0;
+  max-width:  18ch;
+  line-height: 1.4;
+}
+
+/* VS divider column */
+.ct-vs-card__divider {
+  display:          flex;
+  align-items:      center;
+  justify-content:  center;
+  padding:          0 0.5rem;
+  background:       #fff;
+  border-left:      1px solid var(--ct-border);
+  border-right:     1px solid var(--ct-border);
+  font-size:        0.7rem;
+  font-weight:      800;
+  color:            var(--ct-muted);
+  letter-spacing:   0.05em;
+  writing-mode:     vertical-rl;
+  text-orientation: mixed;
+  white-space:      nowrap;
+}
+
+/* Keep old ct-vs-strip/badge classes as no-ops for any pages not yet migrated */
+.ct-vs-strip { display: none; }
+.ct-vs-badge, .ct-vs-divider { display: none; }
 
 /* ── 11. H2 headings ── */
 .ct-h2 {
@@ -684,13 +766,25 @@
     font-size: 0.8125rem;
   }
 
-  .ct-vs-strip {
-    gap: 0.75rem;
+  /* ct-vs-card mobile: stack vertically */
+  .ct-vs-card {
+    flex-direction: column;
+    max-width:      100%;
   }
 
-  .ct-vs-badge {
-    min-width: 100px;
-    padding:   0.6rem 1rem;
+  .ct-vs-card__side--a {
+    border-right:  none;
+    border-bottom: 1px solid var(--ct-border);
+  }
+
+  .ct-vs-card__divider {
+    writing-mode:  horizontal-tb;
+    padding:       0.4rem 0;
+    border-left:   none;
+    border-right:  none;
+    border-top:    1px solid var(--ct-border);
+    border-bottom: 1px solid var(--ct-border);
+    font-size:     0.75rem;
   }
 
   /* Footer mobile handled by style.css */
