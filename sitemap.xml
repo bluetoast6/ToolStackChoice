@@ -152,6 +152,14 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Automation Tools explainers -->
+  <url>
+    <loc>https://www.toolstackchoice.com/ai-agents-vs-automation-tools/</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Automation Tools comparisons -->
   <url>
     <loc>https://www.toolstackchoice.com/n8n-vs-openclaw/</loc>
