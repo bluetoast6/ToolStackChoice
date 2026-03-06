@@ -177,7 +177,7 @@ a:hover, a:focus-visible {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-xs) var(--space-md);
+  gap: 0.15rem var(--space-md); /* tight row gap so wrapped stack links feel like a sub-row, not a second nav */
 }
 
 .primary-nav a {
@@ -211,11 +211,12 @@ a:hover, a:focus-visible {
 .primary-nav li.has-dropdown {
   position: relative;
 }
-/* Lighten the dropdown parent link so stack items don't compete with main sections */
+/* Lighten the dropdown parent link — reads as secondary sub-nav label */
 .primary-nav li.has-dropdown > a {
   font-weight: 400;
-  color: var(--color-muted, #6b6b6b);
-  font-size: 0.875rem;
+  color: #9ca3af;          /* lower contrast than muted — clearly secondary */
+  font-size:   0.8125rem;  /* slightly smaller than main links */
+  letter-spacing: 0.01em;
 }
 .primary-nav li.has-dropdown > a:hover {
   color: var(--color-accent);
