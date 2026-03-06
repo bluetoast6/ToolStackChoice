@@ -546,9 +546,9 @@ tr.row-recommended td:first-child {
 
 .footer-links {
   list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-xs);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xs) var(--space-md);
 }
 .footer-links ul {
   list-style: none;
@@ -659,9 +659,7 @@ tr.row-recommended td:first-child {
   }
   .footer-legal { text-align: left; }
   .footer-links {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: var(--space-xs) var(--space-md);
+    grid-template-columns: 1fr;
   }
   /* Nav: show hamburger on tablet and mobile (≤768px) */
   .nav-toggle { display: block; }
