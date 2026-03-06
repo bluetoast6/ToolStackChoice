@@ -158,6 +158,12 @@
 
   <!-- Automation Tools comparisons -->
   <url>
+    <loc>https://www.toolstackchoice.com/make-vs-openclaw/</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.toolstackchoice.com/zapier-vs-make-vs-openclaw/</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>monthly</changefreq>
