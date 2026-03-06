@@ -784,8 +784,9 @@
 
 /* ── 20. Responsive ── */
 
-/* Tablet: collapse sidebar below article */
-@media (max-width: 900px) {
+/* Mobile / tablet — single column layout */
+@media (max-width: 768px) {
+  /* Layout: collapse sidebar */
   .ct-layout {
     grid-template-columns: 1fr;
     gap:                   2rem;
@@ -794,22 +795,15 @@
 
   .ct-sidebar {
     position: static;
-    /* Show sidebar above article on mobile for quick reference */
     order:    -1;
   }
 
-  /* Hide ToC on tablet — redundant when sidebar is not sticky */
   .ct-toc { display: none; }
 
   .ct-verdict__grid {
     grid-template-columns: 1fr;
   }
 
-  /* Footer responsive handled by style.css .footer-body rules */
-}
-
-/* Mobile */
-@media (max-width: 768px) {
   .ct-header__inner {
     flex-wrap: wrap;
     height:    auto;
