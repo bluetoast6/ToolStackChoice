@@ -678,5 +678,18 @@
   </script>
 
   <script defer src="../../reading-progress.js"></script>
+  <script>
+    // Mobile nav toggle for ct-nav pages
+    (function () {
+      var btn = document.querySelector('.ct-nav-toggle');
+      var nav = document.querySelector('.ct-nav');
+      if (!btn || !nav) return;
+      nav.id = nav.id || 'ct-nav';
+      btn.addEventListener('click', function () {
+        var open = nav.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    })();
+  </script>
 </body>
 </html>

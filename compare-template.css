@@ -103,10 +103,12 @@
 /* ── 5. Primary navigation ── */
 .ct-nav ul {
   display:    flex;
-  gap:        1.5rem;
+  flex-wrap:  nowrap;          /* single row — no wrapping */
+  gap:        1.25rem;
   list-style: none;
   margin:     0;
   padding:    0;
+  align-items: center;
 }
 
 .ct-nav a {
@@ -120,6 +122,60 @@
 .ct-nav a:hover,
 .ct-nav a[aria-current="page"] {
   color: var(--ct-text);
+}
+
+/* Hide hamburger toggle on desktop */
+.ct-nav-toggle { display: none; }
+
+/* ── 5a. AI Tool Stacks dropdown ── */
+.ct-nav li.has-dropdown {
+  position: relative;
+}
+
+.ct-nav li.has-dropdown > a::after {
+  content:      " \25BE";
+  font-size:    0.7em;
+  opacity:      0.55;
+  margin-left:  0.1em;
+}
+
+.ct-nav .dropdown {
+  display:        none;
+  position:       absolute;
+  top:            calc(100% + 8px);
+  left:           0;
+  min-width:      230px;
+  background:     #fff;
+  border:         1px solid var(--ct-border);
+  border-radius:  6px;
+  box-shadow:     0 4px 16px rgba(0,0,0,0.10);
+  z-index:        200;
+  padding:        0.35rem 0;
+  flex-direction: column;
+  gap:            0;
+  list-style:     none;
+}
+
+.ct-nav li.has-dropdown:hover > .dropdown,
+.ct-nav li.has-dropdown:focus-within > .dropdown {
+  display: flex;
+}
+
+.ct-nav .dropdown li { width: 100%; }
+
+.ct-nav .dropdown a {
+  display:     block;
+  padding:     0.5rem 1rem;
+  font-size:   0.875rem;
+  font-weight: 400;
+  color:       var(--ct-text);
+  white-space: nowrap;
+  border-bottom: none;
+}
+
+.ct-nav .dropdown a:hover {
+  background: var(--ct-surface, #f8f8f8);
+  color:      var(--ct-accent-a);
 }
 
 /* ── 6. Page layout: article + sidebar ── */
@@ -753,17 +809,75 @@
 }
 
 /* Mobile */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .ct-header__inner {
-    padding: 0 1rem;
+    flex-wrap: wrap;
+    height:    auto;
+    padding:   0.6rem 1rem;
+    gap:       0.5rem;
   }
 
+  /* Show hamburger toggle */
+  .ct-nav-toggle {
+    display:     block;
+    margin-left: auto;
+    background:  none;
+    border:      1px solid var(--ct-border);
+    border-radius: 4px;
+    padding:     0.3rem 0.55rem;
+    font-size:   1.2rem;
+    cursor:      pointer;
+    line-height: 1;
+    color:       var(--ct-text);
+  }
+
+  /* Hide nav by default; show when .is-open */
+  .ct-nav {
+    display: none;
+    width:   100%;
+    order:   3;
+  }
+  .ct-nav.is-open { display: block; }
+
   .ct-nav ul {
-    gap: 1rem;
+    flex-direction: column;
+    flex-wrap:      nowrap;
+    gap:            0;
+    border-top:     1px solid var(--ct-border);
+    padding-top:    0.5rem;
+    padding-bottom: 0.75rem;
   }
 
   .ct-nav a {
-    font-size: 0.8125rem;
+    display:     block;
+    padding-block: 0.6rem;
+    font-size:   0.9rem;
+    border-bottom: none;
+  }
+
+  /* Dropdown: flat nested list on mobile */
+  .ct-nav li.has-dropdown > a::after { display: none; }
+  .ct-nav .dropdown {
+    display:        flex;
+    position:       static;
+    box-shadow:     none;
+    border:         none;
+    border-radius:  0;
+    padding:        0 0 0 1rem;
+    background:     transparent;
+    min-width:      0;
+  }
+  .ct-nav .dropdown a {
+    padding-block: 0.45rem;
+    font-size:     0.85rem;
+    color:         var(--ct-muted);
+  }
+}
+
+@media (max-width: 600px) {
+  /* extra small screens — handled by 768px block above */
+  .ct-header__inner {
+    padding: 0.6rem 0.75rem;
   }
 
   /* ct-vs-card mobile: stack vertically */
