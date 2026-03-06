@@ -215,6 +215,15 @@
 
 .ct-standfirst a:hover { text-decoration: underline; }
 
+/* Reading time label */
+.reading-time {
+  font-size:     0.8125rem;
+  color:         var(--ct-muted);
+  margin-top:    -0.75rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.01em;
+}
+
 /* ── 10. VS badge strip ── */
 .ct-vs-strip {
   display:     flex;
