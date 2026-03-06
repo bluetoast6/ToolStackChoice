@@ -146,7 +146,7 @@ a:hover, a:focus-visible {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--space-sm);
+  gap: var(--space-md);   /* was space-sm — more breathing room between logo and nav */
   padding-block: var(--space-sm);
 }
 
@@ -210,6 +210,15 @@ a:hover, a:focus-visible {
 /* Nav dropdown (desktop) */
 .primary-nav li.has-dropdown {
   position: relative;
+}
+/* Lighten the dropdown parent link so stack items don't compete with main sections */
+.primary-nav li.has-dropdown > a {
+  font-weight: 400;
+  color: var(--color-muted, #6b6b6b);
+  font-size: 0.875rem;
+}
+.primary-nav li.has-dropdown > a:hover {
+  color: var(--color-accent);
 }
 .primary-nav li.has-dropdown > a::after {
   content: " \25BE";

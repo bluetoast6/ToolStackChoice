@@ -787,6 +787,19 @@
     font-size:     0.75rem;
   }
 
+  /* Hero block spacing on mobile — clear separation between the 3 blocks */
+  .reading-time {
+    margin-bottom: 1.25rem;
+  }
+
+  .review-hub-link {
+    margin-bottom: 1.75rem;
+  }
+
+  .ct-vs-card {
+    margin-top: 0.25rem; /* small top nudge after the pill */
+  }
+
   /* Footer mobile handled by style.css */
 }
 
