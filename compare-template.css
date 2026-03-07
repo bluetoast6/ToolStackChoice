@@ -534,6 +534,29 @@
   width:       30%;
 }
 
+/* ── 14b. Page-specific comparison tables (ct-compare-table, scenario-table)
+   These classes are used on pages that define their own table styles in a
+   <style> block. The wrapper rules below ensure they stay inside the article
+   column and scroll horizontally on small screens, matching ct-table-wrap
+   behaviour. ── */
+.ct-article .ct-compare-table,
+.ct-article .scenario-table {
+  display:         block;        /* enables overflow-x on table element */
+  width:           100%;
+  max-width:       100%;         /* never wider than the article column */
+  overflow-x:      auto;
+  -webkit-overflow-scrolling: touch;
+  border-collapse: collapse;
+  border:          1px solid var(--ct-border);
+  border-radius:   var(--ct-radius);
+  box-sizing:      border-box;
+}
+
+/* Star rating characters — brand amber/yellow to match scorecard visuals */
+.ct-star {
+  color: #f59e0b;   /* Tailwind amber-500 — matches brand yellow */
+}
+
 /* ── 14. Bullet lists ── */
 .ct-list {
   margin:     0.5rem 0 1.25rem 0;
