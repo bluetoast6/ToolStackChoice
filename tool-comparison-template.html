@@ -85,6 +85,30 @@
     ]
   }
   </script>
+
+  <!-- JSON-LD: Article (AEO/AISO — publisher entity reference + dates) -->
+  <!-- ═══════════════════════════════════════════════════════════════════
+       REQUIRED: Update all [bracketed] values before publishing.
+       datePublished = date the page first went live
+       dateModified  = date of last meaningful content update
+       ═══════════════════════════════════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "[Tool A] vs [Tool B] ([Year]): Which is Better for You?",
+    "description": "[Tool A] vs [Tool B]: a direct, hands-on comparison of features, pricing, and ideal use cases — so you can choose the right tool without the guesswork.",
+    "datePublished": "[YYYY-MM-DD]",
+    "dateModified":  "[YYYY-MM-DD]",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.toolstackchoice.com/#organization",
+      "name": "ToolStackChoice"
+    },
+    "publisher": { "@id": "https://www.toolstackchoice.com/#organization" },
+    "mainEntityOfPage": "https://www.toolstackchoice.com/compare/[tool-a]-vs-[tool-b]/"
+  }
+  </script>
   <!-- END JSON-LD ═══════════════════════════════════════════════ -->
 
   <link rel="stylesheet" href="style.css" />
@@ -101,8 +125,8 @@
       <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
         <ul role="list">
           <li><a href="index.html">Home</a></li>
-          <li><a href="automation-tools.html">Automation Tools</a></li>
-          <li><a href="seo-tools.html">SEO Tools</a></li>
+          <li><a href="automation-tools/">Automation Tools</a></li>
+          <li><a href="seo-tools/">SEO Tools</a></li>
           <li><a href="hosting.html">Hosting</a></li>
           <li class="has-dropdown"><a href="ai-tool-stacks/">AI Tool Stacks</a>
             <ul class="dropdown">
@@ -475,8 +499,8 @@
       <nav aria-label="Footer navigation">
         <ul role="list" class="footer-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="automation-tools.html">Automation Tools</a></li>
-          <li><a href="seo-tools.html">SEO Tools</a></li>
+          <li><a href="automation-tools/">Automation Tools</a></li>
+          <li><a href="seo-tools/">SEO Tools</a></li>
           <li><a href="hosting.html">Hosting</a></li>
           <li class="has-dropdown"><a href="ai-tool-stacks/">AI Tool Stacks</a>
             <ul class="dropdown">
