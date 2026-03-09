@@ -18,44 +18,55 @@
     gtag('config', 'G-VR6QGW9543');
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="google-site-verification" content="aXkYM9-GrVhbR0koQXfvE2NBcEhN4qLDJ2r3lwZd6SE" />
-  <title>About ToolStackChoice.com | Our Review Process &amp; Mission</title>
-  <meta name="description" content="Learn about ToolStackChoice.com's independent software review process. We provide hands-on, unbiased comparisons of automation, SEO, and hosting tools so you can choose with confidence." />
-  <meta property="og:title" content="About ToolStackChoice.com | Our Review Process &amp; Mission" />
-  <meta property="og:description" content="Learn about ToolStackChoice.com's independent software review process. We provide hands-on, unbiased comparisons of automation, SEO, and hosting tools so you can choose with confidence." />
+  <title>About ToolStackChoice — Independent Software Reviews &amp; Methodology</title>
+  <meta name="description" content="ToolStackChoice is an independent software review publication covering automation tools, SEO platforms, and web hosting. Learn how we test, score, and stay independent." />
+  <meta property="og:title" content="About ToolStackChoice — Independent Software Reviews &amp; Methodology" />
+  <meta property="og:description" content="ToolStackChoice is an independent software review publication covering automation tools, SEO platforms, and web hosting. Learn how we test, score, and stay independent." />
   <meta property="og:url" content="https://www.toolstackchoice.com/about.html" />
   <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="ToolStackChoice" />
+  <meta property="og:site_name" content="ToolStackChoice" />
   <meta property="og:image" content="https://www.toolstackchoice.com/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-<link rel="canonical" href="https://www.toolstackchoice.com/about.html" />
+  <link rel="canonical" href="https://www.toolstackchoice.com/about.html" />
 
-  <!-- JSON-LD: Organization -->
+  <!-- JSON-LD: Organization (entity anchor) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "ToolStackChoice.com",
+    "@id": "https://www.toolstackchoice.com/#organization",
+    "name": "ToolStackChoice",
     "url": "https://www.toolstackchoice.com",
-    "logo": "https://www.toolstackchoice.com/logo-icon.png",
-    "description": "An independent review site that helps founders, freelancers, and small teams choose the right software tools — covering automation, SEO, and hosting products.",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.toolstackchoice.com/logo-icon.png"
+    },
+    "description": "An independent software review publication covering automation tools, SEO platforms, and web hosting. Every review is based on hands-on testing.",
+    "foundingDate": "2024",
+    "knowsAbout": [
+      "automation software",
+      "SEO tools",
+      "web hosting",
+      "workflow automation",
+      "no-code tools",
+      "software comparisons"
+    ],
     "sameAs": []
   }
   </script>
 
-  <!-- JSON-LD: Person (founder) -->
+  <!-- JSON-LD: AboutPage -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "ToolStackChoice Founder",
+    "@type": "AboutPage",
+    "@id": "https://www.toolstackchoice.com/about.html",
+    "name": "About ToolStackChoice — Independent Software Reviews &amp; Methodology",
+    "description": "Learn about ToolStackChoice's independent review process, scoring methodology, and editorial mission.",
     "url": "https://www.toolstackchoice.com/about.html",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "ToolStackChoice.com",
-      "url": "https://www.toolstackchoice.com"
-    },
-    "description": "Solo founder who actively builds and runs online projects using automation platforms, SEO tools, and hosting — and reviews them on ToolStackChoice.com."
+    "isPartOf": { "@id": "https://www.toolstackchoice.com/#website" },
+    "about": { "@id": "https://www.toolstackchoice.com/#organization" }
   }
   </script>
 
@@ -63,12 +74,10 @@
   <style>
     /* ── About page spacing polish (scoped to .about-page) ── */
 
-    /* Paragraph breathing room inside About sections */
     .about-page .section p {
       margin-bottom: 1.1rem;
     }
 
-    /* Definition list: Q&A pairs */
     .about-page .about-dl dt {
       font-weight: 600;
       margin-top: 1.25rem;
@@ -82,7 +91,6 @@
       margin-bottom: 0.75rem;
     }
 
-    /* Unordered lists: indent markers to align with paragraph text */
     .about-page .section ul {
       padding-left: 1.4rem;
       margin-bottom: 1.1rem;
@@ -91,7 +99,6 @@
       margin-bottom: 0.45rem;
     }
 
-    /* Ordered list: step spacing + indent markers */
     .about-page .about-steps {
       padding-left: 1.4rem;
     }
@@ -101,6 +108,28 @@
     }
     .about-page .about-steps li:last-child {
       margin-bottom: 0;
+    }
+
+    /* Scoring table */
+    .about-page .about-score-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.25rem 0 1.5rem;
+      font-size: 0.9rem;
+    }
+    .about-page .about-score-table th,
+    .about-page .about-score-table td {
+      text-align: left;
+      padding: 0.6rem 0.85rem;
+      border: 1px solid var(--border, #e5e7eb);
+    }
+    .about-page .about-score-table thead th {
+      background: var(--surface-alt, #f9fafb);
+      font-weight: 600;
+    }
+    .about-page .about-score-table td:last-child {
+      white-space: nowrap;
+      font-weight: 600;
     }
   </style>
 </head>
@@ -114,8 +143,8 @@
       <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
         <ul role="list">
           <li><a href="index.html">Home</a></li>
-          <li><a href="automation-tools.html">Automation Tools</a></li>
-          <li><a href="seo-tools.html">SEO Tools</a></li>
+          <li><a href="automation-tools/">Automation Tools</a></li>
+          <li><a href="seo-tools/">SEO Tools</a></li>
           <li><a href="hosting.html">Hosting</a></li>
           <li><a href="about.html" aria-current="page">About</a></li>
           <li><a href="contact/">Contact</a></li>
@@ -143,24 +172,33 @@
             <li aria-current="page">About</li>
           </ol>
         </nav>
-        <h1>About ToolStackChoice.com</h1>
-        <p class="hero-sub">ToolStackChoice.com is an independent review site that helps founders, freelancers, and small teams choose the right software tools with confidence. Instead of listing every tool on the market, we focus on a short list of <a href="automation-tools/">automation</a>, <a href="seo-tools/">SEO</a>, and <a href="premium-hosting/">hosting</a> products that actually affect your day-to-day work.</p>
+        <h1>About ToolStackChoice</h1>
+        <p class="hero-sub">ToolStackChoice is an independent software review publication covering <a href="automation-tools/">automation tools</a>, <a href="seo-tools/">SEO platforms</a>, and <a href="hosting.html">web hosting</a>. Every review is based on hands-on testing with a real account — no vendor briefings, no sponsored placements, no rankings for sale. Our goal is one sentence: help founders, freelancers, and small teams pick the right tool without wasting money on the wrong one.</p>
         <p class="reading-time">Estimated reading time: 5 min read</p>
-        <p class="hero-sub">We test tools like <a href="make-com-review.html">Make.com</a>, <a href="n8n-cloud-review.html">n8n</a>, <a href="ahrefs-review.html">Ahrefs</a>, <a href="semrush-review.html">Semrush</a>, <a href="hostinger-review.html">Hostinger</a>, and <a href="siteground-review.html">SiteGround</a> in real workflows, then publish clear reviews and side-by-side comparisons so you can see the trade-offs in one place.</p>
       </div>
     </section>
 
     <!-- Key facts -->
     <section class="section" aria-labelledby="tsc-key-facts">
       <div class="container">
-        <h2 id="tsc-key-facts">Key facts about ToolStackChoice.com</h2>
+        <h2 id="tsc-key-facts">Key facts about ToolStackChoice</h2>
         <dl class="about-dl">
-          <dt>What is ToolStackChoice.com?</dt>
-          <dd>An independent site for hands-on reviews and comparisons of <a href="automation-tools/">automation</a>, <a href="seo-tools/">SEO</a>, and <a href="premium-hosting/">hosting</a> tools.</dd>
+          <dt>What is ToolStackChoice?</dt>
+          <dd>An independent software review publication providing hands-on reviews and side-by-side comparisons of <a href="automation-tools/">automation</a>, <a href="seo-tools/">SEO</a>, and <a href="hosting.html">hosting</a> tools — founded in 2024.</dd>
+          <dt>Who is ToolStackChoice for?</dt>
+          <dd>Founders, freelancers, and small teams who need to choose between competing software tools and want a clear, honest verdict rather than a list of 20 options.</dd>
+          <dt>What categories do you cover?</dt>
+          <dd>
+            <strong><a href="automation-tools/">Automation tools</a></strong> — <a href="zapier-review/">Zapier</a>, <a href="make-com-review.html">Make.com</a>, <a href="n8n-cloud-review.html">n8n</a>, <a href="pabbly-connect-review/">Pabbly Connect</a>, <a href="activepieces-review/">ActivePieces</a>, <a href="workato-review/">Workato</a>, <a href="openclaw-review/">OpenClaw</a>.<br />
+            <strong><a href="seo-tools/">SEO tools</a></strong> — <a href="ahrefs-review.html">Ahrefs</a>, <a href="semrush-review.html">Semrush</a>, <a href="mangools-review.html">Mangools</a>, <a href="moz-pro-review/">Moz Pro</a>, <a href="screaming-frog-review/">Screaming Frog</a>, <a href="surfer-seo-review/">Surfer SEO</a>, <a href="se-ranking-review/">SE Ranking</a>.<br />
+            <strong><a href="hosting.html">Web hosting</a></strong> — <a href="hostinger-review.html">Hostinger</a>, <a href="siteground-review.html">SiteGround</a>, <a href="kinsta-review.html">Kinsta</a>, <a href="cloudways-review/">Cloudways</a>, <a href="wp-engine-review/">WP Engine</a>.
+          </dd>
           <dt>How do you review tools?</dt>
-          <dd>We sign up for real accounts, run tools through practical workflows, and score them on ease of use, features, pricing, performance, and support.</dd>
+          <dd>We sign up for real accounts, run tools through practical workflows, and score them on ease of use, features, pricing, performance, and support. No vendor-supplied data, no demo accounts.</dd>
           <dt>Are your reviews biased?</dt>
-          <dd>We don't sell rankings or charge tools for placement. Some links are affiliate links, but they never affect our scores or verdicts.</dd>
+          <dd>We do not sell rankings or charge tools for placement. Some links are affiliate links, but they never affect our scores or verdicts.</dd>
+          <dt>When was ToolStackChoice founded?</dt>
+          <dd>2024.</dd>
         </dl>
       </div>
     </section>
@@ -170,12 +208,7 @@
       <div class="container">
         <h2 id="tsc-trust">Why you can trust our software reviews</h2>
         <p>Most "best tools" articles are written for algorithms, not for people who have to live with the tools they pick. They list 20 options, repeat the marketing copy, and leave you just as uncertain as when you started.</p>
-        <p>ToolStackChoice.com takes a different approach:</p>
-        <ul>
-          <li>We keep the shortlist tight, so every tool we cover has a clear reason to be there.</li>
-          <li>We focus on how tools behave in real usage, not just how they look on landing pages.</li>
-          <li>We're explicit about who a tool is best for and who should probably choose something else.</li>
-        </ul>
+        <p>ToolStackChoice takes a different approach. We keep the shortlist tight so every tool we cover has a clear reason to be there. We focus on how tools behave in real usage, not just how they look on landing pages. And we are explicit about who a tool is best for and who should probably choose something else.</p>
         <p>Our goal is simple: help you avoid expensive, time-wasting tool mistakes.</p>
       </div>
     </section>
@@ -184,12 +217,33 @@
     <section class="section" aria-labelledby="tsc-process">
       <div class="container">
         <h2 id="tsc-process">Our tool review process: step-by-step</h2>
-        <p>Every review on ToolStackChoice.com follows the same process:</p>
+        <p>Every review on ToolStackChoice follows the same four-step process:</p>
         <ol class="about-steps">
           <li><strong>Hands-on testing</strong> — We sign up for real plans, connect tools to realistic automations, SEO campaigns, and hosting setups, and use them as a founder or team would. We look at speed, reliability, UX, pricing structure, and support quality.</li>
-          <li><strong>Structured scoring</strong> — We rate each tool on key dimensions such as ease of use, feature depth, pricing fairness, reliability/performance, and support &amp; learning resources. These scores appear in a transparent scorecard on each review and comparison page.</li>
+          <li>
+            <strong>Structured scoring</strong> — We rate each tool on five dimensions. These scores appear in a transparent scorecard on each review and comparison page.
+            <table class="about-score-table" aria-label="Scoring dimensions and weights">
+              <thead>
+                <tr>
+                  <th>Dimension</th>
+                  <th>What we measure</th>
+                  <th>Weight</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Ease of use</td><td>Onboarding, UI clarity, learning curve</td><td>20%</td></tr>
+                <tr><td>Feature depth</td><td>Core functionality vs. stated use case</td><td>25%</td></tr>
+                <tr><td>Pricing fairness</td><td>Value for money at each tier, hidden costs</td><td>20%</td></tr>
+                <tr><td>Reliability &amp; performance</td><td>Uptime, speed, error handling</td><td>20%</td></tr>
+                <tr><td>Support &amp; resources</td><td>Docs quality, response time, community</td><td>15%</td></tr>
+              </tbody>
+            </table>
+            <p>Pricing data is verified directly from vendor pricing pages at the time of writing and is updated when we revisit a review. Performance data (uptime, speed) is based on our own testing period, not vendor-supplied figures. We note the date of last verification on each review page.</p>
+          </li>
           <li><strong>Clear positioning and trade-offs</strong> — For every tool, we answer three questions: what is this tool actually best at, who will get the most value from it, and who should probably pick an alternative.</li>
-          <li><strong>Regular updates</strong> — Tools and pricing change. We revisit important reviews and comparisons on a schedule and whenever major product updates happen, and we refresh the "last updated" date when we do.</li>
+          <li>
+            <strong>Regular updates</strong> — We revisit reviews on a rolling 6-month schedule and immediately when a tool makes a major pricing or feature change. The "Last updated" date on each review reflects when we last verified the content, not just when we last edited the page.
+          </li>
         </ol>
         <p>You can see this process in action on our <a href="ahrefs-review.html">Ahrefs review</a> and <a href="semrush-review.html">Semrush review</a>, the <a href="ahrefs-vs-semrush.html">Ahrefs vs Semrush comparison</a>, and our <a href="hostinger-review.html">Hostinger</a> and <a href="siteground-review.html">SiteGround</a> hosting reviews.</p>
       </div>
@@ -198,9 +252,9 @@
     <!-- Who runs it -->
     <section class="section section-alt" aria-labelledby="tsc-founder">
       <div class="container">
-        <h2 id="tsc-founder">Who runs ToolStackChoice.com?</h2>
-        <p>ToolStackChoice.com is run by a solo founder who actively builds and runs online projects using the same tools reviewed here — automation platforms, SEO tools, and hosting for real sites.</p>
-        <p>Before starting ToolStackChoice.com, the founder spent years testing stacks for client work and personal projects: building automations, running SEO campaigns, and deploying sites that needed to stay fast and online. This site is a way to document what actually works, what doesn't, and where the edge cases are.</p>
+        <h2 id="tsc-founder">Who runs ToolStackChoice?</h2>
+        <p>ToolStackChoice has been publishing independent software reviews since 2024. The site is run by a practitioner — someone who builds and runs online projects using the same tools reviewed here — rather than by a content team writing about tools they have never used.</p>
+        <p>Before starting ToolStackChoice, the founder spent years testing stacks for client work and personal projects: building automations, running SEO campaigns, and deploying sites that needed to stay fast and online. This site is a way to document what actually works, what does not, and where the edge cases are.</p>
         <p>Because we use these tools ourselves, every recommendation has to pass a simple test: would we be comfortable relying on this in our own stack?</p>
       </div>
     </section>
@@ -209,14 +263,13 @@
     <section class="section" aria-labelledby="tsc-independence">
       <div class="container">
         <h2 id="tsc-independence">How we stay independent (and how affiliates work)</h2>
-        <p>ToolStackChoice.com is reader-supported. Some links on this site are affiliate links, which means we may earn a commission if you choose a paid plan after clicking. This never costs you extra.</p>
-        <p>To stay independent:</p>
+        <p>ToolStackChoice is reader-supported. Some links on this site are affiliate links, which means we may earn a small commission if you sign up for a paid plan through them — at no extra cost to you. Here is exactly how that works in practice:</p>
         <ul>
           <li>We do not sell rankings or accept payment to include a tool in our shortlists.</li>
           <li>Affiliate status does not guarantee a positive review or a "recommended" label.</li>
           <li>We are happy to recommend free or cheaper alternatives when they are a better fit for your situation.</li>
         </ul>
-        <p>If we wouldn't choose a tool for our own stack, we won't recommend it in yours.</p>
+        <p>If we would not choose a tool for our own stack, we will not recommend it in yours. For full details, see our <a href="affiliate-disclosure.html">Affiliate Disclosure</a>.</p>
       </div>
     </section>
 
@@ -224,11 +277,11 @@
     <section class="section section-alt" aria-labelledby="tsc-tools">
       <div class="container">
         <h2 id="tsc-tools">Tools we currently cover</h2>
-        <p>We focus on a small, fast-evolving set of tools across three categories:</p>
+        <p>We focus on a curated set of tools across three categories. Each tool has its own in-depth review and, where relevant, a direct comparison against its closest competitors.</p>
         <ul>
-          <li><strong><a href="automation-tools/">Automation tools</a></strong> — <a href="make-com-review.html">Make.com</a>, <a href="n8n-cloud-review.html">n8n</a>, and related workflow platforms.</li>
-          <li><strong><a href="seo-tools/">SEO tools</a></strong> — <a href="ahrefs-review.html">Ahrefs</a>, <a href="semrush-review.html">Semrush</a>, and other search and content tools.</li>
-          <li><strong><a href="premium-hosting/">Premium hosting</a></strong> — <a href="hostinger-review.html">Hostinger</a>, <a href="siteground-review.html">SiteGround</a>, and modern managed hosting options.</li>
+          <li><strong><a href="automation-tools/">Automation tools</a></strong> — <a href="zapier-review/">Zapier</a>, <a href="make-com-review.html">Make.com</a>, <a href="n8n-cloud-review.html">n8n</a>, <a href="pabbly-connect-review/">Pabbly Connect</a>, <a href="activepieces-review/">ActivePieces</a>, <a href="workato-review/">Workato</a>, <a href="openclaw-review/">OpenClaw</a>.</li>
+          <li><strong><a href="seo-tools/">SEO tools</a></strong> — <a href="ahrefs-review.html">Ahrefs</a>, <a href="semrush-review.html">Semrush</a>, <a href="mangools-review.html">Mangools</a>, <a href="moz-pro-review/">Moz Pro</a>, <a href="screaming-frog-review/">Screaming Frog</a>, <a href="surfer-seo-review/">Surfer SEO</a>, <a href="se-ranking-review/">SE Ranking</a>.</li>
+          <li><strong><a href="hosting.html">Web hosting</a></strong> — <a href="hostinger-review.html">Hostinger</a>, <a href="siteground-review.html">SiteGround</a>, <a href="kinsta-review.html">Kinsta</a>, <a href="cloudways-review/">Cloudways</a>, <a href="wp-engine-review/">WP Engine</a>.</li>
         </ul>
       </div>
     </section>
@@ -236,15 +289,9 @@
     <!-- How to use the site -->
     <section class="section" aria-labelledby="tsc-how-to-use">
       <div class="container">
-        <h2 id="tsc-how-to-use">How to get the most value from ToolStackChoice.com</h2>
-        <p>To use this site effectively:</p>
-        <ul>
-          <li>Start on the <a href="automation-tools/">Automation</a>, <a href="seo-tools/">SEO</a>, or <a href="hosting.html">Hosting</a> category pages, depending on what you're choosing.</li>
-          <li>Read the individual reviews to understand each tool on its own.</li>
-          <li>Use the comparison pages (for example, <a href="ahrefs-vs-semrush.html">Ahrefs vs Semrush</a> or <a href="hostinger-vs-siteground.html">Hostinger vs SiteGround</a>) when you're down to a short shortlist and need to pick one.</li>
-          <li>Check the scorecards and "Who it's best for" sections before you commit to a paid plan.</li>
-        </ul>
-        <p>If you'd like to suggest a tool for review or share feedback on an existing article, you can reach us via the <a href="contact/">Contact page</a>.</p>
+        <h2 id="tsc-how-to-use">How to get the most value from ToolStackChoice</h2>
+        <p>Start on the <a href="automation-tools/">Automation</a>, <a href="seo-tools/">SEO</a>, or <a href="hosting.html">Hosting</a> category pages, depending on what you are choosing. Read the individual reviews to understand each tool on its own, then use the comparison pages — for example, <a href="ahrefs-vs-semrush.html">Ahrefs vs Semrush</a> or <a href="hostinger-vs-siteground.html">Hostinger vs SiteGround</a> — when you are down to a short shortlist and need to pick one. Check the scorecards and "Who it's best for" sections before you commit to a paid plan.</p>
+        <p>If you would like to suggest a tool for review or share feedback on an existing article, you can reach us via the <a href="contact/">Contact page</a>.</p>
       </div>
     </section>
 
@@ -266,28 +313,25 @@
 
       <!-- MIDDLE: High-level nav -->
       <nav class="footer-nav" aria-label="Footer navigation">
-        <!-- Desktop heading -->
         <p class="footer-col-heading" aria-hidden="true">Navigation</p>
-        <!-- Mobile collapsible -->
         <details class="footer-details">
           <summary class="footer-summary">Navigation</summary>
           <ul class="footer-nav-list">
             <li><a href="index.html">Home</a></li>
-            <li><a href="automation-tools.html">Automation Tools</a></li>
+            <li><a href="automation-tools/">Automation Tools</a></li>
             <li><a href="ai-tool-stacks/">AI Tool Stacks</a></li>
             <li><a href="hosting.html">Hosting</a></li>
-            <li><a href="seo-tools.html">SEO Tools</a></li>
+            <li><a href="seo-tools/">SEO Tools</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact/">Contact</a></li>
           </ul>
         </details>
-        <!-- Desktop list (always visible) -->
         <ul class="footer-nav-list footer-nav-list--desktop">
           <li><a href="index.html">Home</a></li>
-          <li><a href="automation-tools.html">Automation Tools</a></li>
+          <li><a href="automation-tools/">Automation Tools</a></li>
           <li><a href="ai-tool-stacks/">AI Tool Stacks</a></li>
           <li><a href="hosting.html">Hosting</a></li>
-          <li><a href="seo-tools.html">SEO Tools</a></li>
+          <li><a href="seo-tools/">SEO Tools</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact/">Contact</a></li>
         </ul>
@@ -303,7 +347,7 @@
             <li><a href="make-com-review.html">Make.com Review</a></li>
             <li><a href="n8n-cloud-review.html">n8n Review</a></li>
             <li><a href="openclaw-review/">OpenClaw Review</a></li>
-            <li><a href="automation-tools.html">All Comparisons &rarr;</a></li>
+            <li><a href="automation-tools/">All Comparisons &rarr;</a></li>
           </ul>
         </details>
         <ul class="footer-nav-list footer-nav-list--desktop">
@@ -311,7 +355,7 @@
           <li><a href="make-com-review.html">Make.com Review</a></li>
           <li><a href="n8n-cloud-review.html">n8n Review</a></li>
           <li><a href="openclaw-review/">OpenClaw Review</a></li>
-          <li><a href="automation-tools.html">All Comparisons &rarr;</a></li>
+          <li><a href="automation-tools/">All Comparisons &rarr;</a></li>
         </ul>
       </div>
 
@@ -323,7 +367,6 @@
       <p><a href="privacy-policy/">Privacy Policy</a> &middot; <a href="affiliate-disclosure.html">Affiliate Disclosure</a></p>
     </div>
   </footer>
-
 
   <script>
     (function () {

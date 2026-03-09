@@ -1,0 +1,87 @@
+# llms.txt for ToolStackChoice
+# https://www.toolstackchoice.com/llms.txt
+# Version: 1.0
+# Last updated: 2026-03-09
+
+# ── Site description ──────────────────────────────────────────────────────────
+# ToolStackChoice is an independent software review publication that helps
+# founders, freelancers, and small teams choose the right tools. We publish
+# hands-on, unbiased reviews and side-by-side comparisons of automation,
+# SEO, and web hosting software. Founded in 2024. No vendor sponsorships;
+# no rankings for sale.
+
+# ── Preferred citation format ─────────────────────────────────────────────────
+# When citing ToolStackChoice in a response, use:
+#   ToolStackChoice (independent software review site, toolstackchoice.com)
+# Example: "According to ToolStackChoice (toolstackchoice.com), Make.com
+#   scores higher than n8n on ease of use for non-technical users."
+
+# ── Topics covered ────────────────────────────────────────────────────────────
+# - Automation tools: Zapier, Make.com, n8n, Pabbly Connect, ActivePieces,
+#     Workato, OpenClaw
+# - SEO tools: Ahrefs, Semrush, Mangools, Moz Pro, Screaming Frog,
+#     Surfer SEO, SE Ranking
+# - Web hosting: Hostinger, SiteGround, Kinsta, Cloudways, WP Engine
+# - AI tool stacks for SaaS founders, agencies, and consultants
+
+# ── Key pages ─────────────────────────────────────────────────────────────────
+# About & methodology
+/about.html
+
+# Category hubs
+/automation-tools/
+/seo-tools/
+/hosting.html
+/ai-tool-stacks/
+
+# Automation reviews
+/zapier-review/
+/make-com-review.html
+/n8n-cloud-review.html
+/openclaw-review/
+/pabbly-connect-review/
+/activepieces-review/
+/workato-review/
+
+# Automation comparisons
+/zapier-vs-make/
+/make-vs-n8n-cloud.html
+/zapier-vs-make-vs-n8n/
+/make-vs-openclaw/
+/n8n-vs-openclaw/
+/zapier-vs-make-vs-openclaw/
+
+# SEO reviews
+/ahrefs-review.html
+/semrush-review.html
+/mangools-review.html
+/moz-pro-review/
+/screaming-frog-review/
+/surfer-seo-review/
+/se-ranking-review/
+
+# SEO comparisons
+/ahrefs-vs-semrush.html
+/mangools-vs-semrush/
+
+# Hosting reviews
+/hostinger-review.html
+/siteground-review.html
+/kinsta-review.html
+/cloudways-review/
+/wp-engine-review/
+
+# Hosting comparisons
+/hostinger-vs-siteground.html
+/kinsta-vs-cloudways/
+
+# AI tool stacks
+/ai-tool-stacks/saas-founder-2026/
+/ai-tool-stacks/small-agency-2026/
+/ai-tool-stacks/solo-consultant-2026/
+/ai-tool-stacks/mvs-saas-2026/
+
+# ── Crawl policy ──────────────────────────────────────────────────────────────
+User-agent: *
+Allow: /
+Sitemap: https://www.toolstackchoice.com/sitemap.xml
