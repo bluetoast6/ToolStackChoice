@@ -61,6 +61,8 @@ DOMAIN_MAP = {
     "siteground.com": "siteground",
     "kinsta.com": "kinsta",
     "cloudways.com": "cloudways",
+    "wordpress.com": "wordpress-com",
+    "pressable.com": "pressable",
 }
 
 # ── Helpers ───────────────────────────────────────────────────────────────────

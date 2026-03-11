@@ -54,6 +54,18 @@
       "plain_url": "https://www.cloudways.com",
       "affiliate_url": "https://www.cloudways.com/en/?id=2091593",
       "status": "active"
+    },
+    "wordpress-com": {
+      "name": "WordPress.com",
+      "plain_url": "https://wordpress.com",
+      "affiliate_url": "https://automattic.pxf.io/c/7053622/1919834/22744",
+      "status": "active"
+    },
+    "pressable": {
+      "name": "Pressable",
+      "plain_url": "https://pressable.com",
+      "affiliate_url": "https://automattic.pxf.io/c/7053622/2021364/22744",
+      "status": "active"
     }
   }
 }
