@@ -74,7 +74,7 @@
   </url>
   <url>
     <loc>https://www.toolstackchoice.com/ai-tool-stacks/solo-consultant-2026/</loc>
-    <lastmod>2026-03-03</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -147,6 +147,20 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Automation Tools use cases & diaries -->
+  <url>
+    <loc>https://www.toolstackchoice.com/openclaw-use-cases/</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.toolstackchoice.com/openclaw-30-day-review/</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Automation Tools explainers -->
   <url>
     <loc>https://www.toolstackchoice.com/ai-agents-vs-automation-tools/</loc>
@@ -164,13 +178,19 @@
   </url>
   <url>
     <loc>https://www.toolstackchoice.com/make-vs-openclaw/</loc>
-    <lastmod>2026-03-06</lastmod>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.toolstackchoice.com/zapier-vs-make-vs-openclaw/</loc>
     <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.toolstackchoice.com/zapier-vs-make-vs-n8n-vs-openclaw/</loc>
+    <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
