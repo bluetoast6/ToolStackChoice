@@ -94,52 +94,51 @@
   <link rel="stylesheet" href="../visuals.css" />
 </head>
 <body>
-
-  <!-- ══ SITE HEADER ══ -->
-  <header class="site-header">
-    <div class="header-inner">
+  <div id="reading-progress" aria-hidden="true"></div>
+  <a href="#main-content" class="sr-only">Skip to main content</a>
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
       <a href="../index.html" class="logo" aria-label="ToolStackChoice Home">
         <img src="../logo-icon.png" class="logo-img" alt="ToolStackChoice logo icon" width="44" height="44">
         <span class="logo-text">ToolStackChoice</span>
       </a>
-      <nav class="main-nav" aria-label="Main navigation">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
         <ul role="list">
           <li><a href="../index.html">Home</a></li>
-          <li><a href="../automation-tools/">Automation Tools</a></li>
+          <li><a href="../automation-tools/" aria-current="page">Automation Tools</a></li>
           <li><a href="../seo-tools.html">SEO Tools</a></li>
-          <li class="nav-has-dropdown">
-            <a href="../hosting.html">Hosting</a>
-            <ul class="nav-dropdown" role="list">
-              <li><a href="../kinsta-review.html">Kinsta Review</a></li>
-              <li><a href="../wp-engine-review/">WP Engine Review</a></li>
-              <li><a href="../pressable-review/">Pressable Review</a></li>
-              <li><a href="../wordpress-com-review/">WordPress.com Review</a></li>
-              <li><a href="../cloudways-review/">Cloudways Review</a></li>
-              <li><a href="../siteground-review.html">SiteGround Review</a></li>
-            </ul>
-          </li>
-          <li class="nav-has-dropdown">
-            <a href="../ai-tool-stacks/" aria-current="page">AI Tool Stacks</a>
-            <ul class="nav-dropdown" role="list">
-              <li><a href="../ai-tool-stacks/solo-consultant-2026/">Solo Consultant Stack</a></li>
+          <li><a href="../hosting.html">Hosting</a></li>
+          <li class="has-dropdown"><a href="../ai-tool-stacks/">AI Tool Stacks</a>
+            <ul class="dropdown">
+              <li><a href="../ai-tool-stacks/saas-founder-2026/">SaaS Founder Stack (2026)</a></li>
+              <li><a href="../ai-tool-stacks/small-agency-2026/">Small Agency Stack (2026)</a></li>
+              <li><a href="../ai-tool-stacks/solo-consultant-2026/">Solo Consultant Stack (2026)</a></li>
+              <li><a href="../ai-tool-stacks/mvs-saas-2026/">Minimum Viable SaaS Stack (2026)</a></li>
             </ul>
           </li>
           <li><a href="../about.html">About</a></li>
-          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="../contact/">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
-
+  <!-- ===================== MAIN ===================== -->
   <main id="main-content">
-    <div class="review-layout">
+    <div class="review-layout container">
+
 
       <!-- ══ ARTICLE ══ -->
       <article class="review-body" aria-labelledby="review-title">
 
         <!-- Breadcrumb -->
-        <nav aria-label="Breadcrumb">
-          <ol class="breadcrumb" role="list">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ol role="list">
             <li><a href="../index.html">Home</a></li>
             <li><a href="../automation-tools/">Automation Tools</a></li>
             <li aria-current="page">Is OpenClaw Worth It?</li>
@@ -440,10 +439,11 @@
         </div>
 
       </aside><!-- /review-sidebar -->
+    
+      </aside><!-- /review-sidebar -->
     </div><!-- /review-layout -->
   </main>
-
-  <!-- ══ SITE FOOTER ══ -->
+  <!-- ===================== FOOTER ===================== -->
   <footer class="site-footer" role="contentinfo">
     <div class="footer-body">
       <div class="footer-brand">
@@ -455,19 +455,66 @@
         <p class="footer-disclosure">Some links are affiliate links; we never sell rankings.</p>
       </div>
       <nav class="footer-nav" aria-label="Footer navigation">
-        <p class="footer-col-heading">Navigation</p>
-        <ul role="list">
+        <p class="footer-col-heading" aria-hidden="true">Navigation</p>
+        <details class="footer-details">
+          <summary class="footer-summary">Navigation</summary>
+          <ul class="footer-nav-list">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../automation-tools/">Automation Tools</a></li>
+            <li><a href="../ai-tool-stacks/">AI Tool Stacks</a></li>
+            <li><a href="../hosting.html">Hosting</a></li>
+            <li><a href="../seo-tools.html">SEO Tools</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../contact/">Contact</a></li>
+          </ul>
+        </details>
+        <ul class="footer-nav-list footer-nav-list--desktop">
           <li><a href="../index.html">Home</a></li>
           <li><a href="../automation-tools/">Automation Tools</a></li>
+          <li><a href="../ai-tool-stacks/">AI Tool Stacks</a></li>
           <li><a href="../hosting.html">Hosting</a></li>
           <li><a href="../seo-tools.html">SEO Tools</a></li>
           <li><a href="../about.html">About</a></li>
-          <li><a href="../contact.html">Contact</a></li>
-          <li><a href="../affiliate-disclosure.html">Affiliate Disclosure</a></li>
+          <li><a href="../contact/">Contact</a></li>
         </ul>
       </nav>
+      <div class="footer-reviews">
+        <p class="footer-col-heading" aria-hidden="true">Popular Reviews</p>
+        <details class="footer-details">
+          <summary class="footer-summary">Popular Reviews &amp; Comparisons</summary>
+          <ul class="footer-nav-list">
+            <li><a href="../kinsta-review.html">Kinsta Review</a></li>
+            <li><a href="../pressable-review/">Pressable Review</a></li>
+            <li><a href="../wordpress-com-review/">WordPress.com Review</a></li>
+            <li><a href="../openclaw-review/">OpenClaw Review</a></li>
+            <li><a href="../hosting.html">All Hosting Reviews &rarr;</a></li>
+          </ul>
+        </details>
+        <ul class="footer-nav-list footer-nav-list--desktop">
+          <li><a href="../kinsta-review.html">Kinsta Review</a></li>
+          <li><a href="../pressable-review/">Pressable Review</a></li>
+          <li><a href="../wordpress-com-review/">WordPress.com Review</a></li>
+          <li><a href="../openclaw-review/">OpenClaw Review</a></li>
+          <li><a href="../hosting.html">All Hosting Reviews &rarr;</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <p>&copy; 2026 ToolStackChoice. All rights reserved.</p>
+      <p><a href="../privacy-policy/">Privacy Policy</a> &middot; <a href="../affiliate-disclosure.html">Affiliate Disclosure</a></p>
     </div>
   </footer>
-
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var open = nav.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    })();
+  </script>
+  <script defer src="../reading-progress.js"></script>
 </body>
 </html>
