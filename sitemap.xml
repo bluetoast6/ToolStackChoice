@@ -207,6 +207,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://www.toolstackchoice.com/n8n-vs-make/</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
   <!-- SEO Tools reviews -->
   <url>
@@ -320,6 +326,18 @@
   </url>
 
   <!-- Hosting comparisons -->
+  <url>
+    <loc>https://www.toolstackchoice.com/hostinger-vs-pressable/</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.toolstackchoice.com/siteground-vs-wordpress-com/</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://www.toolstackchoice.com/pressable-vs-wp-engine/</loc>
     <lastmod>2026-04-16</lastmod>

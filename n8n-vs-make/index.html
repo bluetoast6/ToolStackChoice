@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>n8n vs Make (2026): Which Automation Platform Should You Build On Long-Term? | ToolStackChoice</title>
+  <meta name="description" content="n8n vs Make in 2026: a practical comparison of pricing, complexity, self-hosting, and which platform to build on long-term. Includes real workflow examples and solo-founder advice.">
+  <link rel="canonical" href="https://www.toolstackchoice.com/n8n-vs-make/">
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="n8n vs Make (2026): Which Automation Platform Should You Build On Long-Term?">
+  <meta property="og:description" content="Practical comparison of n8n and Make in 2026 — pricing models, complexity, self-hosting, and which platform fits your team long-term.">
+  <meta property="og:url" content="https://www.toolstackchoice.com/n8n-vs-make/">
+  <meta property="og:site_name" content="ToolStackChoice">
+  <!-- Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://www.toolstackchoice.com/n8n-vs-make/#article",
+        "headline": "n8n vs Make (2026): Which Automation Platform Should You Build On Long-Term?",
+        "description": "Practical comparison of n8n and Make in 2026 — pricing models, complexity, self-hosting, and which platform fits your team long-term.",
+        "datePublished": "2026-04-16",
+        "dateModified": "2026-04-16",
+        "author": {"@type": "Organization", "name": "ToolStackChoice"},
+        "publisher": {"@id": "https://www.toolstackchoice.com/#organization"},
+        "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.toolstackchoice.com/n8n-vs-make/"}
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.toolstackchoice.com/n8n-vs-make/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is n8n better than Make?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Neither is universally better. Make is better for non-technical teams who want visual, fast-to-ship SaaS automations. n8n is better for technical users who need self-hosting, complex logic, and long-term flexibility."}
+          },
+          {
+            "@type": "Question",
+            "name": "Can I use both n8n and Make together?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Yes. Many teams use Make for simple SaaS glue workflows and n8n for complex internal pipelines or data-sensitive automations. The two tools complement each other well."}
+          },
+          {
+            "@type": "Question",
+            "name": "Is n8n free to use?",
+            "acceptedAnswer": {"@type": "Answer", "text": "n8n is free to self-host. The cloud version starts at around $20–$25/month for a few thousand executions. Self-hosted n8n has no licensing cost — you only pay for your own infrastructure."}
+          },
+          {
+            "@type": "Question",
+            "name": "What is the main pricing difference between n8n and Make?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Make charges per operation (each module step costs), which adds up on long workflows. n8n Cloud charges per execution (one full workflow run), making it more predictable for complex multi-step flows. Self-hosted n8n has no per-execution cost."}
+          },
+          {
+            "@type": "Question",
+            "name": "Which is easier to learn, n8n or Make?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Make has a gentler learning curve — it is designed for non-technical users and visual thinkers. n8n expects familiarity with code concepts like variables, conditionals, and JavaScript expressions, making it steeper for non-developers."}
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <!-- GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MEASUREMENT_ID"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-MEASUREMENT_ID');</script>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div id="reading-progress" aria-hidden="true"></div>
+  <a href="#main-content" class="sr-only">Skip to main content</a>
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="../index.html" class="logo" aria-label="ToolStackChoice Home">
+        <img src="../logo-icon.png" class="logo-img" alt="ToolStackChoice logo icon" width="44" height="44">
+        <span class="logo-text">ToolStackChoice</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
+        <ul role="list">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../automation-tools/" aria-current="page">Automation Tools</a></li>
+          <li><a href="../seo-tools.html">SEO Tools</a></li>
+          <li><a href="../hosting.html">Hosting</a></li>
+          <li class="has-dropdown"><a href="../ai-tool-stacks/">AI Tool Stacks</a>
+            <ul class="dropdown">
+              <li><a href="../ai-tool-stacks/saas-founder-2026/">SaaS Founder Stack (2026)</a></li>
+              <li><a href="../ai-tool-stacks/small-agency-2026/">Small Agency Stack (2026)</a></li>
+              <li><a href="../ai-tool-stacks/solo-consultant-2026/">Solo Consultant Stack (2026)</a></li>
+              <li><a href="../ai-tool-stacks/mvs-saas-2026/">Minimum Viable SaaS Stack (2026)</a></li>
+            </ul>
+          </li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../contact/">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- ===================== MAIN ===================== -->
+  <main id="main-content">
+    <div class="review-layout container">
+      <!-- ══ ARTICLE ══ -->
+      <article class="review-body" aria-labelledby="review-title">
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ol role="list">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../automation-tools/">Automation Tools</a></li>
+            <li aria-current="page">n8n vs Make</li>
+          </ol>
+        </nav>
+        <!-- Header -->
+        <header class="review-header">
+          <p class="review-category-tag">AUTOMATION COMPARISON</p>
+          <p class="review-updated">Updated April 2026</p>
+          <h1 id="review-title">n8n vs Make (2026): Which Automation Platform Should You Build On Long-Term?</h1>
+          <p class="review-standfirst">Make and n8n both promise "visual automation," but they sit on opposite sides of a spectrum. Make is a polished, visual-first canvas that non-technical teams can adopt quickly. n8n is a developer-friendly workflow engine that feels closer to code, with self-hosting and deep customisation. If you already know Zapier is too limited or too expensive, the real decision in 2026 is often <strong>Make vs n8n</strong> — not "Zapier vs the world." This article focuses on that decision only.</p>
+        </header>
+
+        <!-- At a glance -->
+        <section id="at-a-glance">
+          <h2>At a glance: n8n vs Make (2026)</h2>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Aspect</th>
+                  <th>Make</th>
+                  <th>n8n</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Best for</td><td>Non-technical teams, marketers, ops, solo founders</td><td>Developers, technical teams, data/infra-sensitive orgs</td></tr>
+                <tr><td>Pricing model</td><td>Per operation/step</td><td>Per execution (cloud) or self-hosted (your infra)</td></tr>
+                <tr><td>Typical entry price</td><td>~$10–$15/month for ~10k operations</td><td>~$20–$25/month for a few thousand executions (cloud); free self-hosted</td></tr>
+                <tr><td>Integrations</td><td>Large library of pre-built app modules</td><td>Fewer native nodes; strong HTTP/custom API support</td></tr>
+                <tr><td>Logic &amp; complexity</td><td>Strong visual routing; limited modularity at extreme complexity</td><td>Built for complex flows, sub-workflows, reusable logic</td></tr>
+                <tr><td>Self-hosting</td><td>No</td><td>Yes (first-class)</td></tr>
+                <tr><td>Learning curve</td><td>Gentle, no-code-first</td><td>Steeper; expects technical mindset</td></tr>
+                <tr><td>Data control</td><td>Vendor cloud</td><td>Your infra (self-hosted) or n8n cloud</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- How they feel to use -->
+        <section id="how-they-feel">
+          <h2>How they feel to use</h2>
+
+          <h3 id="make-feel">Make: visual canvas for structured workflows</h3>
+          <p>Make feels like drag-and-drop modules arranged on a canvas, with a clear visual representation of each step that is easy to explain to non-technical teammates. You click an app, connect it, and start wiring modules. It shines when you are automating SaaS-to-SaaS flows — CRM, email, ads, project management, docs — and when the team wants to see the whole workflow on one screen.</p>
+          <p>The trade-off: as scenarios get very large or complex, the canvas can become dense and harder to modularise. Make is excellent at <strong>"complex enough"</strong> workflows, less ideal when you need deep reuse, version-control-friendly modularity, or very intricate logic.</p>
+
+          <h3 id="n8n-feel">n8n: visual, but with a programming mindset</h3>
+          <p>n8n looks visual but <strong>thinks like code</strong>. Everything is an expression, a node, or a reusable sub-workflow. The platform expects you to be comfortable with variables, conditionals, loops, and sometimes JavaScript. It shines when you want modular, reusable automation logic — callable workflows, sub-flows — or when you need to mix API calls, transformations, error handling, and custom code in one place.</p>
+          <p>The trade-off: non-technical users can feel intimidated. n8n is friendly for developers, not necessarily for everyone.</p>
+
+          <h3 id="concrete-example">A quick taste of the difference</h3>
+          <p>Consider a simple job: <strong>fetch data from an API, transform it, and update a Google Sheet</strong>.</p>
+          <p>In Make, you would drag an HTTP → Make a request module, a Tools → Set multiple variables module to reshape the data, and a Google Sheets → Update row module. The logic mostly lives in how you connect these modules and what you configure in their side panels.</p>
+          <p>In n8n, you would use an HTTP Request node, write the transformation directly in the node's Expression field (with JavaScript), then connect to a Google Sheets node to write the result. The logic feels embedded inside the nodes themselves — closer to code than to pure visual wiring.</p>
+          <p>Same outcome, very different mental model.</p>
+        </section>
+
+        <!-- Pricing -->
+        <section id="pricing">
+          <h2>Pricing and cost reality</h2>
+          <p>Both tools are cheap at low volume and can get expensive if you design inefficient flows.</p>
+
+          <h3>Make pricing (2026 patterns)</h3>
+          <p>Make charges <strong>per operation/step</strong>: each module execution is an operation. Entry paid tiers give you on the order of 10k operations/month in the low-teens dollars. The free tier exists but is tight for serious use.</p>
+          <p>This model is great when you have many small, simple workflows with few steps each. It becomes less attractive when you have long, complex scenarios with many modules per run, or when you process large volumes of data or events.</p>
+
+          <h3>n8n pricing (2026 patterns)</h3>
+          <p>n8n Cloud plans charge <strong>per execution</strong>: one full run of a workflow. Steps do not cost extra once the execution starts. Entry cloud plans give you a few thousand executions/month at a higher starting price than Make's cheapest tier. <strong>Self-hosted n8n is free</strong> from a licensing perspective — your cost is infrastructure and time.</p>
+          <p>This model is great when you have complex, multi-step workflows that run relatively infrequently. It becomes less attractive when you have very high-frequency, simple triggers where each event counts as a full execution.</p>
+
+          <h3>Cost heuristics</h3>
+          <p>Lots of simple workflows with a few steps each → Make is usually cheaper and simpler to reason about. Fewer, very complex workflows with many steps → n8n Cloud can be more cost-efficient, and self-hosted n8n can be extremely cost-efficient if you are comfortable running it.</p>
+          <p><strong>Do not forget n8n Cloud.</strong> If you are technical but do not want to self-host, n8n's cloud offering is a strong middle ground: you get n8n's developer-centric power and pricing without managing a server. For many technical solo founders and small teams, that is the best starting point — self-host only when you genuinely need the extra control.</p>
+        </section>
+
+        <!-- Integrations -->
+        <section id="integrations">
+          <h2>Integrations and extensibility</h2>
+
+          <h3>Make: app integrations first</h3>
+          <p>Make has a large library of pre-built app modules and many templates to start from. For very custom APIs or unusual integrations, you often end up in generic HTTP modules and manual wiring, and you rely heavily on Make's app library and roadmap for first-class support. It fits best when your world is mostly popular SaaS tools and standard APIs.</p>
+
+          <h3>n8n: fewer apps, more API power</h3>
+          <p>n8n has a solid but smaller library of nodes compared to Make. It has very strong HTTP/request nodes and expression support — flows look close to what you would write in code — and native support for custom JavaScript, modular workflows, and complex branching. It fits best when you want your automation to feel like a programmable system, not just glue between popular tools.</p>
+        </section>
+
+        <!-- Self-hosting -->
+        <section id="self-hosting">
+          <h2>Self-hosting, data control, and compliance</h2>
+          <p>This is where they diverge sharply. Make is fully hosted SaaS: you get convenience, but data flows through Make's cloud. n8n offers first-class <strong>self-hosting</strong> — you can run it on your own servers, VPC, or even locally.</p>
+          <p>If you have strict data-residency or compliance requirements, or a strong preference for running everything in your own infrastructure, n8n is the natural winner.</p>
+        </section>
+
+        <!-- Complexity and debugging -->
+        <section id="complexity">
+          <h2>Complexity, debugging, and maintenance</h2>
+
+          <h3>Make</h3>
+          <p>Easy to onboard new teammates. Visual debugging — watching modules light up, inspecting outputs — is intuitive. As scenarios grow, the canvas can become crowded; modularity is limited, so copy-paste or duplication is common. Good fit if you want flows to be explainable to non-developers and are okay periodically refactoring messy canvases.</p>
+
+          <h3>n8n</h3>
+          <p>Debugging feels more like working in an IDE than a simple builder. You can break logic into sub-workflows, reuse patterns, and think with a software-architecture mindset. Error handling can be very fine-grained. Good fit if your team already treats automation as "part of the codebase" and values maintainability over pure visual simplicity.</p>
+        </section>
+
+        <!-- Outgrowing Make -->
+        <section id="outgrowing-make">
+          <h2>Signs you are outgrowing Make (and should look at n8n)</h2>
+          <p>If you are using Make and notice these patterns regularly, it is a sign to at least evaluate n8n:</p>
+          <ul>
+            <li>You are constantly <strong>duplicating large chunks of logic</strong> across scenarios instead of reusing them.</li>
+            <li>Your team reaches for the <strong>Code module</strong> in Make as a standard part of most flows.</li>
+            <li>Your <strong>per-operation bill is spiking</strong> mainly because workflows are long and complex, not because traffic increased.</li>
+            <li>You have picked up <strong>compliance or data-residency requirements</strong> that make fully cloud-hosted automation less comfortable.</li>
+            <li>You need to trigger flows directly from <strong>internal systems or databases</strong> that Make cannot easily reach.</li>
+          </ul>
+          <p>Those are all signs your use case is drifting into "n8n territory."</p>
+        </section>
+
+        <!-- Scenarios -->
+        <section id="scenarios">
+          <h2>Common scenarios: how I decide between Make and n8n</h2>
+
+          <h3>Scenario 1: marketing and sales ops for a small team</h3>
+          <p>Integrate forms, CRM, email, ads, and spreadsheets. Build lead routing, list cleaning, and lifecycle automations. Team is mostly non-technical.</p>
+          <p><strong>I would choose: Make.</strong> It is easier to adopt, everyone can see the flows, and most of the work is SaaS-to-SaaS glue.</p>
+
+          <h3>Scenario 2: technical SaaS team building internal tools and data pipelines</h3>
+          <p>Integrate internal databases, APIs, and monitoring tools. Build complex workflows with conditionals, loops, and custom logic. Developers are already comfortable with JavaScript and infrastructure.</p>
+          <p><strong>I would choose: n8n (ideally self-hosted).</strong> The ability to self-host, write custom logic, and treat workflows as code makes it a better long-term fit.</p>
+
+          <h3>Scenario 3: solo founder with mixed needs</h3>
+          <p>Some basic automations (notifications, CRM updates) and some more complex flows (data enrichment, reporting, mini internal tools). Technical enough to write simple scripts but does not want to run full infra yet.</p>
+          <p><strong>I would start with Make</strong> for quick wins and simple SaaS glue. If I then build a critical, complex workflow that starts to feel like an internal product — for example, a custom lead-scoring engine or data pipeline feeding analytics — I would rebuild that specific workflow in <strong>n8n Cloud</strong> to gain better control, modularity, and predictable pricing, while keeping simpler "glue" scenarios in Make. This "Make for easy glue, n8n for internal products" split works well in practice.</p>
+          <p>See also: <a href="../ai-tool-stacks/solo-consultant-2026/">Best AI Stack for Solo Consultants (2026)</a> for how this fits into a broader tool stack.</p>
+        </section>
+
+        <!-- Verdict -->
+        <section id="verdict-heading">
+          <h2>Our verdict</h2>
+          <p>You do not need both to start. Pick one based on <strong>who will be using it day-to-day</strong>.</p>
+          <p>If your primary users are non-technical and you want them working directly in the builder, <strong>Make</strong> is usually the right call. If your primary users are developers or technically strong operators who care about self-hosting, complex logic, and long-term flexibility, <strong>n8n</strong> is the better bet — starting with n8n Cloud if you do not want to run servers yet.</p>
+          <p>For many teams, the long-term winning move is Make for fast, visual workflows that everyone understands, and n8n for the heavy lifting behind the scenes when you are ready to treat automation as part of your product or infrastructure.</p>
+          <div class="cta-group">
+            <a href="https://www.make.com/en/register?pc=toolstackchoice" class="btn" rel="sponsored noopener" target="_blank">Try Make</a>
+            <a href="https://n8n.partnerlinks.io/lndei606iv7v" class="btn btn-secondary" rel="sponsored noopener" target="_blank">Try n8n</a>
+          </div>
+          <p class="affiliate-note">Affiliate links &mdash; we may earn a commission at no extra cost to you.</p>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq-heading">
+          <h2>FAQ</h2>
+          <dl class="faq-list">
+            <div class="faq-item">
+              <dt>Is n8n better than Make?</dt>
+              <dd>Neither is universally better. Make is better for non-technical teams who want visual, fast-to-ship SaaS automations. n8n is better for technical users who need self-hosting, complex logic, and long-term flexibility.</dd>
+            </div>
+            <div class="faq-item">
+              <dt>Can I use both n8n and Make together?</dt>
+              <dd>Yes. Many teams use Make for simple SaaS glue workflows and n8n for complex internal pipelines or data-sensitive automations. The two tools complement each other well.</dd>
+            </div>
+            <div class="faq-item">
+              <dt>Is n8n free to use?</dt>
+              <dd>n8n is free to self-host. The cloud version starts at around $20–$25/month for a few thousand executions. Self-hosted n8n has no licensing cost — you only pay for your own infrastructure.</dd>
+            </div>
+            <div class="faq-item">
+              <dt>What is the main pricing difference between n8n and Make?</dt>
+              <dd>Make charges per operation (each module step costs), which adds up on long workflows. n8n Cloud charges per execution (one full workflow run), making it more predictable for complex multi-step flows. Self-hosted n8n has no per-execution cost.</dd>
+            </div>
+            <div class="faq-item">
+              <dt>Which is easier to learn, n8n or Make?</dt>
+              <dd>Make has a gentler learning curve — it is designed for non-technical users and visual thinkers. n8n expects familiarity with code concepts like variables, conditionals, and JavaScript expressions, making it steeper for non-developers.</dd>
+            </div>
+          </dl>
+        </section>
+      </article><!-- /review-body -->
+
+      <!-- ══ SIDEBAR ══ -->
+      <aside class="review-sidebar" aria-label="Comparison quick facts and navigation">
+        <!-- Quick Take -->
+        <div class="sidebar-box">
+          <h2 class="sidebar-box-title">Quick take</h2>
+          <dl class="quick-facts">
+            <div class="fact-row">
+              <dt>Make best for</dt>
+              <dd>Non-technical teams, marketers, ops, and solo founders who want to ship fast</dd>
+            </div>
+            <div class="fact-row">
+              <dt>n8n best for</dt>
+              <dd>Developers and technical teams who want self-hosting, complex logic, and full control</dd>
+            </div>
+            <div class="fact-row">
+              <dt>Use both when</dt>
+              <dd>Make handles simple SaaS glue; n8n handles complex internal pipelines</dd>
+            </div>
+            <div class="fact-row">
+              <dt>Make cost model</dt>
+              <dd>Per operation — cheap for simple flows, expensive for long ones</dd>
+            </div>
+            <div class="fact-row">
+              <dt>n8n cost model</dt>
+              <dd>Per execution (cloud) or free self-hosted — better for complex flows</dd>
+            </div>
+            <div class="fact-row">
+              <dt>Bottom line</dt>
+              <dd>Make wins on ease; n8n wins on power, control, and long-term flexibility</dd>
+            </div>
+          </dl>
+          <a href="https://www.make.com/en/register?pc=toolstackchoice" class="btn sidebar-cta" rel="sponsored noopener" target="_blank">Try Make</a>
+          <p class="affiliate-note" style="margin-top:0.5rem;font-size:0.78rem;">Affiliate link &mdash; we may earn a commission.</p>
+        </div>
+        <!-- On-page ToC -->
+        <nav class="sidebar-box toc-box" aria-label="On this page">
+          <h2 class="sidebar-box-title">On this page</h2>
+          <ol class="toc-list" role="list">
+            <li><a href="#at-a-glance">At a glance</a></li>
+            <li><a href="#how-they-feel">How they feel to use</a></li>
+            <li><a href="#pricing">Pricing and cost reality</a></li>
+            <li><a href="#integrations">Integrations</a></li>
+            <li><a href="#self-hosting">Self-hosting and data control</a></li>
+            <li><a href="#complexity">Complexity and debugging</a></li>
+            <li><a href="#outgrowing-make">Signs you are outgrowing Make</a></li>
+            <li><a href="#scenarios">Decision scenarios</a></li>
+            <li><a href="#faq-heading">FAQ</a></li>
+            <li><a href="#verdict-heading">Our verdict</a></li>
+          </ol>
+        </nav>
+        <!-- Related -->
+        <div class="sidebar-box">
+          <h2 class="sidebar-box-title">Related pages</h2>
+          <ul class="related-list" role="list">
+            <li><a href="../make-com-review/">Make.com Review (2026)</a></li>
+            <li><a href="../n8n-cloud-review/">n8n Cloud Review (2026)</a></li>
+            <li><a href="../make-vs-openclaw/">Make vs OpenClaw</a></li>
+            <li><a href="../n8n-vs-openclaw/">n8n vs OpenClaw</a></li>
+            <li><a href="../zapier-vs-make-vs-n8n/">Zapier vs Make vs n8n</a></li>
+            <li><a href="../zapier-vs-make-vs-n8n-vs-openclaw/">Zapier vs Make vs n8n vs OpenClaw</a></li>
+            <li><a href="../automation-tools/">Automation Tools hub</a></li>
+          </ul>
+        </div>
+      </aside><!-- /review-sidebar -->
+    </div><!-- /review-layout -->
+  </main>
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-body">
+      <div class="footer-brand">
+        <a href="../index.html" class="logo" aria-label="ToolStackChoice Home">
+          <img src="../logo-icon.png" class="logo-img" alt="ToolStackChoice logo icon" width="44" height="44">
+          <span class="logo-text">ToolStackChoice</span>
+        </a>
+        <p class="footer-tagline">Independent tool reviews since 2024.</p>
+        <p class="footer-disclosure">Some links are affiliate links; we never sell rankings.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <p class="footer-col-heading" aria-hidden="true">Navigation</p>
+        <details class="footer-details">
+          <summary class="footer-summary">Navigation</summary>
+          <ul class="footer-nav-list">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../automation-tools/">Automation Tools</a></li>
+            <li><a href="../ai-tool-stacks/">AI Tool Stacks</a></li>
+            <li><a href="../hosting.html">Hosting</a></li>
+            <li><a href="../seo-tools.html">SEO Tools</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../contact/">Contact</a></li>
+          </ul>
+        </details>
+        <ul class="footer-nav-list footer-nav-list--desktop">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../automation-tools/">Automation Tools</a></li>
+          <li><a href="../ai-tool-stacks/">AI Tool Stacks</a></li>
+          <li><a href="../hosting.html">Hosting</a></li>
+          <li><a href="../seo-tools.html">SEO Tools</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../contact/">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="footer-reviews">
+        <p class="footer-col-heading" aria-hidden="true">Popular Reviews</p>
+        <details class="footer-details">
+          <summary class="footer-summary">Popular Reviews &amp; Comparisons</summary>
+          <ul class="footer-nav-list">
+            <li><a href="../make-com-review/">Make.com Review</a></li>
+            <li><a href="../n8n-cloud-review/">n8n Cloud Review</a></li>
+            <li><a href="../pressable-review/">Pressable Review</a></li>
+            <li><a href="../openclaw-review/">OpenClaw Review</a></li>
+            <li><a href="../automation-tools/">All Automation Reviews &rarr;</a></li>
+          </ul>
+        </details>
+        <ul class="footer-nav-list footer-nav-list--desktop">
+          <li><a href="../make-com-review/">Make.com Review</a></li>
+          <li><a href="../n8n-cloud-review/">n8n Cloud Review</a></li>
+          <li><a href="../pressable-review/">Pressable Review</a></li>
+          <li><a href="../openclaw-review/">OpenClaw Review</a></li>
+          <li><a href="../automation-tools/">All Automation Reviews &rarr;</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <p>&copy; 2026 ToolStackChoice. All rights reserved.</p>
+      <p><a href="../privacy-policy/">Privacy Policy</a> &middot; <a href="../affiliate-disclosure.html">Affiliate Disclosure</a></p>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var open = nav.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    })();
+  </script>
+  <script defer src="../reading-progress.js"></script>
+</body>
+</html>
