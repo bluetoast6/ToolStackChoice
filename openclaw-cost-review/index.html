@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VR6QGW9543"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VR6QGW9543');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google-site-verification" content="aXkYM9-GrVhbR0koQXfvE2NBcEhN4qLDJ2r3lwZd6SE" />
+
+  <title>Is OpenClaw Worth It? The Honest Cost Breakdown for Solo Founders (2026) | ToolStackChoice</title>
+  <meta name="description" content="OpenClaw pricing and cost reality check for solo founders in 2026. We break down server costs, LLM costs, maintenance time, and what it actually replaces." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.toolstackchoice.com/openclaw-cost-review/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Is OpenClaw Worth It? The Honest Cost Breakdown for Solo Founders (2026)" />
+  <meta property="og:description" content="OpenClaw pricing and cost reality check for solo founders in 2026. We break down server costs, LLM costs, maintenance time, and what it actually replaces." />
+  <meta property="og:url" content="https://www.toolstackchoice.com/openclaw-cost-review/" />
+  <meta property="og:site_name" content="ToolStackChoice.com" />
+  <meta property="og:image" content="https://www.toolstackchoice.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- JSON-LD: Article + FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Is OpenClaw Worth It? The Honest Cost Breakdown for Solo Founders (2026)",
+    "description": "OpenClaw pricing and cost reality check for solo founders in 2026 — server costs, LLM costs, maintenance time, and what it actually replaces.",
+    "datePublished": "2026-04-16",
+    "dateModified": "2026-04-16",
+    "author": { "@type": "Organization", "name": "ToolStackChoice" },
+    "publisher": { "@id": "https://www.toolstackchoice.com/#organization" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does OpenClaw actually cost per month?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For a solo founder running a light workflow set (3–5 automations, a few hours of agent runtime per week), a realistic monthly cost is roughly $50–100 — covering server/cloud costs, LLM API usage, and a small buffer for maintenance time. Heavy usage with complex or long-running agents can push this to $150–300/month."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is OpenClaw cheaper than hiring a VA?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For specific, well-defined browser-based tasks, yes. A VA doing 5–10 hours/week of inbox triage, research, and call prep might cost $300–600/month. OpenClaw running the same tasks costs $50–100/month in infrastructure, but requires your time to set up, maintain, and review outputs. The real cost comparison includes your time, not just the dollar amount."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the hidden costs of running OpenClaw?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The main hidden costs are: (1) your setup time — typically 2–5 hours per workflow to build, test, and tune; (2) ongoing maintenance — selectors break when websites change, requiring periodic fixes; (3) LLM API costs that scale with usage; and (4) the mental overhead of monitoring agent outputs, especially early on."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When is OpenClaw NOT worth it?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "OpenClaw is not worth it if the task can be solved with a simple Make or Zapier automation (API-to-API, no browser needed), if you're not willing to invest setup time upfront, if you need 100% reliability with no review steps, or if you only have one or two tasks to automate — the infrastructure overhead won't pay off."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does OpenClaw compare to Make or n8n on cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Make and n8n are cheaper for API-based automations — Make starts at ~$9/month, n8n cloud at ~$20/month. OpenClaw costs more ($50–100/month realistic) but does something different: it handles browser-based, judgement-driven tasks that Make and n8n simply can't do. They're not direct substitutes."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../visuals.css" />
+</head>
+<body>
+
+  <!-- ══ SITE HEADER ══ -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../index.html" class="logo" aria-label="ToolStackChoice Home">
+        <img src="../logo-icon.png" class="logo-img" alt="ToolStackChoice logo icon" width="44" height="44">
+        <span class="logo-text">ToolStackChoice</span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul role="list">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../automation-tools/">Automation Tools</a></li>
+          <li><a href="../seo-tools.html">SEO Tools</a></li>
+          <li class="nav-has-dropdown">
+            <a href="../hosting.html">Hosting</a>
+            <ul class="nav-dropdown" role="list">
+              <li><a href="../kinsta-review.html">Kinsta Review</a></li>
+              <li><a href="../wp-engine-review/">WP Engine Review</a></li>
+              <li><a href="../pressable-review/">Pressable Review</a></li>
+              <li><a href="../wordpress-com-review/">WordPress.com Review</a></li>
+              <li><a href="../cloudways-review/">Cloudways Review</a></li>
+              <li><a href="../siteground-review.html">SiteGround Review</a></li>
+            </ul>
+          </li>
+          <li class="nav-has-dropdown">
+            <a href="../ai-tool-stacks/" aria-current="page">AI Tool Stacks</a>
+            <ul class="nav-dropdown" role="list">
+              <li><a href="../ai-tool-stacks/solo-consultant-2026/">Solo Consultant Stack</a></li>
+            </ul>
+          </li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="review-layout">
+
+      <!-- ══ ARTICLE ══ -->
+      <article class="review-body" aria-labelledby="review-title">
+
+        <!-- Breadcrumb -->
+        <nav aria-label="Breadcrumb">
+          <ol class="breadcrumb" role="list">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../automation-tools/">Automation Tools</a></li>
+            <li aria-current="page">Is OpenClaw Worth It?</li>
+          </ol>
+        </nav>
+
+        <!-- Header -->
+        <header class="review-header">
+          <p class="review-category-tag">AUTOMATION / AI TOOLS</p>
+          <p class="review-updated">Updated April 2026</p>
+          <h1 id="review-title">Is OpenClaw Worth It? The Honest Cost Breakdown for Solo Founders (2026)</h1>
+          <p class="review-standfirst">OpenClaw is one of the more interesting tools I've added to my stack — a browser agent that handles tasks requiring judgement, not just API calls. But "interesting" and "worth the money" are different questions. This is the cost breakdown I wish existed before I started: what you actually pay, what it actually replaces, and when the maths works in your favour.</p>
+        </header>
+
+        <!-- What you're actually paying for -->
+        <section id="what-you-pay-for">
+          <h2>What you're actually paying for</h2>
+          <p>OpenClaw isn't a simple SaaS subscription with a fixed monthly fee. The cost structure is more like a small piece of infrastructure: you pay for the compute that runs the agent, the LLM API calls the agent makes to reason about what it sees, and your own time to set up, maintain, and review outputs.</p>
+          <p>The three real cost components are:</p>
+          <ul>
+            <li><strong>Server / cloud compute</strong> — the machine that runs the browser agent. This is the base cost, and it's roughly fixed regardless of how many tasks you run.</li>
+            <li><strong>LLM API usage</strong> — every time the agent reads a page, makes a decision, or drafts a summary, it calls an LLM. This scales with usage.</li>
+            <li><strong>Your time</strong> — setup, maintenance, and reviewing outputs. This is the cost most people undercount.</li>
+          </ul>
+        </section>
+
+        <!-- Cost scenarios -->
+        <section id="cost-scenarios">
+          <h2>Cost scenarios: light, medium, and heavy usage</h2>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Usage level</th>
+                  <th>What it looks like</th>
+                  <th>Estimated monthly cost</th>
+                  <th>Your time per month</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Light</strong></td>
+                  <td>2–3 automations, short sessions, a few hours of agent runtime/week</td>
+                  <td>~$30–60</td>
+                  <td>~1–2 hrs maintenance</td>
+                </tr>
+                <tr>
+                  <td><strong>Medium</strong></td>
+                  <td>4–6 automations, daily runs, moderate LLM usage</td>
+                  <td>~$60–120</td>
+                  <td>~2–4 hrs maintenance</td>
+                </tr>
+                <tr>
+                  <td><strong>Heavy</strong></td>
+                  <td>8+ automations, long-running agents, complex multi-step tasks</td>
+                  <td>~$120–300+</td>
+                  <td>~4–8 hrs maintenance</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>These are realistic ranges, not marketing estimates. The wide range within each tier reflects how much LLM API costs vary depending on which model you use and how much reasoning each task requires. A task that reads a short page and drafts two sentences costs a fraction of a task that reads 10 pages and produces a structured summary.</p>
+        </section>
+
+        <!-- Hidden costs -->
+        <section id="hidden-costs">
+          <h2>The hidden costs nobody talks about</h2>
+
+          <h3>1. Setup time</h3>
+          <p>Each workflow takes real time to build properly. You need to map out the task, write the agent instructions, test it on real pages, handle edge cases, and tune it until the output is reliable enough to trust. A simple workflow (e.g., "triage my inbox and flag anything urgent") might take 2–3 hours to get right. A complex one (e.g., "research a prospect, pull their recent content, and draft a personalised outreach email") can take 5–8 hours of iteration.</p>
+          <p>That setup time is a one-off cost per workflow — but it's real, and it means the first month of running OpenClaw is always more expensive in time than subsequent months.</p>
+
+          <h3>2. Selector maintenance</h3>
+          <p>Browser agents work by interacting with web pages — clicking buttons, reading content, filling fields. When a website changes its layout or HTML structure, the agent's selectors can break. This is the most common maintenance task: a workflow that ran perfectly for three months suddenly fails because the site it reads changed its navigation or redesigned a key page.</p>
+          <p>For most workflows, this happens every few months per workflow. It's usually a 30–60 minute fix, but it means OpenClaw is never truly "set and forget."</p>
+
+          <h3>3. Review overhead (especially early on)</h3>
+          <p>In the first few weeks of running a new workflow, you should be reviewing outputs regularly — not because OpenClaw is unreliable, but because you need to catch edge cases and tune the agent's instructions before you trust it to run unsupervised. This review time tapers off as workflows mature, but it's real overhead in the early phase.</p>
+        </section>
+
+        <!-- What it actually replaces -->
+        <section id="what-it-replaces">
+          <h2>What OpenClaw actually replaces (and what it doesn't)</h2>
+
+          <h3>What it replaces well</h3>
+          <p>OpenClaw is best at replacing <strong>repetitive, browser-based tasks that currently require human judgement</strong> — the kind of thing a sharp VA or junior team member would do if you could afford one. Specifically:</p>
+          <ul>
+            <li><strong>Inbox triage</strong>: reading emails, categorising by urgency, flagging what needs a response, drafting replies for review.</li>
+            <li><strong>Call and meeting prep</strong>: researching a contact or company before a call, pulling recent news or content, summarising into a briefing note.</li>
+            <li><strong>Client and prospect monitoring</strong>: watching a set of websites or LinkedIn profiles for relevant updates, summarising weekly.</li>
+            <li><strong>Research and summarisation</strong>: reading a set of sources on a topic and producing a structured summary or comparison.</li>
+          </ul>
+
+          <h3>What it doesn't replace</h3>
+          <p>OpenClaw is <strong>not</strong> a replacement for structured API-to-API automation. If you can solve a task with Make or n8n — connecting two tools via their APIs, moving data between systems, triggering actions based on clean structured data — you should. Those tools are cheaper, faster, and more reliable for that use case. OpenClaw's value is specifically in tasks that require reading a UI, making a judgement call, and acting on what it sees. See our <a href="../make-vs-openclaw/">Make vs OpenClaw comparison</a> for a full breakdown of when to use each.</p>
+        </section>
+
+        <!-- The VA comparison -->
+        <section id="va-comparison">
+          <h2>The VA comparison: is OpenClaw cheaper?</h2>
+          <p>The most common question I get: "Is OpenClaw cheaper than hiring a VA?"</p>
+          <p>The honest answer: <strong>it depends on what you're comparing</strong>.</p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Comparison point</th>
+                  <th>OpenClaw (medium usage)</th>
+                  <th>Part-time VA (5–10 hrs/week)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Monthly dollar cost</td>
+                  <td>~$60–120</td>
+                  <td>~$300–600 (at $15–20/hr)</td>
+                </tr>
+                <tr>
+                  <td>Your setup/maintenance time</td>
+                  <td>~2–4 hrs/month ongoing</td>
+                  <td>~1–2 hrs/month management</td>
+                </tr>
+                <tr>
+                  <td>Reliability for defined tasks</td>
+                  <td>High once tuned; breaks on site changes</td>
+                  <td>High for trained tasks; variable for new ones</td>
+                </tr>
+                <tr>
+                  <td>Flexibility for new tasks</td>
+                  <td>Requires new workflow setup (hours)</td>
+                  <td>Can be briefed quickly</td>
+                </tr>
+                <tr>
+                  <td>Judgement on ambiguous situations</td>
+                  <td>Limited — needs clear instructions</td>
+                  <td>Better — can ask clarifying questions</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>The real answer: OpenClaw is significantly cheaper in dollar terms for well-defined, repetitive tasks. But a VA is more flexible, requires less setup time, and handles ambiguity better. The best setup for many solo founders is <strong>OpenClaw for the repetitive stuff + a VA for the flexible, judgement-heavy tasks</strong> — not one or the other.</p>
+        </section>
+
+        <!-- When it's worth it -->
+        <section id="worth-it">
+          <h2>When OpenClaw is worth it</h2>
+          <p>Based on my own usage and the cost breakdown above, OpenClaw makes financial sense when:</p>
+          <ul>
+            <li>You have <strong>3+ repetitive browser-based tasks</strong> that currently eat 3–5 hours of your week.</li>
+            <li>Those tasks are well-defined enough to write clear instructions for an agent.</li>
+            <li>You're willing to invest the setup time upfront (typically 10–20 hours total for a solid initial workflow set).</li>
+            <li>You're comfortable reviewing outputs and fixing selectors when sites change.</li>
+          </ul>
+          <p>At that point, the maths is straightforward: $60–100/month to reclaim 3–5 hours/week is an excellent trade for most solo founders.</p>
+        </section>
+
+        <!-- When it's not worth it -->
+        <section id="not-worth-it">
+          <h2>When OpenClaw is NOT worth it</h2>
+          <ul>
+            <li>The task can be solved with a simple Make or Zapier automation (API-to-API, no browser needed). Don't use a browser agent for something a webhook can handle.</li>
+            <li>You're not willing to invest setup time upfront. OpenClaw rewards patience and iteration; if you want something that works perfectly out of the box, this isn't it.</li>
+            <li>You need 100% reliability with no review steps. Browser agents are powerful but not infallible — if a task requires zero errors and zero human review, a more deterministic tool is safer.</li>
+            <li>You only have one or two tasks to automate. The infrastructure overhead (setup, maintenance, monitoring) doesn't pay off for a single workflow.</li>
+          </ul>
+        </section>
+
+        <!-- Comparison vs Make/n8n -->
+        <section id="vs-make-n8n">
+          <h2>Cost vs Make and n8n</h2>
+          <p>For completeness, here's how OpenClaw's cost compares to the other automation tools in the stack:</p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Tool</th>
+                  <th>Typical monthly cost</th>
+                  <th>What it's for</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Make</strong></td>
+                  <td>~$9–16/month</td>
+                  <td>API-to-API automation, structured data flows</td>
+                </tr>
+                <tr>
+                  <td><strong>n8n (cloud)</strong></td>
+                  <td>~$20/month</td>
+                  <td>API automation with more technical flexibility</td>
+                </tr>
+                <tr>
+                  <td><strong>OpenClaw</strong></td>
+                  <td>~$60–120/month (medium usage)</td>
+                  <td>Browser-based, judgement-driven tasks</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>OpenClaw costs more — but it does something different. Make and n8n can't read a UI, make a judgement call about what they see, and act on it. They're not substitutes; they're complements. The right stack for most solo founders is <strong>Make or n8n for structured flows + OpenClaw for browser-based tasks</strong>. See our <a href="../zapier-vs-make-vs-n8n-vs-openclaw/">Zapier vs Make vs n8n vs OpenClaw comparison</a> for a full breakdown.</p>
+        </section>
+
+        <!-- My verdict -->
+        <section id="verdict-heading">
+          <h2>My verdict: is OpenClaw worth it?</h2>
+          <p><strong>Yes — if you use it for the right things.</strong></p>
+          <p>For a solo founder with 3–5 well-defined browser-based tasks that currently eat hours every week, OpenClaw at $60–100/month is one of the best investments in your stack. The dollar cost is low; the real cost is setup time and ongoing maintenance. If you're willing to invest that, the return is real.</p>
+          <p>If you're hoping for a magic box that automates everything without setup effort, you'll be disappointed. OpenClaw rewards people who treat it like infrastructure — something you build carefully, maintain regularly, and trust within defined limits.</p>
+          <p>For more on how I use it day-to-day, see my <a href="../openclaw-use-cases/">OpenClaw use cases guide</a> and <a href="../openclaw-30-day-review/">30-day review</a>. For the full feature and capability review, see our <a href="../openclaw-review/">OpenClaw review</a>.</p>
+          <p>
+            <a href="https://openclaw.ai" class="btn" rel="nofollow noopener" target="_blank">Try OpenClaw</a>
+          </p>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq-heading">
+          <h2>Frequently asked questions</h2>
+
+          <h3>How much does OpenClaw actually cost per month?</h3>
+          <p>For a solo founder running a light workflow set (3–5 automations, a few hours of agent runtime per week), a realistic monthly cost is roughly $50–100. Heavy usage with complex or long-running agents can push this to $150–300/month.</p>
+
+          <h3>Is OpenClaw cheaper than hiring a VA?</h3>
+          <p>In dollar terms, yes — significantly. But a VA is more flexible and handles ambiguity better. The best setup for many solo founders is OpenClaw for repetitive, well-defined tasks plus a VA for flexible, judgement-heavy work.</p>
+
+          <h3>What are the hidden costs of running OpenClaw?</h3>
+          <p>The main hidden costs are: (1) setup time — typically 2–5 hours per workflow; (2) ongoing maintenance when websites change their structure; (3) LLM API costs that scale with usage; and (4) review time, especially early on.</p>
+
+          <h3>When is OpenClaw NOT worth it?</h3>
+          <p>OpenClaw is not worth it if the task can be solved with a simple Make or Zapier automation, if you're not willing to invest setup time, if you need 100% reliability with no review steps, or if you only have one or two tasks to automate.</p>
+        </section>
+
+      </article><!-- /review-body -->
+
+      <!-- ══ SIDEBAR ══ -->
+      <aside class="review-sidebar" aria-label="Article quick facts and navigation">
+
+        <!-- Quick Take -->
+        <div class="sidebar-box">
+          <h2 class="sidebar-box-title">Quick take</h2>
+          <dl class="quick-facts">
+            <div class="fact-row">
+              <dt>Typical monthly cost</dt>
+              <dd>~$60–120 for medium usage (server + LLM API)</dd>
+            </div>
+            <div class="fact-row">
+              <dt>Hidden cost</dt>
+              <dd>Your setup and maintenance time — 2–4 hrs/month ongoing</dd>
+            </div>
+            <div class="fact-row">
+              <dt>Worth it if</dt>
+              <dd>You have 3+ repetitive browser-based tasks eating 3–5 hrs/week</dd>
+            </div>
+            <div class="fact-row">
+              <dt>Not worth it if</dt>
+              <dd>The task can be solved with Make/Zapier, or you won't invest setup time</dd>
+            </div>
+            <div class="fact-row">
+              <dt>vs VA cost</dt>
+              <dd>Cheaper in dollars; more setup time; less flexible</dd>
+            </div>
+            <div class="fact-row">
+              <dt>vs Make / n8n</dt>
+              <dd>Costs more; does something different (browser + judgement)</dd>
+            </div>
+          </dl>
+          <a href="https://openclaw.ai" class="btn sidebar-cta" rel="nofollow noopener" target="_blank">Try OpenClaw</a>
+        </div>
+
+        <!-- On-page ToC -->
+        <nav class="sidebar-box toc-box" aria-label="On this page">
+          <h2 class="sidebar-box-title">On this page</h2>
+          <ol class="toc-list" role="list">
+            <li><a href="#what-you-pay-for">What you're paying for</a></li>
+            <li><a href="#cost-scenarios">Cost scenarios</a></li>
+            <li><a href="#hidden-costs">Hidden costs</a></li>
+            <li><a href="#what-it-replaces">What it replaces</a></li>
+            <li><a href="#va-comparison">The VA comparison</a></li>
+            <li><a href="#worth-it">When it's worth it</a></li>
+            <li><a href="#not-worth-it">When it's NOT worth it</a></li>
+            <li><a href="#vs-make-n8n">Cost vs Make and n8n</a></li>
+            <li><a href="#verdict-heading">My verdict</a></li>
+            <li><a href="#faq-heading">FAQ</a></li>
+          </ol>
+        </nav>
+
+        <!-- Related -->
+        <div class="sidebar-box">
+          <h2 class="sidebar-box-title">Related pages</h2>
+          <ul class="related-list" role="list">
+            <li><a href="../openclaw-review/">OpenClaw Review (2026)</a></li>
+            <li><a href="../openclaw-use-cases/">OpenClaw Use Cases</a></li>
+            <li><a href="../openclaw-30-day-review/">30-Day OpenClaw Review</a></li>
+            <li><a href="../make-vs-openclaw/">Make vs OpenClaw</a></li>
+            <li><a href="../zapier-vs-make-vs-n8n-vs-openclaw/">Zapier vs Make vs n8n vs OpenClaw</a></li>
+            <li><a href="../ai-tool-stacks/solo-consultant-2026/">Solo Consultant AI Stack</a></li>
+            <li><a href="../automation-tools/">Automation Tools hub</a></li>
+          </ul>
+        </div>
+
+      </aside><!-- /review-sidebar -->
+    </div><!-- /review-layout -->
+  </main>
+
+  <!-- ══ SITE FOOTER ══ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-body">
+      <div class="footer-brand">
+        <a href="../index.html" class="logo" aria-label="ToolStackChoice Home">
+          <img src="../logo-icon.png" class="logo-img" alt="ToolStackChoice logo icon" width="44" height="44">
+          <span class="logo-text">ToolStackChoice</span>
+        </a>
+        <p class="footer-tagline">Independent tool reviews since 2024.</p>
+        <p class="footer-disclosure">Some links are affiliate links; we never sell rankings.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <p class="footer-col-heading">Navigation</p>
+        <ul role="list">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../automation-tools/">Automation Tools</a></li>
+          <li><a href="../hosting.html">Hosting</a></li>
+          <li><a href="../seo-tools.html">SEO Tools</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="../affiliate-disclosure.html">Affiliate Disclosure</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>
